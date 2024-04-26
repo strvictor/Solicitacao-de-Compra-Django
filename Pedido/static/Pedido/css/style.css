@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000; 1.200..1000&família=Roboto:ital,wght@0.100; 0,300; 0,400; 0,500; 0,700; 0,900; 1,100; 1,300; 1,400; 1,500; 1,700; 1.900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Nunito, sans-serif;
+    color: #d9dada;
+}
+
+body{
+    background: linear-gradient(to bottom, #2A2E34, #131518);
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-envio {
+    background-color: #2a2e34;
+    width: 45%;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 50px;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 3px 3px 8px #17191b;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card-envio > h1 {
+    font-size: 16pt;
+    font-weight: 650;
+    letter-spacing: 0.7px;
+    margin-top: 32px;
+}
+
+.card-envio > p {
+    font-size: 11pt;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 16px;
+}
+
+img {
+    width: 110px;
+}    
+
+form {
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}    
+/* Estilos para o select e seus elementos filhos */
+select {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #d9dada;
+    height: 28px;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #d9dada; /* Cor do texto do select */
+    padding: 0; /* Remove o preenchimento padrão */
+    appearance: none; /* Remove o estilo padrão do sistema operacional */
+    -webkit-appearance: none; /* Para compatibilidade com navegadores baseados em WebKit */
+    -moz-appearance: none; /* Para compatibilidade com navegadores baseados em Mozilla */
+}
+
+/* Estilos para a seta do select */
+select::-ms-expand {
+    display: none; /* Esconde a seta em navegadores da Microsoft */
+}
+
+/* Estilos para o foco do select */
+select:focus {
+    border-bottom: solid 1px #00C85B; /* Altere a cor conforme desejado */
+}
+
+/* Estilos para as opções do select */
+select option {
+    background-color: #2a2e34; /* Cor de fundo das opções */
+    color: #d9dada; /* Cor do texto das opções */
+}
+
+/* Estilos para a borda do select ao passar o mouse */
+select:hover {
+    border-bottom: solid 1px #00C85B; /* Altere a cor conforme desejado */
+}
+
+/* Estilos para o select quando desativado */
+select:disabled {
+    opacity: 0.6; /* Reduza a opacidade */
+    cursor: not-allowed; /* Altere o cursor */
+}
+
+
+.inputs{
+    width: 48%;
+    margin-bottom: 24px;
+    
+}    
+
+.inputs > p{
+    font-size: 10pt;
+    font-weight: 600;
+    margin-bottom: 2px;
+}    
+
+.inputs > p > span{
+    color: rgb(163, 0, 0);
+    margin-left: 2px;
+}    
+
+.inputs > input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #d9dada;
+    height: 28px;
+    border-radius: 3px;
+    background-color: transparent;
+}    
+
+
+
+
+
+
+.descricao {
+    width: 100%;
+    font-size: 10pt;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.descricao > p > span{
+    color: rgb(163, 0, 0);
+    margin-left: 2px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px; /* Ajuste conforme necessário */
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #d9dada;
+    border-radius: 3px;
+    background-color: transparent;
+    resize: none;    
+}
+
+/* Personalização da barra de rolagem */
+textarea::-webkit-scrollbar {
+    width: 7px; /* Largura da barra de rolagem */
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor de fundo da área de rolagem */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do indicador de rolagem */
+    border-radius: 6px; /* Borda arredondada do indicador */
+    cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor do indicador de rolagem ao passar o mouse */
+}
+
+.espaco {
+    width: 100%;
+    height: 100px;
+    border: dashed 1px #d9dada;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.espaco > label {
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.espaco > input {
+    display: none;
+}
+
+.btn-enviar{
+    width: 100%;
+    height: 60px;
+    background-color: #00C85B;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-size: 12pt;
+    font-weight: 600;
+    letter-spacing: 5;
+    color: #131518;
+}
+
+.btn-enviar:hover{
+    background-color: #00da62;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 6px #00ad4eab;
+}
+
+
+@media screen and (max-width: 700px) {
+    .card-envio {
+        background-color: #2a2e34;
+        width: 100%;
+        padding: 25px;
+        box-shadow: none;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card-envio {
+        width: 100%;
+        min-width: 100px;
+        padding: 40px 25px;
+        box-shadow: none;
+    }
+
+    .card-envio > p {
+        font-size: 11pt;
+        font-weight: 300;
+
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .section{
+        height: 100vh;
+    }
+
+    .card-envio {
+        padding: 20px;
+
+    }
+}
+
+
