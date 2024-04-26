@@ -203,6 +203,7 @@ textarea:focus{
     align-items: center;
     justify-content: center;
 }
+
 .espaco > input {
     display: none;
 }
@@ -226,7 +227,6 @@ textarea:focus{
     box-shadow: 3px 3px 6px #00ad4eab;
 }
 
-
 @media screen and (max-width: 700px) {
     .card-envio {
         background-color: #2a2e34;
@@ -249,7 +249,6 @@ textarea:focus{
     .card-envio > p {
         font-size: 11pt;
         font-weight: 300;
-
     }
 }
 
@@ -260,8 +259,5 @@ textarea:focus{
 
     .card-envio {
         padding: 20px;
-
     }
 }
-
-
