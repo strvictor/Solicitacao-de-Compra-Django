@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Dados
+from .models import Dados, Coodernadores
 
-# Register your models here.
 admin.site.register(Dados)
+admin.site.register(Coodernadores)
