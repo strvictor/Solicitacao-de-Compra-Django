@@ -18,8 +18,10 @@ body{
 
 section {
     width: 50%;
+    min-width: 40%;
     height: auto;
     background-color: #2a2e34;
+    box-shadow: 3px 3px 8px #17191b;
     padding: 25px;
     border-radius: 6px;
 }
@@ -100,7 +102,19 @@ button:hover{
 }
 
 
+@media screen and (max-width: 990px) {
+    section {
+        width: 80%;
+    }
+}
 
-button{
-    width: 100%;
+@media screen and (max-width: 550px) {
+    section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+    }
 }
