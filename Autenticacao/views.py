@@ -14,15 +14,19 @@ def autenticacao(request):
         usuario = authenticate(request, username=email, password=senha)
 
         if usuario is not None:
-            # Autenticação bem-sucedida
             login(request, usuario)
-
-            return HttpResponse(f'Deu Certo!!')
+            # usuario ja autenticado
+            return render(request, 'autenticado.html')
         else:
             # Autenticação falhou
             return HttpResponse(f'Deu errado!!')
 
 
-
-def sessao_pro(request):
-    return HttpResponse("Sessão Pro")
+def sessaopro(request):
+    if request.user.is_authenticated:
+        # usuario está autenticado e estou redirecionando para a pagina autenticado.html
+        return render(request, 'autenticado.html')
+    
+    else:
+        # não esta autenticado e precisa fazer o login
+        return render(request, 'login.html')
