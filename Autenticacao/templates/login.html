@@ -9,7 +9,8 @@
 </head>
 <body>
     <section>
-        <form action="#">
+        <form action="{% url 'autenticacao' %}" method="post">
+            {% csrf_token %}
             <img src="{% static 'Autenticacao/img/logo.png' %}" alt="">
             <h1>Faça Login</h1>
             <div class="div-login">
@@ -18,7 +19,7 @@
             </div>
             <div class="div-login">
                 <p>Senha<span>*</span></p>
-                <input type="password" name="password" placeholder="Insira sua senha" required>
+                <input type="password" name="senha" placeholder="Insira sua senha" required>
             </div>
             <button type="submit">Login</button>
         </form>
