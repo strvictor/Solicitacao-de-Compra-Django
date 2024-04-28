@@ -10,6 +10,7 @@ class Dados(models.Model):
     data_limite = models.DateField(max_length=50)
     descricao = models.CharField(max_length=1000)
     arquivo = models.FileField()
+    data_pedido = models.DateTimeField()
 
     def __str__(self) -> str:
         return self.nome

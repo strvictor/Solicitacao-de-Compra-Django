@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Dados
+import datetime
 
 # Create your views here.
 def mostra_form(request):
@@ -16,9 +17,10 @@ def mostra_form(request):
         data_limite = request.POST.get('data_limite')
         descricao = request.POST.get('descricao')
         arquivo = request.FILES['arquivo']
+        data_e_hora_atual = datetime.datetime.now()
             
         # chama a classe do banco de dados
-        dados = Dados(nome=nome, email=email, telefone=telefone, setor=setor, prioridade=prioridade, data_limite=data_limite, descricao=descricao, arquivo=arquivo)
+        dados = Dados(nome=nome, email=email, telefone=telefone, setor=setor, prioridade=prioridade, data_limite=data_limite, descricao=descricao, arquivo=arquivo, data_pedido=data_e_hora_atual)
 
         # envia os dados do formulario (nesse momento não estou tratando os dados!)
         dados.save()
