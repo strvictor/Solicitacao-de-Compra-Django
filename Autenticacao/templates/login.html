@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'Autenticacao/css/style.css' %}">
+</head>
+<body>
+    <section>
+        <form action="#">
+            <img src="{% static 'Autenticacao/img/logo.png' %}" alt="">
+            <h1>Faça Login</h1>
+            <div class="div-login">
+                <p>Email<span>*</span></p>
+                <input type="email" name="email" placeholder="Insira seu e-mail" required>
+            </div>
+            <div class="div-login">
+                <p>Senha<span>*</span></p>
+                <input type="password" name="password" placeholder="Insira sua senha" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+</body>
+</html>
