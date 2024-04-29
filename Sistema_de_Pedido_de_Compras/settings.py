@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rolepermissions',
     'Pedido',
     'Autenticacao'
 ]
@@ -121,3 +122,5 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SESSION_COOKIE_AGE = 172800
+
+ROLEPERMISSIONS_MODULE = 'Autenticacao.roles'

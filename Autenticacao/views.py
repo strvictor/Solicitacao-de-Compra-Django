@@ -1,6 +1,5 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
 
@@ -31,3 +30,8 @@ def sessaopro(request):
     # login deu certo redirecionando para a pagina final
     return render(request, 'autenticado.html')
     
+
+
+
+
+
