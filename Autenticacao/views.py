@@ -23,6 +23,8 @@ def autenticacao(request):
             # Autenticação falhou
             return HttpResponse(f'Email ou Senha incorretos!')
         
+
+        
 # login deu errado, redirecionando para /autenticacao/
 @login_required(login_url="/autenticacao/")
 def sessaopro(request):

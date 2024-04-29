@@ -67,7 +67,15 @@
                 <input class="btn-enviar" type="submit" value="Enviar">
             </form>
         </div>
+
+        
     </section>
+    {% if mensagem %}
+        <script>
+            // Mostra um alerta com o nome enviado
+            alert("{{ mensagem }}");
+        </script>
+    {% endif %}
 
     <script>
         // Aguarda o carregamento completo do documento HTML antes de executar o código JavaScript

@@ -88,6 +88,10 @@ form {
     height: 28px;
     border-radius: 3px;
     background-color: transparent;
+    -webkit-appearance: none; /* Desativa os estilos do Safari/Chrome */
+    -moz-appearance: none; /* Desativa os estilos do Firefox */
+    appearance: none; /* Desativa os estilos padrão */
+    /* Adicione seus próprios estilos aqui */
 }    
 
 .inputs > input:focus{
@@ -157,7 +161,11 @@ textarea {
     border-bottom: solid 1px #d9dada;
     border-radius: 3px;
     background-color: transparent;
-    resize: none;    
+    resize: none;
+    -webkit-appearance: none; /* Desativa os estilos do Safari/Chrome */
+    -moz-appearance: none; /* Desativa os estilos do Firefox */
+    appearance: none; /* Desativa os estilos padrão */
+    /* Adicione seus próprios estilos aqui */    
 }
 
 /* Personalização da barra de rolagem */
@@ -230,7 +238,6 @@ textarea:focus{
 
 @media screen and (max-width: 700px) {
     .card-envio {
-        background-color: #2a2e34;
         width: 100%;
         padding: 25px;
         box-shadow: none;
