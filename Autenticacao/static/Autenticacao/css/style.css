@@ -10,7 +10,8 @@
 body{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, #2A2E34, #131518);
+    background: rgb(19,21,24);
+    background: linear-gradient(60deg, rgba(19,21,24,1) 0%, rgb(16, 45, 92) 50%, rgba(42,46,52,1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,10 +21,11 @@ section {
     width: 50%;
     min-width: 40%;
     height: auto;
-    background-color: #2a2e34;
-    box-shadow: 3px 3px 8px #17191b;
+    background-color: rgba(15,49,99,0.1); /* Definindo a opacidade para 10% */
+    box-shadow: 3px 3px 8px rgba(5, 16, 32, 0.658);
     padding: 25px;
     border-radius: 6px;
+    backdrop-filter: blur(50%);
 }
 
 form {
@@ -42,10 +44,10 @@ img {
 form > h1 {
     font-size: 16pt;
     font-weight: 650;
-    letter-spacing: 0.7px;
     margin-top: 20px;
     margin-bottom: 20px;
     text-transform: uppercase;
+
 }
 
 
