@@ -1,6 +1,8 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+
 
 def autenticacao(request):
     if request.method == "GET":
@@ -19,14 +21,11 @@ def autenticacao(request):
             return render(request, 'autenticado.html')
         else:
             # Autenticação falhou
-            return HttpResponse(f'Deu errado!!')
-
-
+            return HttpResponse(f'Email ou Senha incorretos!')
+        
+# login deu errado, redirecionando para /autenticacao/
+@login_required(login_url="/autenticacao/")
 def sessaopro(request):
-    if request.user.is_authenticated:
-        # usuario está autenticado e estou redirecionando para a pagina autenticado.html
-        return render(request, 'autenticado.html')
+    # login deu certo redirecionando para a pagina final
+    return render(request, 'autenticado.html')
     
-    else:
-        # não esta autenticado e precisa fazer o login
-        return render(request, 'login.html')
