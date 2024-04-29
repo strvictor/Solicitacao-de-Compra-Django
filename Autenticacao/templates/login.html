@@ -12,7 +12,7 @@
         <form action="{% url 'autenticacao' %}" method="post">
             {% csrf_token %}
             <img src="{% static 'Autenticacao/img/logo.png' %}" alt="">
-            <h1>Faça Login</h1>
+            <h1>Login</h1>
             <div class="div-login">
                 <p>Email<span>*</span></p>
                 <input type="email" name="email" placeholder="Insira seu e-mail" required>
@@ -21,6 +21,11 @@
                 <p>Senha<span>*</span></p>
                 <input type="password" name="senha" placeholder="Insira sua senha" required>
             </div>
+            {% if login_errado %}
+                <div class="login_errado">
+                    <p>{{ login_errado }}</p>  
+                </div>
+            {% endif %}
             <button type="submit">Login</button>
         </form>
     </section>

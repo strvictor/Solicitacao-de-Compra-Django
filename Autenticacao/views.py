@@ -1,5 +1,5 @@
 from django.contrib.auth import authenticate, login
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
@@ -18,10 +18,10 @@ def autenticacao(request):
         if usuario is not None:
             login(request, usuario)
             # usuario ja autenticado
-            return render(request, 'autenticado.html')
+            return redirect('sessaopro')
         else:
             # Autenticação falhou
-            return HttpResponse(f'Email ou Senha incorretos!')
+            return render(request, 'login.html', {'login_errado': 'E-mail ou Senha incorretos!'})
         
 
         
