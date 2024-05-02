@@ -1,6 +1,5 @@
 from rolepermissions.roles import AbstractUserRole
 
-
 class CoordenadoresPermissoes(AbstractUserRole):
     available_permissions = {
                                 'aprovar_pedidos': True,
