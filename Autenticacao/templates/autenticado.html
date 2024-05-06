@@ -21,7 +21,7 @@
         </nav>
     </header>
 
-    <h1>Olá, Bom dia<br>Seja bem vindo Paulo Victor</h1>
+    <h1>Olá, Bom dia<br>Seja bem-vindo Fulano</h1>
 
     <div class="tabela">
         <table>
@@ -65,10 +65,10 @@
     <div class="link-paginacao">
         <div class="tags_a">
             {% if pagina.has_previous %}
-                <a href="{% url 'home' %}?page={{pagina.previous_page_number}}">Anterior</a>
+                <a class="anterior" href="{% url 'home' %}?page={{pagina.previous_page_number}}">Anterior</a>
             {% endif %}
             {% if pagina.has_next %}
-                <a href="{% url 'home' %}?page={{pagina.next_page_number}}">Próximo</a>
+                <a class="proximo" href="{% url 'home' %}?page={{pagina.next_page_number}}">Próximo</a>
             {% endif %}
         </div>
     </div>
