@@ -97,3 +97,25 @@ td > button {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+ 
+.link-paginacao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tags_a{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.tags_a > a {
+    padding: 8px 16px;
+    background-color: #022001;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
