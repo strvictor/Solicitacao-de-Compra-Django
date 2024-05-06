@@ -11,6 +11,10 @@ class Dados(models.Model):
     descricao = models.CharField(max_length=1000)
     arquivo = models.FileField()
     data_pedido = models.DateTimeField()
+    status = models.CharField(max_length=50, default='Pendente')
+    estagio = models.CharField(max_length=50, default='-')
+    ultima_atualizacao = models.CharField(max_length=50, default='-')
+    acao = models.CharField(max_length=50, null=True)
 
     def __str__(self) -> str:
         return self.nome
