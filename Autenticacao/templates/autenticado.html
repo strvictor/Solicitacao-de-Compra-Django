@@ -1,100 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Pedidos</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1.200..1000&família=Roboto:ital,wght@0.100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1.900&display=swap">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Nunito, sans-serif;
-            color: #d9dada;
-        }
-        
-        body {
-            width: 100vw;
-            height: 100vh;
-            background: rgb(19,21,24);
-            background: linear-gradient(60deg, rgba(19,21,24,1) 0%, rgb(16, 45, 92) 50%, rgba(42,46,52,1) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        nav {
-            width: 100%;
-            padding: 20px;
-            background-color: rgba(15,49,99,0.1);
-            box-shadow: 3px 3px 8px rgba(5, 16, 32, 0.658);
-            border-radius: 6px;
-            backdrop-filter: blur(10px);
-            margin-bottom: 20px;
-            position: absolute;
-            top: 0px;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-        
-        nav ul li {
-            margin: 0 10px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #d9dada;
-            font-weight: 600;
-            transition: color 0.3s ease-in-out;
-        }
-        
-        nav ul li a:hover {
-            color: #00C85B;
-        }
-        
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 3px 3px 8px rgba(5, 16, 32, 0.658);
-            background-color: rgba(15,49,99,0.1);
-            margin-bottom: 20px;
-        }
-        
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #dee2e6;
-        }
-        
-        th {
-            background-color: rgba(0, 0, 0, 0.3);
-            font-weight: 600;
-        }
-        
-        tr:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-    </style>
+    <title>Home - Pedidos</title>
+    <link rel="stylesheet" href="{% static 'Autenticacao/css/autenticado.css' %}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Pedidos Aprovados</a></li>
-            <li><a href="#">Pedidos Reprovados</a></li>
-            <li><a href="#">Perfil</a></li>
-        </ul>
-    </nav>
-    <table>
-        <thead>
+    
+    <header>
+        <nav>
+            <img class="logo" src="{% static 'Autenticacao/img/logo.png' %}" alt="">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pedidos Aprovados</a></li>
+                <li><a href="#">Pedidos Reprovados</a></li>
+                <li><a href="#">Pedidos Pendentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Olá, Bom dia<br>Seja bem vindo Paulo Victor</h1>
+
+    <div class="tabela">
+        <table>
             <tr>
                 <th>Nome</th>
                 <th>Email</th>
@@ -103,16 +33,35 @@
                 <th>Prioridade</th>
                 <th>Data Limite</th>
                 <th>Descrição</th>
-                <th>Arquivo</th>
+                <th>Cotação</th>
                 <th>Data da Solicitação</th>
                 <th>Status</th>
                 <th>Estágio</th>
-                <th>Aprovado por Último</th>
+                <th>Última Atualização</th>
+                <th>-</th>
             </tr>
-        </thead>
-        <tbody>
-            <!-- Inserir dados da tabela aqui -->
-        </tbody>
-    </table>
+            <tr>
+                <td>Paulo Victor</td>
+                <td>paulo.victor@cabanaclube.com.br</td>
+                <td>91 993233036</td>
+                <td>TI</td>
+                <td>Baixa</td>
+                <td>10/05/2024</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nemo harum nobis laudantium voluptates beatae veniam dolor, perspiciatis officiis ullam dicta explicabo officia fugit dolorem dolore ab ut saepe commodi!</td>
+                <td>arquivo.xlss</td>
+                <td>04/05/2024 14:50</td>
+                <td>Pendente</td>
+                <td>1/4</td>
+                <td>-</td>
+                <td>
+                    <button type="submit" class="aprovar">Aprovar</button>
+                    <button type="submit" class="reprovar">Reprovar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
 </body>
+    
 </html>
+
