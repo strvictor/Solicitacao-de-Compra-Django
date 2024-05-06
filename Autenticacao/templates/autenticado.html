@@ -40,24 +40,26 @@
                 <th>Última Atualização</th>
                 <th>Ação</th>
             </tr>
-            <tr>
-                <td>Paulo Victor</td>
-                <td>paulo.victor@cabanaclube.com.br</td>
-                <td>91 993233036</td>
-                <td>TI</td>
-                <td>Baixa</td>
-                <td>10/05/2024</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nemo harum nobis laudantium voluptates beatae veniam dolor, perspiciatis officiis ullam dicta explicabo officia fugit dolorem dolore ab ut saepe commodi!</td>
-                <td>arquivo.xlss</td>
-                <td>04/05/2024 14:50</td>
-                <td>Pendente</td>
-                <td>1/4</td>
-                <td>-</td>
-                <td>
-                    <button type="submit" class="aprovar">Aprovar</button>
-                    <button type="submit" class="reprovar">Reprovar</button>
-                </td>
-            </tr>
+            {% for dado in pagina.object_list %}
+                <tr>
+                    <td>{{dado.nome}}</td>
+                    <td>{{dado.email}}</td>
+                    <td>{{dado.telefone}}</td>
+                    <td>{{dado.setor}}</td>
+                    <td>{{dado.prioridade}}</td>
+                    <td>{{dado.data_limite}}</td>
+                    <td>{{dado.descricao}}</td>
+                    <td>{{dado.arquivo}}</td>
+                    <td>{{dado.data_pedido}}</td>
+                    <td>{{dado.status}}</td>
+                    <td>{{dado.estagio}}</td>
+                    <td>{{dado.ultima_atualizacao}}</td>
+                    <td>
+                        <button type="submit" class="aprovar">Aprovar</button>
+                        <button type="submit" class="reprovar">Reprovar</button>
+                    </td>
+                </tr>
+            {% endfor %}
         </table>
     </div>
 

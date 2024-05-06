@@ -2,6 +2,8 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from Pedido.models import Dados
+from django.core.paginator import Paginator
 
 
 def autenticacao(request):
@@ -28,7 +30,15 @@ def autenticacao(request):
 @login_required(login_url="/autenticacao/")
 def home(request):
     # login deu certo redirecionando para a pagina final
-    return render(request, 'autenticado.html')
+    print('to aqui no home')
+
+    dados = Dados.objects.all()
+    
+    dados_paginacao = Paginator(dados, 5)
+    pagina_numero = request.GET.get('page')
+    pagina = dados_paginacao.get_page(pagina_numero)
+
+    return render(request, 'autenticado.html', {"pagina": pagina})
 
 
 

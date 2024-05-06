@@ -12,7 +12,7 @@ class Dados(models.Model):
     arquivo = models.FileField()
     data_pedido = models.DateTimeField()
     status = models.CharField(max_length=50, default='Pendente')
-    estagio = models.CharField(max_length=50, default='-')
+    estagio = models.CharField(max_length=50, default='1/4')
     ultima_atualizacao = models.CharField(max_length=50, default='-')
     acao = models.CharField(max_length=50, null=True)
 
