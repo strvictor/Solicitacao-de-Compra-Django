@@ -122,6 +122,6 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-SESSION_COOKIE_AGE = 172800
+SESSION_COOKIE_AGE = 86400
 
 ROLEPERMISSIONS_MODULE = 'Autenticacao.roles'
