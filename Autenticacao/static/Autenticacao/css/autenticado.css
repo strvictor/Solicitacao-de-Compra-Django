@@ -81,7 +81,7 @@ td {
     text-overflow: ellipsis; /* Adiciona ponto de suspensão (...) ao texto truncado */
 }
 
-td > button {
+.aprovar {
     width: 80px;
     height: 30px;
     cursor: pointer;
@@ -90,13 +90,18 @@ td > button {
     border-radius: 4px;
     border: none;
     margin-bottom: 10px;
-}
-
-.aprovar {
     background-color: #0dc207;
 }
 
 .reprovar {
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    font-weight: 550;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
     background-color: red;
 }
   

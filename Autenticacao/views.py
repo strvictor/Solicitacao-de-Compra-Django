@@ -4,6 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from Pedido.models import Dados
 from django.core.paginator import Paginator
+from django.http import HttpResponse
+import datetime
+
 
 
 def autenticacao(request):
@@ -29,16 +32,70 @@ def autenticacao(request):
 # login deu errado, redirecionando para /autenticacao/
 @login_required(login_url="/autenticacao/")
 def home(request):
-    # login deu certo redirecionando para a pagina final
-    print('to aqui no home')
+
+    usuario_autenticado = request.user
+
+    # Acessando nome e email do usuário autenticado
+    nome_inicio = usuario_autenticado.first_name
+    nome_final = usuario_autenticado.last_name
+    nome_completo = nome_inicio + ' ' + nome_final
+    email = usuario_autenticado.email
+
+    # função só ta tratando quando o usuario só tem um grupo!
+    print(grupo_de_acesso(email))
 
     dados = Dados.objects.all()
-    
+
+    #adicionando a paginacao
     dados_paginacao = Paginator(dados, 5)
     pagina_numero = request.GET.get('page')
     pagina = dados_paginacao.get_page(pagina_numero)
 
-    return render(request, 'autenticado.html', {"pagina": pagina})
+    return render(request, 'autenticado.html', {"pagina": pagina,
+                                                "nome_usuario": nome_completo,
+                                                "saudacao": saudacao()
+                                                })
+
+
+
+
+
+def saudacao():
+    hora_atual = datetime.datetime.now().hour
+    
+    if 6 <= hora_atual < 12:
+        return "Bom dia"
+    elif 12 <= hora_atual < 18:
+        return "Boa tarde"
+    else:
+        return "Boa noite"
+
+def grupo_de_acesso(email):
+    usuario1 = User.objects.get(email=email)
+    grupos_do_usuario = usuario1.groups.all()
+
+    if len(grupos_do_usuario) == 1 and grupos_do_usuario:
+        return grupos_do_usuario[0]
+    else:
+        return 'usuario tem mais de 1 grupo, favor tratar!'
+
+
+
+def aprovar_dado(request):
+    if request.method == 'POST':
+        id_linha = request.POST.get('dado_id')
+
+        return HttpResponse(f'Dado aprovado com sucesso. {id_linha}')
+    else:
+        return redirect('home')
+
+def reprovar_dado(request):
+    if request.method == 'POST':
+        id_linha = request.POST.get('dado_id')
+        
+        return HttpResponse(f'Dado reprovado com sucesso. {id_linha}')
+    else:
+        return redirect('home')
 
 
 
@@ -46,14 +103,4 @@ def home(request):
 
 
 
-
-usuario1 = User.objects.get(email='vicctor1009@gmail.com')
-
-grupos_do_usuario = usuario1.groups.all()
-
-if len(grupos_do_usuario) == 1 and grupos_do_usuario:
-    print(grupos_do_usuario[0])
-
-else:
-    for grupo in grupos_do_usuario:
-        print("Grupo:", grupo)
+    

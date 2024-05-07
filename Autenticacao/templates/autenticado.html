@@ -21,7 +21,7 @@
         </nav>
     </header>
 
-    <h1>Olá, Bom dia<br>Seja bem-vindo Fulano</h1>
+    <h1>Olá, {{ saudacao }}.<br>{{ nome_usuario }}, seja bem-vindo de volta!</h1>
 
     <div class="tabela">
         <table>
@@ -55,9 +55,18 @@
                     <td>{{dado.estagio}}</td>
                     <td>{{dado.ultima_atualizacao}}</td>
                     <td>
-                        <button type="submit" class="aprovar">Aprovar</button>
-                        <button type="submit" class="reprovar">Reprovar</button>
+                        <form action="{% url 'aprovar_dado' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="dado_id" value="{{ dado.id }}">
+                            <button type="submit" class="aprovar">Aprovar</button>
+                        </form>
+                        <form action="{% url 'reprovar_dado' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="dado_id" value="{{ dado.id }}">
+                            <button type="submit" class="reprovar">Reprovar</button>
+                        </form>
                     </td>
+                    
                 </tr>
             {% endfor %}
         </table>
