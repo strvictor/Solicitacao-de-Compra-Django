@@ -5,8 +5,8 @@ from django.contrib.auth.models import User
 from Pedido.models import Dados
 from django.core.paginator import Paginator
 from django.http import HttpResponse
+from .motivacao import APIConselhos
 import datetime
-
 
 
 def autenticacao(request):
@@ -28,7 +28,6 @@ def autenticacao(request):
             # Autenticação falhou
             return render(request, 'login.html', {'login_errado': 'E-mail ou Senha incorretos!'})
         
-
 # login deu errado, redirecionando para /autenticacao/
 @login_required(login_url="/autenticacao/")
 def home(request):
@@ -44,6 +43,7 @@ def home(request):
     # função só ta tratando quando o usuario só tem um grupo!
     print(grupo_de_acesso(email))
 
+
     dados = Dados.objects.all()
 
     #adicionando a paginacao
@@ -53,11 +53,9 @@ def home(request):
 
     return render(request, 'autenticado.html', {"pagina": pagina,
                                                 "nome_usuario": nome_completo,
-                                                "saudacao": saudacao()
+                                                "saudacao": saudacao(),
+                                                "concelho": api_concelho()
                                                 })
-
-
-
 
 
 def saudacao():
@@ -70,6 +68,7 @@ def saudacao():
     else:
         return "Boa noite"
 
+
 def grupo_de_acesso(email):
     usuario1 = User.objects.get(email=email)
     grupos_do_usuario = usuario1.groups.all()
@@ -80,14 +79,38 @@ def grupo_de_acesso(email):
         return 'usuario tem mais de 1 grupo, favor tratar!'
 
 
+def api_concelho():
+    api = APIConselhos()
+    conselho = api.obter_conselho_aleatorio()
+    if conselho:
+        return conselho
+
 
 def aprovar_dado(request):
     if request.method == 'POST':
         id_linha = request.POST.get('dado_id')
 
+        usuario_autenticado = request.user
+
+        # Acessando nome e email do usuário autenticado
+        nome_inicio = usuario_autenticado.first_name
+        nome_final = usuario_autenticado.last_name
+        nome_completo = nome_inicio + ' ' + nome_final
+        email = usuario_autenticado.email
+
+        
+        # Obtém o objeto do modelo que você deseja modificar
+        objeto = Dados.objects.get(pk=id_linha)
+
+        # Modifica os atributos do objeto
+        objeto.status = "Aprovado"
+        objeto.ultima_atualizacao = nome_completo
+        objeto.save()  # Salva as alterações no banco de dados
+
         return HttpResponse(f'Dado aprovado com sucesso. {id_linha}')
     else:
         return redirect('home')
+
 
 def reprovar_dado(request):
     if request.method == 'POST':
@@ -98,9 +121,8 @@ def reprovar_dado(request):
         return redirect('home')
 
 
-
-
-
+def modifica_bd(status, id, coodernador):
+    pass
 
 
     
