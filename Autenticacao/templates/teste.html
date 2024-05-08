@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabela com Pop-up</title>
+<style>
+    /* Estilos para a tabela */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    /* Estilos para o popup */
+    .popup {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+    }
+    th:hover .popup {
+        visibility: visible;
+    }
+</style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Título 1<span class="popup">Explicação do Título 1</span></th>
+        <th>Título 2<span class="popup">Explicação do Título 2</span></th>
+        <th>Título 3<span class="popup">Explicação do Título 3</span></th>
+        <th>Título 4<span class="popup">Explicação do Título 4</span></th>
+        <th>Título 5<span class="popup">Explicação do Título 5</span></th>
+    </tr>
+    <!-- Aqui vão os dados da tabela -->
+    <tr>
+        <td>Dado 1</td>
+        <td>Dado 2</td>
+        <td>Dado 3</td>
+        <td>Dado 4</td>
+        <td>Dado 5</td>
+    </tr>
+</table>
+
+</body>
+</html>

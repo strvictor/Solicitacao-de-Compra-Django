@@ -32,17 +32,7 @@ def autenticacao(request):
 @login_required(login_url="/autenticacao/")
 def home(request):
 
-    usuario_autenticado = request.user
-
-    # Acessando nome e email do usuário autenticado
-    nome_inicio = usuario_autenticado.first_name
-    nome_final = usuario_autenticado.last_name
-    nome_completo = nome_inicio + ' ' + nome_final
-    email = usuario_autenticado.email
-
-    # função só ta tratando quando o usuario só tem um grupo!
-    print(grupo_de_acesso(email))
-
+    nome_completo, permissao_usuario = retorna_dados_usuario(request)
 
     dados = Dados.objects.all()
 
@@ -58,6 +48,26 @@ def home(request):
                                                 })
 
 
+def retorna_dados_usuario(request):
+    usuario_autenticado = request.user
+
+    # Acessando nome e email do usuário autenticado
+    nome_inicio = usuario_autenticado.first_name
+    nome_final = usuario_autenticado.last_name
+    nome_completo = nome_inicio + ' ' + nome_final
+    email = usuario_autenticado.email
+
+    usuario1 = User.objects.get(email=email)
+    grupos_do_usuario = usuario1.groups.all()
+
+    if len(grupos_do_usuario) == 1 and grupos_do_usuario:
+        grupo_final_usuario = grupos_do_usuario[0]
+    else:
+        grupo_final_usuario = 'usuario tem mais de 1 grupo, favor tratar!'
+
+    return nome_completo, grupo_final_usuario
+
+
 def saudacao():
     hora_atual = datetime.datetime.now().hour
     
@@ -67,16 +77,6 @@ def saudacao():
         return "Boa tarde"
     else:
         return "Boa noite"
-
-
-def grupo_de_acesso(email):
-    usuario1 = User.objects.get(email=email)
-    grupos_do_usuario = usuario1.groups.all()
-
-    if len(grupos_do_usuario) == 1 and grupos_do_usuario:
-        return grupos_do_usuario[0]
-    else:
-        return 'usuario tem mais de 1 grupo, favor tratar!'
 
 
 def api_concelho():
@@ -90,24 +90,29 @@ def aprovar_dado(request):
     if request.method == 'POST':
         id_linha = request.POST.get('dado_id')
 
-        usuario_autenticado = request.user
+        nome_completo, permissao_usuario = retorna_dados_usuario(request)
 
-        # Acessando nome e email do usuário autenticado
-        nome_inicio = usuario_autenticado.first_name
-        nome_final = usuario_autenticado.last_name
-        nome_completo = nome_inicio + ' ' + nome_final
-        email = usuario_autenticado.email
+        if str(permissao_usuario) == "Coodernador":
+            estagio_update = "2/5"
+        elif str(permissao_usuario) == "Gerente":
+            estagio_update = "3/5"
+        elif str(permissao_usuario) == "Analista de Compras":
+            estagio_update = "4/5"
+        elif str(permissao_usuario) == "Diretor Financeiro":
+            estagio_update = "5/5"
+        else:
+            estagio_update = 'nenhum!!!!!!!!'
 
-        
         # Obtém o objeto do modelo que você deseja modificar
         objeto = Dados.objects.get(pk=id_linha)
 
         # Modifica os atributos do objeto
         objeto.status = "Aprovado"
+        objeto.estagio = estagio_update
         objeto.ultima_atualizacao = nome_completo
         objeto.save()  # Salva as alterações no banco de dados
 
-        return HttpResponse(f'Dado aprovado com sucesso. {id_linha}')
+        return redirect('home')
     else:
         return redirect('home')
 
@@ -120,9 +125,6 @@ def reprovar_dado(request):
     else:
         return redirect('home')
 
-
-def modifica_bd(status, id, coodernador):
-    pass
 
 
     

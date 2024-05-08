@@ -9,10 +9,10 @@ class Dados(models.Model):
     prioridade = models.CharField(max_length=100)
     data_limite = models.DateField(max_length=50)
     descricao = models.CharField(max_length=1000)
-    arquivo = models.FileField()
+    arquivo = models.FileField(null=True, upload_to='uploads/')
     data_pedido = models.DateTimeField()
     status = models.CharField(max_length=50, default='Pendente')
-    estagio = models.CharField(max_length=50, default='1/4')
+    estagio = models.CharField(max_length=50, default='1/5')
     ultima_atualizacao = models.CharField(max_length=50, default='-')
     acao = models.CharField(max_length=50, null=True)
 
