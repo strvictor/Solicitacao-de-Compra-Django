@@ -13,10 +13,9 @@
         <nav>
             <img class="logo" src="{% static 'Autenticacao/img/logo.png' %}" alt="">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pedidos Aprovados</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'pedidos_aprovados' %}">Pedidos Aprovados</a></li>
                 <li><a href="#">Pedidos Reprovados</a></li>
-                <li><a href="#">Pedidos Pendentes</a></li>
             </ul>
         </nav>
     </header>
@@ -71,6 +70,9 @@
             {% endfor %}
         </table>
     </div>
+
+    <p class="mensagem">{{ mensagem }}</p>
+
     <div class="link-paginacao">
         <div class="tags_a">
             {% if pagina.has_previous %}
@@ -82,7 +84,9 @@
         </div>
     </div>
 
-    <h1>"{{ concelho }}"</h1>
+    <div class="conteudo-concelho">
+        <p class="concelho">"{{ concelho }}"</p>
+    </div>
 
 </body>
     

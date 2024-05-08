@@ -9,6 +9,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     width: 100vw;
+    height: auto;
 }
 
 header {
@@ -59,7 +60,7 @@ h1 {
 
 
 .tabela {
-    overflow-x: auto;
+    /* overflow-x: auto; */
     display: flex;
     justify-content: center;
 
@@ -169,4 +170,22 @@ tr:nth-child(even) {
 }
 th:hover .popup {
     visibility: visible;
+}
+
+.mensagem {
+    text-align: center;
+    color: #0dc207;
+    font-size: 13pt;
+    font-weight: 600;
+}
+
+.conteudo-concelho {
+    width: 100%;
+    position: absolute;
+}
+
+.concelho {
+    text-align: center;
+    position: relative;
+    bottom: 5px;
 }

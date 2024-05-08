@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from Pedido.models import Dados
+from Pedido.models import UsuariosBD
 from django.core.paginator import Paginator
 from django.http import HttpResponse
 from .motivacao import APIConselhos
@@ -32,9 +33,26 @@ def autenticacao(request):
 @login_required(login_url="/autenticacao/")
 def home(request):
 
-    nome_completo, permissao_usuario = retorna_dados_usuario(request)
+    nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
+    print(f'SETOR:', setor)
+    # pega tudo
+    #dados = Dados.objects.all()
 
-    dados = Dados.objects.all()
+    if str(permissao_usuario) == "Coodernador":
+        estagio_update = "1/5"
+    elif str(permissao_usuario) == "Gerente":
+        estagio_update = "2/5"
+    elif str(permissao_usuario) == "Analista de Compras":
+        estagio_update = "3/5"
+    elif str(permissao_usuario) == "Diretor Financeiro":
+        estagio_update = "4/5"
+
+    # pega com base na permisao do usuario
+    dados = Dados.objects.filter(estagio=estagio_update, setor=setor)
+
+    mensagem = ''
+    if len(dados) == 0:
+        mensagem = 'Sem novas solicitações no seu estágio.'
 
     #adicionando a paginacao
     dados_paginacao = Paginator(dados, 5)
@@ -44,9 +62,9 @@ def home(request):
     return render(request, 'autenticado.html', {"pagina": pagina,
                                                 "nome_usuario": nome_completo,
                                                 "saudacao": saudacao(),
-                                                "concelho": api_concelho()
+                                                "concelho": api_concelho(),
+                                                "mensagem": mensagem
                                                 })
-
 
 def retorna_dados_usuario(request):
     usuario_autenticado = request.user
@@ -65,7 +83,14 @@ def retorna_dados_usuario(request):
     else:
         grupo_final_usuario = 'usuario tem mais de 1 grupo, favor tratar!'
 
-    return nome_completo, grupo_final_usuario
+    # pega o setor do usuario com base em seu nome
+    captura_setor =  UsuariosBD.objects.filter(nome=nome_completo).first()
+    if captura_setor:
+        setor = captura_setor.setor
+    else:
+        setor = None
+
+    return nome_completo, grupo_final_usuario, setor
 
 
 def saudacao():
@@ -90,7 +115,7 @@ def aprovar_dado(request):
     if request.method == 'POST':
         id_linha = request.POST.get('dado_id')
 
-        nome_completo, permissao_usuario = retorna_dados_usuario(request)
+        nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
 
         if str(permissao_usuario) == "Coodernador":
             estagio_update = "2/5"
@@ -128,3 +153,28 @@ def reprovar_dado(request):
 
 
     
+def pedidos_aprovados(request):
+
+    nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
+    print(f'SETOR:', setor)
+
+    # pega tudo
+    #dados = Dados.objects.all()
+
+    dados = Dados.objects.filter(setor=setor, status='Aprovado')
+
+    mensagem = ''
+    if len(dados) == 0:
+        mensagem = 'Sem novas solicitações no seu estágio.'
+
+    #adicionando a paginacao
+    dados_paginacao = Paginator(dados, 5)
+    pagina_numero = request.GET.get('page')
+    pagina = dados_paginacao.get_page(pagina_numero)
+
+    return render(request, 'autenticado.html', {"pagina": pagina,
+                                                "nome_usuario": nome_completo,
+                                                "saudacao": saudacao(),
+                                                "concelho": api_concelho(),
+                                                "mensagem": mensagem
+                                                })

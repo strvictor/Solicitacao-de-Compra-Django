@@ -19,10 +19,10 @@ class Dados(models.Model):
     def __str__(self) -> str:
         return self.nome
     
-class Coodernadores(models.Model):
+class UsuariosBD(models.Model):
     setor = models.CharField(max_length=100)
-    nome_coodernador = models.CharField(max_length=100)
-    email_coodernador = models.EmailField(max_length=100)
+    nome = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
 
     def __str__(self) -> str:
-        return self.nome_coodernador
+        return self.nome

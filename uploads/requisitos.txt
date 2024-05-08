@@ -1,0 +1,18 @@
+Demanda: Realizar um sistema web (site) onde os colaboradores possam realizar pedidos de compra. 
+
+
+
+requisitos funcionais:
+campo pro usuario colocar a prioridade
+campo pro usuario colocar a previsaõ maxima que ele precisa do item em mãos
+campo pro usuario colocar a descrição
+campo pro usuario colocaro anexo da cotação (Xlsx)
+
+
+Regra de Negocio:
+
+- O colaborador faz a cotação do item desejado, no minimo 3 cotações, e submete o formulario.
+- Primeiro precisa ser aprovado pela Diretora Aline
+- Depois pelo diretor financeiro, Gerlem
+- Suelem executa a compra
+
