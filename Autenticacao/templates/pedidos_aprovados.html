@@ -4,21 +4,22 @@
 <div class="tabela">
     <table>
         <tr>
+            <th style="width: 35px;">Id</th>
             <th>Nome</th>
             <th>Email</th>
             <th>Telefone</th>
             <th>Setor</th>
-            <th>Prioridade</th>
+            <th style="width: 80px;">Prioridade</th>
             <th>Data Limite<span class="popup">data maxima que a solicitante espera que a solicitação seja atendida</span></th>
-            <th>Descrição</th>
-            <th>Cotação</th>
+            <th style="width: 250px;">Descrição</th>
             <th>Data da Solicitação</th>
             <th>Status</th>
-            <th>Estágio</th>
+            <th style="width: 50px;">Estágio</th>
             <th>Última Atualização</th>
         </tr>
-        {% for dado in pagina.object_list %}
+        {% for index, dado in pagina.object_list %}
             <tr>
+                <td>{{ index }}</td>
                 <td>{{dado.nome}}</td>
                 <td>{{dado.email}}</td>
                 <td>{{dado.telefone}}</td>
@@ -26,7 +27,6 @@
                 <td>{{dado.prioridade}}</td>
                 <td>{{dado.data_limite}}</td>
                 <td>{{dado.descricao}}</td>
-                <td>{{dado.arquivo}}</td>
                 <td>{{dado.data_pedido}}</td>
                 <td>{{dado.status}}</td>
                 <td>{{dado.estagio}}</td>
@@ -34,5 +34,19 @@
             </tr>
         {% endfor %}
     </table>
+</div>
+{% endblock %}
+
+
+{% block paginacao %}
+<div class="link-paginacao">
+    <div class="tags_a">
+        {% if pagina.has_previous %}
+            <a class="anterior" href="{% url 'pedidos_aprovados' %}?page={{pagina.previous_page_number}}">Anterior</a>
+        {% endif %}
+        {% if pagina.has_next %}
+            <a class="proximo" href="{% url 'pedidos_aprovados' %}?page={{pagina.next_page_number}}">Próximo</a>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}

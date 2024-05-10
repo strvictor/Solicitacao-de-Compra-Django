@@ -193,8 +193,10 @@ def pedidos_aprovados(request):
     if len(dados) == 0:
         mensagem = 'Sem novas solicitações.'
 
-    #adicionando a paginacao
-    dados_paginacao = Paginator(dados, 5)
+    dados_com_indices = [(index + 1, dado) for index, dado in enumerate(dados)]
+
+   #adicionando a paginacao
+    dados_paginacao = Paginator(dados_com_indices, 1)
     pagina_numero = request.GET.get('page')
     pagina = dados_paginacao.get_page(pagina_numero)
 
@@ -202,5 +204,4 @@ def pedidos_aprovados(request):
                                                 "nome_usuario": nome_completo,
                                                 "saudacao": saudacao(),
                                                 "concelho": api_concelho(),
-                                                "mensagem": mensagem
-                                                })
+                                                "mensagem": mensagem})

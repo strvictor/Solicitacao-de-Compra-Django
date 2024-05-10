@@ -75,6 +75,7 @@
 
     <p class="mensagem">{{ mensagem }}</p>
 
+    {% block paginacao %}
     <div class="link-paginacao">
         <div class="tags_a">
             {% if pagina.has_previous %}
@@ -85,6 +86,7 @@
             {% endif %}
         </div>
     </div>
+    {% endblock %}
 
     <div class="conteudo-concelho">
         <p class="concelho">"{{ concelho }}"</p>
