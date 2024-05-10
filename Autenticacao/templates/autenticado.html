@@ -21,7 +21,8 @@
     </header>
 
     <h1>Olá, {{ saudacao }}<br>Seja bem-vindo(a) {{ nome_usuario }}!</h1>
-
+    
+    {% block tabela %}
     <div class="tabela">
         <table>
             <tr>
@@ -70,6 +71,7 @@
             {% endfor %}
         </table>
     </div>
+    {% endblock %}
 
     <p class="mensagem">{{ mensagem }}</p>
 

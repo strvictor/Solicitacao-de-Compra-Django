@@ -1,0 +1,38 @@
+{% extends 'autenticado.html' %}
+
+{% block tabela %}
+<div class="tabela">
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Setor</th>
+            <th>Prioridade</th>
+            <th>Data Limite<span class="popup">data maxima que a solicitante espera que a solicitação seja atendida</span></th>
+            <th>Descrição</th>
+            <th>Cotação</th>
+            <th>Data da Solicitação</th>
+            <th>Status</th>
+            <th>Estágio</th>
+            <th>Última Atualização</th>
+        </tr>
+        {% for dado in pagina.object_list %}
+            <tr>
+                <td>{{dado.nome}}</td>
+                <td>{{dado.email}}</td>
+                <td>{{dado.telefone}}</td>
+                <td>{{dado.setor}}</td>
+                <td>{{dado.prioridade}}</td>
+                <td>{{dado.data_limite}}</td>
+                <td>{{dado.descricao}}</td>
+                <td>{{dado.arquivo}}</td>
+                <td>{{dado.data_pedido}}</td>
+                <td>{{dado.status}}</td>
+                <td>{{dado.estagio}}</td>
+                <td>{{dado.ultima_atualizacao}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

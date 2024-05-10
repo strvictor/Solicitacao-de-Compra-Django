@@ -156,8 +156,6 @@ def reprovar_dado(request):
         return redirect('home')
 
 
-
-    
 def pedidos_aprovados(request):
 
     nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
@@ -200,7 +198,7 @@ def pedidos_aprovados(request):
     pagina_numero = request.GET.get('page')
     pagina = dados_paginacao.get_page(pagina_numero)
 
-    return render(request, 'autenticado.html', {"pagina": pagina,
+    return render(request, 'pedidos_aprovados.html', {"pagina": pagina,
                                                 "nome_usuario": nome_completo,
                                                 "saudacao": saudacao(),
                                                 "concelho": api_concelho(),
