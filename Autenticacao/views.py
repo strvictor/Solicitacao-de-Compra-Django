@@ -47,12 +47,17 @@ def home(request):
     elif str(permissao_usuario) == "Diretor Financeiro":
         estagio_update = "4/5"
 
-    # pega com base na permisao do usuario
-    dados = Dados.objects.filter(estagio=estagio_update, setor=setor)
+
+    if setor == None:
+        # se cair aqui é pq não é coodernador
+        dados = Dados.objects.filter(estagio=estagio_update)
+    else:
+        # pega com base na permisao do usuario | é coodernador
+        dados = Dados.objects.filter(estagio=estagio_update, setor=setor)
 
     mensagem = ''
     if len(dados) == 0:
-        mensagem = 'Sem novas solicitações no seu estágio.'
+        mensagem = 'Sem novas solicitações.'
 
     #adicionando a paginacao
     dados_paginacao = Paginator(dados, 5)
@@ -161,11 +166,34 @@ def pedidos_aprovados(request):
     # pega tudo
     #dados = Dados.objects.all()
 
-    dados = Dados.objects.filter(setor=setor, status='Aprovado')
+    if setor == None:
+        # entra aqui se não é coodernador, ou seja, pega os gerentes, analistas, diretor... retorno do banco todos os dados que estiverem do estagio 2/5 >, ou seja ja passou por ele
+
+        if str(permissao_usuario) == 'Gerente':
+            estagio = ['2/5', '3/5', '4/5', '5/5']
+            permitidos = ['Aline Araujo', 'Giovane lobato', 'Gerlem Brito']
+
+        elif str(permissao_usuario) == 'Analista de Compras':
+            estagio = ['3/5', '4/5', '5/5']
+            permitidos = ['Giovane lobato', 'Gerlem Brito']
+
+        elif str(permissao_usuario) == 'Diretor Financeiro':
+            estagio = ['5/5'] # retirei o 4/5
+            permitidos = ['Gerlem Brito']
+        else:
+            print('erro aqui brow')
+
+
+        print(permissao_usuario)
+        print(estagio)
+        dados = Dados.objects.filter(estagio__in=estagio, status='Aprovado', ultima_atualizacao__in=permitidos)
+
+    else:
+        dados = Dados.objects.filter(setor=setor, status='Aprovado')
 
     mensagem = ''
     if len(dados) == 0:
-        mensagem = 'Sem novas solicitações no seu estágio.'
+        mensagem = 'Sem novas solicitações.'
 
     #adicionando a paginacao
     dados_paginacao = Paginator(dados, 5)
