@@ -196,7 +196,7 @@ def pedidos_aprovados(request):
     dados_com_indices = [(index + 1, dado) for index, dado in enumerate(dados)]
 
    #adicionando a paginacao
-    dados_paginacao = Paginator(dados_com_indices, 1)
+    dados_paginacao = Paginator(dados_com_indices, 5)
     pagina_numero = request.GET.get('page')
     pagina = dados_paginacao.get_page(pagina_numero)
 
