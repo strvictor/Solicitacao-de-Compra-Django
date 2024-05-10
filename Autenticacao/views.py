@@ -171,11 +171,11 @@ def pedidos_aprovados(request):
 
         if str(permissao_usuario) == 'Gerente':
             estagio = ['2/5', '3/5', '4/5', '5/5']
-            permitidos = ['Aline Araujo', 'Giovane lobato', 'Gerlem Brito']
+            permitidos = ['Aline Araujo', 'Giovane Lobato', 'Gerlem Brito']
 
         elif str(permissao_usuario) == 'Analista de Compras':
             estagio = ['3/5', '4/5', '5/5']
-            permitidos = ['Giovane lobato', 'Gerlem Brito']
+            permitidos = ['Giovane Lobato', 'Gerlem Brito']
 
         elif str(permissao_usuario) == 'Diretor Financeiro':
             estagio = ['5/5'] # retirei o 4/5
