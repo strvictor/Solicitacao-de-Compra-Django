@@ -45,7 +45,13 @@
                 </div>
                 <div class="inputs">
                     <p>Prioridade<span>*</span></p>
-                    <input type="text" name="prioridade" placeholder="Insira a prioridade da solicitação" required>
+                    <select name="setor" required>
+                        <option value="" disabled selected>Selecione a prioridade</option>
+                        <option value="Baixa">Baixa (Mais de 30 dias)</option>
+                        <option value="Média">Média (Entre 15 e 30 dias)</option>
+                        <option value="Alta">Alta (Até 7 dias)</option>
+                    </select>
+                    <!-- <input type="text" name="prioridade" placeholder="Insira a prioridade da solicitação" required> -->
                 </div>
                 <div class="inputs">
                     <p>Data Limite<span>*</span></p>
