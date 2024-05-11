@@ -72,7 +72,7 @@
                     <td>
 
                         {% if permissao_usuario == 'Analista de Compras' %}
-                            <form id="meuFormulario" action="{% url 'aprovar_dado' %}" method="post">
+                            <form id="meuFormulario" action="{% url 'aprovar_dado' %}" method="post" enctype="multipart/form-data">
                                 {% csrf_token %}
                                 <input type="hidden" name="dado_id" value="{{ dado.id }}">
                                 <button type="submit" class="aprovar">Enviar</button>

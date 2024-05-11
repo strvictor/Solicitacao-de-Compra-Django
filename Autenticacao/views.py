@@ -121,9 +121,13 @@ def api_concelho():
 def aprovar_dado(request):
     if request.method == 'POST':
         id_linha = request.POST.get('dado_id')
-        arquivo = request.FILES['arquivo']
+        
+        if 'arquivo' in request.FILES:
+            # cotação do analista de compras
+            arquivo = request.FILES['arquivo']
 
-
+        else:
+            arquivo = ''
 
         print(arquivo)
 
