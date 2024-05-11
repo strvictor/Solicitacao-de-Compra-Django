@@ -38,7 +38,7 @@
                 <th>Data Limite<span class="popup">data maxima que a solicitante espera que a solicitação seja atendida</span></th>
                 <th>Descrição</th>
 
-                {% if permissao_usuario == 'Analista de Compras' %}
+                {% if permissao_usuario == 'Analista de Compras' or permissao_usuario == 'Diretor Financeiro' %}
                     <th>Cotação</th>
                 {% endif %}
 
@@ -61,7 +61,11 @@
 
                     {% if permissao_usuario == 'Analista de Compras' %}
                         <td>
-                            <input type="file" id="arquivo" name="arquivo">
+                            <input required type="file" id="arquivo" name="arquivo">
+                        </td>
+                    {% elif permissao_usuario == 'Diretor Financeiro' %}
+                        <td>
+                            <a href="{{dado.arquivo.url}}" download="">Baixar Cotação</a>
                         </td>
                     {% endif %}
 
@@ -75,7 +79,7 @@
                             <form id="meuFormulario" action="{% url 'aprovar_dado' %}" method="post" enctype="multipart/form-data">
                                 {% csrf_token %}
                                 <input type="hidden" name="dado_id" value="{{ dado.id }}">
-                                <button type="submit" class="aprovar">Enviar</button>
+                                <button aria-required="true" type="submit" class="aprovar">Enviar</button>
                             </form>
 
                         {% else %}

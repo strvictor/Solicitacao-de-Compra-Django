@@ -113,6 +113,12 @@ USE_TZ = True
 STATIC_URL = 'static/'
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/'),)
 
+MEDIA_ROOT = (
+  os.path.join(BASE_DIR, 'uploads') #pasta media para abrigar os arquivos dos usuários
+)
+
+MEDIA_URL = '/uploads/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

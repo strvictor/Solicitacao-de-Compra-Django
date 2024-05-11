@@ -5,7 +5,8 @@ from django.contrib.auth.models import User
 from Pedido.models import Dados
 from Pedido.models import UsuariosBD
 from django.core.paginator import Paginator
-from django.http import HttpResponse
+from django.http import FileResponse
+from django.shortcuts import get_object_or_404
 from .motivacao import APIConselhos
 import datetime
 
@@ -121,15 +122,13 @@ def api_concelho():
 def aprovar_dado(request):
     if request.method == 'POST':
         id_linha = request.POST.get('dado_id')
-        
+
         if 'arquivo' in request.FILES:
             # cotação do analista de compras
             arquivo = request.FILES['arquivo']
 
         else:
             arquivo = ''
-
-        print(arquivo)
 
         nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
 
@@ -292,5 +291,6 @@ def pedidos_reprovados(request):
                                                 "mensagem": mensagem})
 
 
-def envia_cotacao(request):
-    pass
+def download_arquivo(request, arquivo_id):
+    arquivo = get_object_or_404(Dados, pk=arquivo_id)
+    return FileResponse(arquivo.arquivo)
