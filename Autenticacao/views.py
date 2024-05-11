@@ -53,14 +53,15 @@ def home(request):
         dados = Dados.objects.filter(estagio=estagio_update)
     else:
         # pega com base na permisao do usuario | é coodernador
-        dados = Dados.objects.filter(estagio=estagio_update, setor=setor)
+        dados = Dados.objects.filter(estagio=estagio_update, setor=setor, status='Pendente')
 
     mensagem = ''
     if len(dados) == 0:
         mensagem = 'Sem novas solicitações.'
 
+    dados_com_indices = [(index + 1, dado) for index, dado in enumerate(dados)]
     #adicionando a paginacao
-    dados_paginacao = Paginator(dados, 5)
+    dados_paginacao = Paginator(dados_com_indices, 5)
     pagina_numero = request.GET.get('page')
     pagina = dados_paginacao.get_page(pagina_numero)
 
@@ -150,11 +151,33 @@ def aprovar_dado(request):
 def reprovar_dado(request):
     if request.method == 'POST':
         id_linha = request.POST.get('dado_id')
-        
-        return HttpResponse(f'Dado reprovado com sucesso. {id_linha}')
+
+        nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
+
+        if str(permissao_usuario) == "Coodernador":
+            estagio_update = "1/5"
+        elif str(permissao_usuario) == "Gerente":
+            estagio_update = "2/5"
+        elif str(permissao_usuario) == "Analista de Compras":
+            estagio_update = "3/5"
+        elif str(permissao_usuario) == "Diretor Financeiro":
+            estagio_update = "4/5"
+        else:
+            estagio_update = 'nenhum!!!!!!!!'
+
+        # Obtém o objeto do modelo que você deseja modificar
+        objeto = Dados.objects.get(pk=id_linha)
+
+        # Modifica os atributos do objeto
+        objeto.status = "Reprovado"
+        objeto.estagio = estagio_update
+        objeto.ultima_atualizacao = nome_completo
+        objeto.save()  # Salva as alterações no banco de dados
+
+        return redirect('home')
     else:
         return redirect('home')
-
+    
 
 def pedidos_aprovados(request):
 
@@ -169,7 +192,7 @@ def pedidos_aprovados(request):
 
         if str(permissao_usuario) == 'Gerente':
             estagio = ['2/5', '3/5', '4/5', '5/5']
-            permitidos = ['Aline Araujo', 'Giovane Lobato', 'Gerlem Brito']
+            permitidos = ['Aline Araujo', 'Giovane Lobato', 'Gerlem Brito', 'Usuario Gerente']
 
         elif str(permissao_usuario) == 'Analista de Compras':
             estagio = ['3/5', '4/5', '5/5']
@@ -188,6 +211,57 @@ def pedidos_aprovados(request):
 
     else:
         dados = Dados.objects.filter(setor=setor, status='Aprovado')
+
+    mensagem = ''
+    if len(dados) == 0:
+        mensagem = 'Sem novas solicitações.'
+
+    dados_com_indices = [(index + 1, dado) for index, dado in enumerate(dados)]
+
+   #adicionando a paginacao
+    dados_paginacao = Paginator(dados_com_indices, 5)
+    pagina_numero = request.GET.get('page')
+    pagina = dados_paginacao.get_page(pagina_numero)
+
+    return render(request, 'pedidos_aprovados.html', {"pagina": pagina,
+                                                "nome_usuario": nome_completo,
+                                                "saudacao": saudacao(),
+                                                "concelho": api_concelho(),
+                                                "mensagem": mensagem})
+
+
+def pedidos_reprovados(request):
+
+    nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
+    print(f'SETOR:', setor)
+
+    # pega tudo
+    #dados = Dados.objects.all()
+
+    if setor == None:
+        # entra aqui se não é coodernador, ou seja, pega os gerentes, analistas, diretor... retorno do banco todos os dados que estiverem do estagio 2/5 >, ou seja ja passou por ele
+
+        if str(permissao_usuario) == 'Gerente':
+            estagio = ['2/5', '3/5', '4/5', '5/5']
+            permitidos = ['Aline Araujo', 'Giovane Lobato', 'Gerlem Brito', 'Usuario Gerente']
+
+        elif str(permissao_usuario) == 'Analista de Compras':
+            estagio = ['3/5', '4/5', '5/5']
+            permitidos = ['Giovane Lobato', 'Gerlem Brito']
+
+        elif str(permissao_usuario) == 'Diretor Financeiro':
+            estagio = ['5/5'] # retirei o 4/5
+            permitidos = ['Gerlem Brito']
+        else:
+            print('erro aqui brow')
+
+
+        print(permissao_usuario)
+        print(estagio)
+        dados = Dados.objects.filter(estagio__in=estagio, status='Reprovado', ultima_atualizacao__in=permitidos)
+
+    else:
+        dados = Dados.objects.filter(setor=setor, status='Reprovado')
 
     mensagem = ''
     if len(dados) == 0:

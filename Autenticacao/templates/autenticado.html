@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'pedidos_aprovados' %}">Pedidos Aprovados</a></li>
-                <li><a href="#">Pedidos Reprovados</a></li>
+                <li><a href="{% url 'pedidos_reprovados' %}">Pedidos Reprovados</a></li>
             </ul>
         </nav>
     </header>
@@ -26,6 +26,7 @@
     <div class="tabela">
         <table>
             <tr>
+                <th style="width: 35px;">Id</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Telefone</th>
@@ -33,15 +34,16 @@
                 <th>Prioridade</th>
                 <th>Data Limite<span class="popup">data maxima que a solicitante espera que a solicitação seja atendida</span></th>
                 <th>Descrição</th>
-                <th>Cotação</th>
+                <!-- <th>Cotação</th> -->
                 <th>Data da Solicitação</th>
                 <th>Status</th>
                 <th>Estágio</th>
                 <th>Última Atualização</th>
                 <th>Ação</th>
             </tr>
-            {% for dado in pagina.object_list %}
+            {% for index, dado in pagina.object_list %}
                 <tr>
+                    <td>{{index}}</td>
                     <td>{{dado.nome}}</td>
                     <td>{{dado.email}}</td>
                     <td>{{dado.telefone}}</td>
@@ -49,7 +51,7 @@
                     <td>{{dado.prioridade}}</td>
                     <td>{{dado.data_limite}}</td>
                     <td>{{dado.descricao}}</td>
-                    <td>{{dado.arquivo}}</td>
+                    <!-- <td>{{dado.arquivo}}</td> -->
                     <td>{{dado.data_pedido}}</td>
                     <td>{{dado.status}}</td>
                     <td>{{dado.estagio}}</td>
