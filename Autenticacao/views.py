@@ -34,7 +34,7 @@ def autenticacao(request):
 def home(request):
 
     nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
-    print(f'SETOR:', setor)
+    print(f'SETOR:', permissao_usuario)
     # pega tudo
     #dados = Dados.objects.all()
 
@@ -50,7 +50,7 @@ def home(request):
 
     if setor == None:
         # se cair aqui é pq não é coodernador
-        dados = Dados.objects.filter(estagio=estagio_update)
+        dados = Dados.objects.filter(estagio=estagio_update, status='Aprovado')
     else:
         # pega com base na permisao do usuario | é coodernador
         dados = Dados.objects.filter(estagio=estagio_update, setor=setor, status='Pendente')
@@ -69,7 +69,8 @@ def home(request):
                                                 "nome_usuario": nome_completo,
                                                 "saudacao": saudacao(),
                                                 "concelho": api_concelho(),
-                                                "mensagem": mensagem
+                                                "mensagem": mensagem,
+                                                'permissao_usuario': str(permissao_usuario),
                                                 })
 
 def retorna_dados_usuario(request):
@@ -116,10 +117,15 @@ def api_concelho():
     if conselho:
         return conselho
 
-
+@login_required(login_url="/autenticacao/")
 def aprovar_dado(request):
     if request.method == 'POST':
         id_linha = request.POST.get('dado_id')
+        arquivo = request.FILES['arquivo']
+
+
+
+        print(arquivo)
 
         nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
 
@@ -141,13 +147,14 @@ def aprovar_dado(request):
         objeto.status = "Aprovado"
         objeto.estagio = estagio_update
         objeto.ultima_atualizacao = nome_completo
+        objeto.arquivo = arquivo
         objeto.save()  # Salva as alterações no banco de dados
 
         return redirect('home')
     else:
         return redirect('home')
 
-
+@login_required(login_url="/autenticacao/")
 def reprovar_dado(request):
     if request.method == 'POST':
         id_linha = request.POST.get('dado_id')
@@ -178,7 +185,7 @@ def reprovar_dado(request):
     else:
         return redirect('home')
     
-
+@login_required(login_url="/autenticacao/")
 def pedidos_aprovados(request):
 
     nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
@@ -229,7 +236,7 @@ def pedidos_aprovados(request):
                                                 "concelho": api_concelho(),
                                                 "mensagem": mensagem})
 
-
+@login_required(login_url="/autenticacao/")
 def pedidos_reprovados(request):
 
     nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
@@ -250,7 +257,7 @@ def pedidos_reprovados(request):
             permitidos = ['Giovane Lobato', 'Gerlem Brito']
 
         elif str(permissao_usuario) == 'Diretor Financeiro':
-            estagio = ['5/5'] # retirei o 4/5
+            estagio = ['4/5'] # retirei o 4/5
             permitidos = ['Gerlem Brito']
         else:
             print('erro aqui brow')
@@ -279,3 +286,7 @@ def pedidos_reprovados(request):
                                                 "saudacao": saudacao(),
                                                 "concelho": api_concelho(),
                                                 "mensagem": mensagem})
+
+
+def envia_cotacao(request):
+    pass

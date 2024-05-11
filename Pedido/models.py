@@ -7,7 +7,7 @@ class Dados(models.Model):
     telefone = models.CharField(max_length=100)
     setor = models.CharField(max_length=100)
     prioridade = models.CharField(max_length=100)
-    data_limite = models.DateField(max_length=50)
+    data_limite = models.DateField(max_length=50, null=True, blank=True)
     descricao = models.CharField(max_length=1000)
     arquivo = models.FileField(null=True, upload_to='uploads/')
     data_pedido = models.DateTimeField()

@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block titulo %}
     <title>Home - Pedidos</title>
+    {% endblock %}
     <link rel="stylesheet" href="{% static 'Autenticacao/css/autenticado.css' %}">
+    <link rel="shortcut icon" href="{% static 'Autenticacao/img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
     
@@ -34,7 +37,11 @@
                 <th>Prioridade</th>
                 <th>Data Limite<span class="popup">data maxima que a solicitante espera que a solicitação seja atendida</span></th>
                 <th>Descrição</th>
-                <!-- <th>Cotação</th> -->
+
+                {% if permissao_usuario == 'Analista de Compras' %}
+                    <th>Cotação</th>
+                {% endif %}
+
                 <th>Data da Solicitação</th>
                 <th>Status</th>
                 <th>Estágio</th>
@@ -51,22 +58,41 @@
                     <td>{{dado.prioridade}}</td>
                     <td>{{dado.data_limite}}</td>
                     <td>{{dado.descricao}}</td>
-                    <!-- <td>{{dado.arquivo}}</td> -->
+
+                    {% if permissao_usuario == 'Analista de Compras' %}
+                        <td>
+                            <input type="file" id="arquivo" name="arquivo">
+                        </td>
+                    {% endif %}
+
                     <td>{{dado.data_pedido}}</td>
                     <td>{{dado.status}}</td>
                     <td>{{dado.estagio}}</td>
                     <td>{{dado.ultima_atualizacao}}</td>
                     <td>
-                        <form action="{% url 'aprovar_dado' %}" method="post">
-                            {% csrf_token %}
-                            <input type="hidden" name="dado_id" value="{{ dado.id }}">
-                            <button type="submit" class="aprovar">Aprovar</button>
-                        </form>
-                        <form action="{% url 'reprovar_dado' %}" method="post">
-                            {% csrf_token %}
-                            <input type="hidden" name="dado_id" value="{{ dado.id }}">
-                            <button type="submit" class="reprovar">Reprovar</button>
-                        </form>
+
+                        {% if permissao_usuario == 'Analista de Compras' %}
+                            <form id="meuFormulario" action="{% url 'aprovar_dado' %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="dado_id" value="{{ dado.id }}">
+                                <button type="submit" class="aprovar">Enviar</button>
+                            </form>
+
+                        {% else %}
+
+                            <form action="{% url 'aprovar_dado' %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="dado_id" value="{{ dado.id }}">
+                                <button type="submit" class="aprovar">Aprovar</button>
+                            </form>
+                            
+                            <form action="{% url 'reprovar_dado' %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="dado_id" value="{{ dado.id }}">
+                                <button type="submit" class="reprovar">Reprovar</button>
+                            </form>
+                        {% endif %}
+
                     </td>
                     
                 </tr>
@@ -94,7 +120,28 @@
         <p class="concelho">"{{ concelho }}"</p>
     </div>
 
-</body>
+
     
+    <script>
+        document.querySelector('.aprovar').addEventListener('click', function() {
+            // Obtém o arquivo selecionado
+            var arquivoInput = document.getElementById('arquivo');
+            var arquivoSelecionado = arquivoInput.files[0];
+    
+            // Adiciona o arquivo ao formulário
+            var formulario = document.getElementById('meuFormulario');
+            var campoArquivo = document.createElement('input');
+            campoArquivo.setAttribute('type', 'file');
+            campoArquivo.setAttribute('name', 'arquivo');
+            campoArquivo.style.display = 'none'; // Oculta o campo adicionado
+            campoArquivo.files = arquivoInput.files;
+            formulario.appendChild(campoArquivo);
+    
+            // Envie o formulário
+            formulario.submit();
+        });
+    </script>
+
+</body>
 </html>
 
