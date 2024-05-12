@@ -23,6 +23,7 @@ class UsuariosBD(models.Model):
     setor = models.CharField(max_length=100)
     nome = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
+    estagio = models.CharField(max_length=100, null=True,)
 
     def __str__(self) -> str:
         return self.nome

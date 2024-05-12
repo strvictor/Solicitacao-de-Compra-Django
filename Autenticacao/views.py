@@ -8,7 +8,12 @@ from django.core.paginator import Paginator
 from django.http import FileResponse
 from django.shortcuts import get_object_or_404
 from .motivacao import APIConselhos
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from django.conf import settings
 import datetime
+
 
 
 def autenticacao(request):
@@ -35,7 +40,7 @@ def autenticacao(request):
 def home(request):
 
     nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
-    print(f'SETOR:', permissao_usuario)
+    print(f'SETOR:', setor)
     # pega tudo
     #dados = Dados.objects.all()
 
@@ -49,11 +54,13 @@ def home(request):
         estagio_update = "4/5"
 
 
-    if setor == None:
+    if setor == 'None':
         # se cair aqui é pq não é coodernador
+        print('to aquiddddd')
         dados = Dados.objects.filter(estagio=estagio_update, status='Aprovado')
     else:
         # pega com base na permisao do usuario | é coodernador
+        print('é aqui q to')
         dados = Dados.objects.filter(estagio=estagio_update, setor=setor, status='Pendente')
 
     mensagem = ''
@@ -93,11 +100,11 @@ def retorna_dados_usuario(request):
 
     # pega o setor do usuario com base em seu nome
     captura_setor =  UsuariosBD.objects.filter(nome=nome_completo).first()
-    if captura_setor:
-        setor = captura_setor.setor
+    if captura_setor == 'None':
+        setor = 'None'
     else:
-        setor = None
-
+        setor = captura_setor.setor
+        print(setor)
     return nome_completo, grupo_final_usuario, setor
 
 
@@ -153,6 +160,16 @@ def aprovar_dado(request):
         objeto.arquivo = arquivo
         objeto.save()  # Salva as alterações no banco de dados
 
+        # estou capturando o estagio dos staffs pra envio de email informando nova solicitação!
+        if estagio_update == '5/5':
+            pass
+        else:
+            captura_estagio =  UsuariosBD.objects.filter(estagio=estagio_update).first()
+            nome = captura_estagio.nome
+            email = captura_estagio.email
+
+            enviar_email(request, nome, email)
+
         return redirect('home')
     else:
         return redirect('home')
@@ -197,7 +214,7 @@ def pedidos_aprovados(request):
     # pega tudo
     #dados = Dados.objects.all()
 
-    if setor == None:
+    if setor == 'None':
         # entra aqui se não é coodernador, ou seja, pega os gerentes, analistas, diretor... retorno do banco todos os dados que estiverem do estagio 2/5 >, ou seja ja passou por ele
 
         if str(permissao_usuario) == 'Gerente':
@@ -248,7 +265,7 @@ def pedidos_reprovados(request):
     # pega tudo
     #dados = Dados.objects.all()
 
-    if setor == None:
+    if setor == 'None':
         # entra aqui se não é coodernador, ou seja, pega os gerentes, analistas, diretor... retorno do banco todos os dados que estiverem do estagio 2/5 >, ou seja ja passou por ele
 
         if str(permissao_usuario) == 'Gerente':
@@ -294,3 +311,29 @@ def pedidos_reprovados(request):
 def download_arquivo(request, arquivo_id):
     arquivo = get_object_or_404(Dados, pk=arquivo_id)
     return FileResponse(arquivo.arquivo)
+
+
+
+
+
+
+def enviar_email(request, nome_usuario, email_usuario):
+    # Renderiza o modelo HTML como uma string
+    html_content = render_to_string('email_templates/email_template.html', {'nome': nome_usuario})
+    
+    # Converte o HTML para texto sem formatação
+    text_content = strip_tags(html_content)
+    
+    # Cria o e-mail
+    email = EmailMultiAlternatives(
+        'Nova Solicitação de Compra | Cabana Clube',  # Assunto
+        text_content,  # Corpo do e-mail em texto sem formatação
+        settings.EMAIL_HOST_USER,  # Remetente
+        [email_usuario]  # Lista de destinatários
+    )
+    
+    # Adiciona o conteúdo HTML ao e-mail
+    email.attach_alternative(html_content, "text/html")
+    
+    # Envia o e-mail
+    email.send()

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Pedido de Aprovação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #141414;
+        }
+        p {
+            color: #2c2c2c;
+            margin-top: 6px;
+        }
+        .btn {
+            background-color: #00C85B;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .logo {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <img class="logo" src="{% static 'Autenticacao/img/logo.png' %}" alt="">
+
+        <h1>Novo Pedido Pendente de Aprovação</h1>
+        <p>Olá, {{ nome }}</p>
+        <p>Um novo pedido foi submetido e está aguardando sua aprovação.</p>
+
+        <p>Por favor, acesse o sistema para revisar e aprovar o pedido.</p>
+        <a href="http://192.168.0.25/autenticacao/home/" target="_blank" class="btn">Visualizar Nova Solicitação.</a>
+    </div>
+</body>
+</html>

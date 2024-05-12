@@ -132,3 +132,11 @@ AUTHENTICATION_BACKENDS = [
 SESSION_COOKIE_AGE = 86400
 
 ROLEPERMISSIONS_MODULE = 'Autenticacao.roles'
+
+# Configurações de email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.office365.com'  # Altere para o seu servidor SMTP
+EMAIL_PORT = 587  # Porta do servidor SMTP
+EMAIL_HOST_USER = 'paulo.victor@cabanaclube.com.br'  # Seu endereço de e-mail
+EMAIL_HOST_PASSWORD = 'Str.1009'  # Sua senha de e-mail
+EMAIL_USE_TLS = True  # Use TLS para criptografia
