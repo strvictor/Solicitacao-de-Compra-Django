@@ -168,7 +168,7 @@ def aprovar_dado(request):
             nome = captura_estagio.nome
             email = captura_estagio.email
 
-            enviar_email(request, nome, email)
+            enviar_email(request, nome, email, setor)
 
         return redirect('home')
     else:
@@ -317,9 +317,11 @@ def download_arquivo(request, arquivo_id):
 
 
 
-def enviar_email(request, nome_usuario, email_usuario):
+def enviar_email(request, nome_usuario, email_usuario, setor_usuario):
     # Renderiza o modelo HTML como uma string
-    html_content = render_to_string('email_templates/email_template.html', {'nome': nome_usuario})
+    html_content = render_to_string('email_templates/email_template.html',
+                                    {'nome': nome_usuario,
+                                     'setor': setor_usuario})
     
     # Converte o HTML para texto sem formatação
     text_content = strip_tags(html_content)
