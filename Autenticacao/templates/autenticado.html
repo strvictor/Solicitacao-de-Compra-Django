@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block titulo %}
-    <title>Home - Pedidos</title>
+    <title>Cabana | Pedidos Pendentes</title>
     {% endblock %}
     <link rel="stylesheet" href="{% static 'Autenticacao/css/autenticado.css' %}">
     <link rel="shortcut icon" href="{% static 'Autenticacao/img/favicon.ico' %}" type="image/x-icon">
@@ -16,7 +16,8 @@
         <nav>
             <img class="logo" src="{% static 'Autenticacao/img/logo.png' %}" alt="">
             <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="{% url 'pedidos_pendentes' %}">Pedidos Pendentes</a></li>
                 <li><a href="{% url 'pedidos_aprovados' %}">Pedidos Aprovados</a></li>
                 <li><a href="{% url 'pedidos_reprovados' %}">Pedidos Reprovados</a></li>
             </ul>

@@ -30,14 +30,14 @@ def autenticacao(request):
         if usuario is not None:
             login(request, usuario)
             # usuario ja autenticado
-            return redirect('home')
+            return redirect('pedidos_pendentes')
         else:
             # Autenticação falhou
             return render(request, 'login.html', {'login_errado': 'E-mail ou Senha incorretos!'})
         
 # login deu errado, redirecionando para /autenticacao/
 @login_required(login_url="/autenticacao/")
-def home(request):
+def pedidos_pendentes(request):
 
     nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
     # pega tudo
@@ -153,6 +153,8 @@ def aprovar_dado(request):
         # Obtém o objeto do modelo que você deseja modificar
         objeto = Dados.objects.get(pk=id_linha)
 
+        setor_do_pedido_atual = objeto.setor
+
         # Modifica os atributos do objeto
         objeto.status = "Aprovado"
         objeto.estagio = estagio_update
@@ -169,11 +171,11 @@ def aprovar_dado(request):
             nome = captura_estagio.nome
             email = captura_estagio.email
 
-            enviar_email(request, nome, email, setor, "Aprovado")
+            enviar_email(request, nome, email, setor_do_pedido_atual, "Aprovado")
 
-        return redirect('home')
+        return redirect('pedidos_pendentes')
     else:
-        return redirect('home')
+        return redirect('pedidos_pendentes')
 
 @login_required(login_url="/autenticacao/")
 def reprovar_dado(request):
@@ -226,9 +228,9 @@ def reprovar_dado(request):
                 else:
                     print('setor errado:', nome, email, setor_usuario)
 
-        return redirect('home')
+        return redirect('pedidos_pendentes')
     else:
-        return redirect('home')
+        return redirect('pedidos_pendentes')
     
 @login_required(login_url="/autenticacao/")
 def pedidos_aprovados(request):
@@ -326,7 +328,7 @@ def pedidos_reprovados(request):
     pagina_numero = request.GET.get('page')
     pagina = dados_paginacao.get_page(pagina_numero)
 
-    return render(request, 'pedidos_aprovados.html', {"pagina": pagina,
+    return render(request, 'pedidos_reprovados.html', {"pagina": pagina,
                                                 "nome_usuario": nome_completo,
                                                 "saudacao": saudacao(),
                                                 "concelho": api_concelho(),
@@ -336,10 +338,6 @@ def pedidos_reprovados(request):
 def download_arquivo(request, arquivo_id):
     arquivo = get_object_or_404(Dados, pk=arquivo_id)
     return FileResponse(arquivo.arquivo)
-
-
-
-
 
 
 def enviar_email(request, nome_usuario, email_usuario, setor_usuario, tipo_mensagem):

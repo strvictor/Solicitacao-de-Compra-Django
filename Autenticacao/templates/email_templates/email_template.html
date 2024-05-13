@@ -53,18 +53,18 @@
             <p>Um novo pedido no setor {{ setor }} foi submetido e está aguardando sua aprovação.</p>
             
             <p>Por favor, acesse o sistema para revisar e aprovar o pedido.</p>
-            <a style="background-color: #00C85B;" href="http://192.168.0.25/autenticacao/home/" target="_blank" class="btn">Visualizar Nova Solicitação.</a>
+            <a style="background-color: #00C85B;" href="http://192.168.0.25/autenticacao/pedidos-pendentes/" target="_blank" class="btn">Visualizar Nova Solicitação.</a>
 
         {% else %}
 
             <img class="logo" src="{% static 'Autenticacao/img/logo.png' %}" alt="">
             
-            <h1 style="color: #b80404;" >Sua Solicitação foi Reprovada</h1>
+            <h1 style="color: #e1002f;" >Sua Solicitação foi Reprovada</h1>
             <p>Olá, {{ nome }}</p>
             <p>Sua solicitação no setor {{ setor }} foi reprovada pelo seu supervisor.</p>
             
             <p>Por favor, acesse o sistema para visualizar mais detalhes.</p>
-            <a style="background-color: #b80404;" href="http://192.168.0.25/autenticacao/pedidos-reprovados/" target="_blank" class="btn">Visualizar Solicitação Reprovada.</a>
+            <a style="background-color: #e1002f;" href="http://192.168.0.25/autenticacao/pedidos-reprovados/" target="_blank" class="btn">Visualizar Solicitação Reprovada.</a>
 
         {% endif %}
     </div>

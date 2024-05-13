@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido de Compra</title>
+    <title>Cabana | Novo Pedido</title>
     <link rel="stylesheet" href="{% static 'Pedido/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'Pedido/img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
     <section>
@@ -16,7 +17,8 @@
 
             <p>Prático e eficaz, este formulário de pedido de compra foi projetado para simplificar o processo de solicitação de compra do Cabana Clube. Preencha os campos e selecione os itens desejados para enviar sua solicitação.</p>
 
-            <form action="{% url 'mostra_form' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <form action="{% url 'mostra_form' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="inputs">
                     <p>Nome Completo<span>*</span></p>
                     <input type="text" name="nome" placeholder="Insira seu nome" required>
