@@ -40,7 +40,6 @@ def autenticacao(request):
 def home(request):
 
     nome_completo, permissao_usuario, setor = retorna_dados_usuario(request)
-    print(f'SETOR:', setor)
     # pega tudo
     #dados = Dados.objects.all()
 
@@ -95,6 +94,7 @@ def retorna_dados_usuario(request):
 
     if len(grupos_do_usuario) == 1 and grupos_do_usuario:
         grupo_final_usuario = grupos_do_usuario[0]
+        print(grupo_final_usuario)
     else:
         grupo_final_usuario = 'usuario tem mais de 1 grupo, favor tratar!'
 
@@ -162,13 +162,14 @@ def aprovar_dado(request):
 
         # estou capturando o estagio dos staffs pra envio de email informando nova solicitação!
         if estagio_update == '5/5':
+            # seria a prroxima pessoa que o diretor financeiro envia mensagem, pode ser a suellem
             pass
         else:
             captura_estagio =  UsuariosBD.objects.filter(estagio=estagio_update).first()
             nome = captura_estagio.nome
             email = captura_estagio.email
 
-            enviar_email(request, nome, email, setor)
+            enviar_email(request, nome, email, setor, "Aprovado")
 
         return redirect('home')
     else:
@@ -185,21 +186,45 @@ def reprovar_dado(request):
             estagio_update = "1/5"
         elif str(permissao_usuario) == "Gerente":
             estagio_update = "2/5"
+            permitidos = ['1/5']
         elif str(permissao_usuario) == "Analista de Compras":
             estagio_update = "3/5"
+            permitidos = ['1/5', '2/5']
         elif str(permissao_usuario) == "Diretor Financeiro":
             estagio_update = "4/5"
+            permitidos = ['1/5', '2/5', '3/5']
         else:
             estagio_update = 'nenhum!!!!!!!!'
 
         # Obtém o objeto do modelo que você deseja modificar
         objeto = Dados.objects.get(pk=id_linha)
 
+        setor_do_pedido_atual = objeto.setor
+
         # Modifica os atributos do objeto
         objeto.status = "Reprovado"
         objeto.estagio = estagio_update
         objeto.ultima_atualizacao = nome_completo
         objeto.save()  # Salva as alterações no banco de dados
+
+        # estou capturando o estagio dos staffs pra envio de email informando nova solicitação!
+        if estagio_update == '0/5':
+        
+            pass
+        else:
+
+            captura_estagio =  UsuariosBD.objects.filter(estagio__in=permitidos)
+
+            for usuario in captura_estagio:
+                nome = usuario.nome
+                email = usuario.email
+                setor_usuario = usuario.setor
+
+                if str(setor_do_pedido_atual) == str(setor_usuario) or setor_usuario == 'None':
+                    print(nome, email)
+                    enviar_email(request, nome, email, setor_do_pedido_atual, "Reprovado")
+                else:
+                    print('setor errado:', nome, email, setor_usuario)
 
         return redirect('home')
     else:
@@ -317,18 +342,25 @@ def download_arquivo(request, arquivo_id):
 
 
 
-def enviar_email(request, nome_usuario, email_usuario, setor_usuario):
+def enviar_email(request, nome_usuario, email_usuario, setor_usuario, tipo_mensagem):
     # Renderiza o modelo HTML como uma string
     html_content = render_to_string('email_templates/email_template.html',
                                     {'nome': nome_usuario,
-                                     'setor': setor_usuario})
+                                     'setor': setor_usuario,
+                                     'tipo_mensagem': tipo_mensagem,
+                                     })
     
     # Converte o HTML para texto sem formatação
     text_content = strip_tags(html_content)
-    
+
+    if tipo_mensagem == 'Aprovado':
+        mensagem = 'Nova Solicitação de Compra | Cabana Clube'
+    else:
+        mensagem = 'Solicitação Reprovada | Cabana Clube'
+
     # Cria o e-mail
     email = EmailMultiAlternatives(
-        'Nova Solicitação de Compra | Cabana Clube',  # Assunto
+        mensagem,  # Assunto
         text_content,  # Corpo do e-mail em texto sem formatação
         settings.EMAIL_HOST_USER,  # Remetente
         [email_usuario]  # Lista de destinatários
