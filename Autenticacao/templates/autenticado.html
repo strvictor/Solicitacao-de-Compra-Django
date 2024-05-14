@@ -9,6 +9,8 @@
     {% endblock %}
     <link rel="stylesheet" href="{% static 'Autenticacao/css/autenticado.css' %}">
     <link rel="shortcut icon" href="{% static 'Autenticacao/img/favicon.ico' %}" type="image/x-icon">
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
 </head>
 <body>
     
@@ -28,9 +30,10 @@
     
     {% block tabela %}
     <div class="tabela">
-        <table>
-            <tr>
-                <th style="width: 35px;">Id</th>
+        <table class="sortable">
+            <thead>
+              <tr>
+                <th>Id</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Telefone</th>
@@ -38,70 +41,63 @@
                 <th>Prioridade</th>
                 <th>Data Limite<span class="popup">data maxima que a solicitante espera que a solicitação seja atendida</span></th>
                 <th>Descrição</th>
-
                 {% if permissao_usuario == 'Analista de Compras' or permissao_usuario == 'Diretor Financeiro' %}
                     <th>Cotação</th>
                 {% endif %}
-
                 <th>Data da Solicitação</th>
                 <th>Status</th>
                 <th>Estágio</th>
                 <th>Última Atualização</th>
                 <th>Ação</th>
-            </tr>
-            {% for index, dado in pagina.object_list %}
-                <tr>
-                    <td>{{index}}</td>
-                    <td>{{dado.nome}}</td>
-                    <td>{{dado.email}}</td>
-                    <td>{{dado.telefone}}</td>
-                    <td>{{dado.setor}}</td>
-                    <td>{{dado.prioridade}}</td>
-                    <td>{{dado.data_limite}}</td>
-                    <td>{{dado.descricao}}</td>
-
-                    {% if permissao_usuario == 'Analista de Compras' %}
-                        <td>
-                            <input required type="file" id="arquivo" name="arquivo">
-                        </td>
-                    {% elif permissao_usuario == 'Diretor Financeiro' %}
-                        <td>
-                            <a href="{{dado.arquivo.url}}" download="">Baixar Cotação</a>
-                        </td>
-                    {% endif %}
-
-                    <td>{{dado.data_pedido}}</td>
-                    <td>{{dado.status}}</td>
-                    <td>{{dado.estagio}}</td>
-                    <td>{{dado.ultima_atualizacao}}</td>
-                    <td>
-
+              </tr>
+            </thead>
+            <tbody>
+                {% for index, dado in pagina.object_list %}
+                    <tr>
+                        <td>{{index}}</td>
+                        <td>{{dado.nome}}</td>
+                        <td>{{dado.email}}</td>
+                        <td>{{dado.telefone}}</td>
+                        <td>{{dado.setor}}</td>
+                        <td>{{dado.prioridade}}</td>
+                        <td>{{dado.data_limite}}</td>
+                        <td>{{dado.descricao}}</td>
                         {% if permissao_usuario == 'Analista de Compras' %}
-                            <form id="meuFormulario" action="{% url 'aprovar_dado' %}" method="post" enctype="multipart/form-data">
-                                {% csrf_token %}
-                                <input type="hidden" name="dado_id" value="{{ dado.id }}">
-                                <button aria-required="true" type="submit" class="aprovar">Enviar</button>
-                            </form>
-
-                        {% else %}
-
-                            <form action="{% url 'aprovar_dado' %}" method="post">
-                                {% csrf_token %}
-                                <input type="hidden" name="dado_id" value="{{ dado.id }}">
-                                <button type="submit" class="aprovar">Aprovar</button>
-                            </form>
-                            
-                            <form action="{% url 'reprovar_dado' %}" method="post">
-                                {% csrf_token %}
-                                <input type="hidden" name="dado_id" value="{{ dado.id }}">
-                                <button type="submit" class="reprovar">Reprovar</button>
-                            </form>
+                            <td>
+                                <input required type="file" id="arquivo" name="arquivo">
+                            </td>
+                        {% elif permissao_usuario == 'Diretor Financeiro' %}
+                            <td>
+                                <a href="{{dado.arquivo.url}}" download="">Baixar Cotação</a>
+                            </td>
                         {% endif %}
-
-                    </td>
-                    
-                </tr>
-            {% endfor %}
+                        <td>{{dado.data_pedido}}</td>
+                        <td>{{dado.status}}</td>
+                        <td>{{dado.estagio}}</td>
+                        <td>{{dado.ultima_atualizacao}}</td>
+                        <td>
+                            {% if permissao_usuario == 'Analista de Compras' %}
+                                <form id="meuFormulario" action="{% url 'aprovar_dado' %}" method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="dado_id" value="{{ dado.id }}">
+                                    <button aria-required="true" type="submit" class="aprovar">Enviar</button>
+                                </form>
+                            {% else %}
+                                <form action="{% url 'aprovar_dado' %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="dado_id" value="{{ dado.id }}">
+                                    <button type="submit" class="aprovar">Aprovar</button>
+                                </form>
+                                <form action="{% url 'reprovar_dado' %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="dado_id" value="{{ dado.id }}">
+                                    <button type="submit" class="reprovar">Reprovar</button>
+                                </form>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
         </table>
     </div>
     {% endblock %}
@@ -126,7 +122,6 @@
     </div>
 
 
-    
     <script>
         document.querySelector('.aprovar').addEventListener('click', function() {
             // Obtém o arquivo selecionado
@@ -149,4 +144,3 @@
 
 </body>
 </html>
-
