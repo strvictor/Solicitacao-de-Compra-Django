@@ -4,12 +4,12 @@
     margin: 0;
     padding: 0;
     font-family: Nunito, sans-serif;
-    color: #d9dada;
+    color: #010f03;
 }
 
 body{
-    background: rgb(19,21,24);
-    background: linear-gradient(60deg, rgba(19,21,24,1) 0%, rgb(16, 45, 92) 50%, rgba(42,46,52,1) 100%);
+    background: #f1f2ed;;
+    /* background: linear-gradient(60deg, rgba(19,21,24,1) 0%, rgb(16, 45, 92) 50%, rgba(42,46,52,1) 100%); */
 }
 
 section {
@@ -21,8 +21,8 @@ section {
 }
 
 .card-envio {
-    background-color: rgba(15,49,99,0.1); /* Definindo a opacidade para 10% */
-    box-shadow: 3px 3px 8px rgba(5, 16, 32, 0.658);
+    background-color: #e9e9e36b; /* Definindo a opacidade para 10% */
+    box-shadow: 0px 3px 15px rgba(153, 153, 153, 0.493);
     width: 45%;
     min-width: 500px;
     display: flex;
@@ -66,6 +66,7 @@ form {
 .inputs{
     width: 48%;
     margin-bottom: 24px;
+    color: #010f03;
     
 }    
 
@@ -106,7 +107,7 @@ select {
     height: 28px;
     border-radius: 3px;
     background-color: transparent;
-    color: #d9dada; /* Cor do texto do select */
+    color: #010f03; /* Cor do texto do select */
     padding: 0; /* Remove o preenchimento padrão */
     appearance: none; /* Remove o estilo padrão do sistema operacional */
     -webkit-appearance: none; /* Para compatibilidade com navegadores baseados em WebKit */
@@ -227,7 +228,7 @@ textarea:focus{
     font-size: 12pt;
     font-weight: 600;
     letter-spacing: 5;
-    color: #131518;
+    color: #010f03;
 }
 
 .btn-enviar:hover{

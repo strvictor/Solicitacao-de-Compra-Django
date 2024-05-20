@@ -80,6 +80,7 @@ def pedidos_pendentes(request):
                                                 'permissao_usuario': str(permissao_usuario),
                                                 })
 
+
 def retorna_dados_usuario(request):
     usuario_autenticado = request.user
 
@@ -123,7 +124,8 @@ def api_concelho():
     api = APIConselhos()
     conselho = api.obter_conselho_aleatorio()
     if conselho:
-        return conselho
+        # return conselho
+        return ''
 
 @login_required(login_url="/autenticacao/")
 def aprovar_dado(request):
@@ -333,11 +335,6 @@ def pedidos_reprovados(request):
                                                 "saudacao": saudacao(),
                                                 "concelho": api_concelho(),
                                                 "mensagem": mensagem})
-
-
-def download_arquivo(request, arquivo_id):
-    arquivo = get_object_or_404(Dados, pk=arquivo_id)
-    return FileResponse(arquivo.arquivo)
 
 
 def enviar_email(request, nome_usuario, email_usuario, setor_usuario, tipo_mensagem):

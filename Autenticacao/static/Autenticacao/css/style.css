@@ -4,14 +4,14 @@
     margin: 0;
     padding: 0;
     font-family: Nunito, sans-serif;
-    color: #d9dada;
+    color: #010f03;
 }
 
 body{
     width: 100vw;
     height: 100vh;
-    background: rgb(19,21,24);
-    background: linear-gradient(60deg, rgba(19,21,24,1) 0%, rgb(16, 45, 92) 50%, rgba(42,46,52,1) 100%);
+    background: #f1f2ed;
+    /* background: linear-gradient(60deg, rgba(19,21,24,1) 0%, rgb(16, 45, 92) 50%, rgba(42,46,52,1) 100%); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,8 +21,8 @@ section {
     width: 50%;
     min-width: 40%;
     height: auto;
-    background-color: rgba(15,49,99,0.1); /* Definindo a opacidade para 10% */
-    box-shadow: 3px 3px 8px rgba(5, 16, 32, 0.658);
+    background-color: #e9e9e36b; /* Definindo a opacidade para 10% */
+    box-shadow: 0px 3px 15px rgba(153, 153, 153, 0.493);
     padding: 25px;
     border-radius: 6px;
     backdrop-filter: blur(50%);
@@ -57,7 +57,7 @@ form > h1 {
 }
 
 .login_errado > p{
-    color: #ff0000;
+    color: rgb(216, 2, 2);
 }
 
 .div-login {
