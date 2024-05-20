@@ -22,6 +22,10 @@
                 <li><a href="{% url 'pedidos_pendentes' %}">Pedidos Pendentes</a></li>
                 <li><a href="{% url 'pedidos_aprovados' %}">Pedidos Aprovados</a></li>
                 <li><a href="{% url 'pedidos_reprovados' %}">Pedidos Reprovados</a></li>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button class="sair" type="submit">Sair</button>
+                </form>
             </ul>
         </nav>
     </header>

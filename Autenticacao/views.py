@@ -1,19 +1,16 @@
-from django.contrib.auth import authenticate, login
-from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
-from Pedido.models import Dados
-from Pedido.models import UsuariosBD
-from django.core.paginator import Paginator
-from django.http import FileResponse
-from django.shortcuts import get_object_or_404
-from .motivacao import APIConselhos
+from django.contrib.auth import authenticate, login
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
+from django.shortcuts import render, redirect
+from django.core.paginator import Paginator
+from django.contrib.auth.models import User
 from django.utils.html import strip_tags
+from Pedido.models import UsuariosBD
+from .motivacao import APIConselhos
 from django.conf import settings
+from Pedido.models import Dados
 import datetime
-
 
 
 def autenticacao(request):
@@ -34,6 +31,7 @@ def autenticacao(request):
         else:
             # Autenticação falhou
             return render(request, 'login.html', {'login_errado': 'E-mail ou Senha incorretos!'})
+        
         
 # login deu errado, redirecionando para /autenticacao/
 @login_required(login_url="/autenticacao/")
@@ -127,6 +125,7 @@ def api_concelho():
         # return conselho
         return ''
 
+
 @login_required(login_url="/autenticacao/")
 def aprovar_dado(request):
     if request.method == 'POST':
@@ -179,6 +178,7 @@ def aprovar_dado(request):
     else:
         return redirect('pedidos_pendentes')
 
+
 @login_required(login_url="/autenticacao/")
 def reprovar_dado(request):
     if request.method == 'POST':
@@ -213,10 +213,8 @@ def reprovar_dado(request):
 
         # estou capturando o estagio dos staffs pra envio de email informando nova solicitação!
         if estagio_update == '0/5':
-        
             pass
         else:
-
             captura_estagio =  UsuariosBD.objects.filter(estagio__in=permitidos)
 
             for usuario in captura_estagio:
@@ -233,6 +231,7 @@ def reprovar_dado(request):
         return redirect('pedidos_pendentes')
     else:
         return redirect('pedidos_pendentes')
+    
     
 @login_required(login_url="/autenticacao/")
 def pedidos_aprovados(request):
@@ -284,6 +283,7 @@ def pedidos_aprovados(request):
                                                 "saudacao": saudacao(),
                                                 "concelho": api_concelho(),
                                                 "mensagem": mensagem})
+
 
 @login_required(login_url="/autenticacao/")
 def pedidos_reprovados(request):
