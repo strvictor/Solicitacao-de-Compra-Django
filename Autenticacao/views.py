@@ -119,11 +119,11 @@ def saudacao():
 
 
 def api_concelho():
-    api = APIConselhos()
-    conselho = api.obter_conselho_aleatorio()
-    if conselho:
-        # return conselho
-        return ''
+    # api = APIConselhos()
+    # conselho = api.obter_conselho_aleatorio()
+    # if conselho:
+    #   return conselho
+    return ''
 
 
 @login_required(login_url="/autenticacao/")

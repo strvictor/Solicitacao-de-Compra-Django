@@ -1,0 +1,2300 @@
+HWiNFO64 Version 8.00-5400
+
+MASTER --------------------------------------------------------------------
+
+ [Computador atual]
+  Nome do computador:                     MASTER
+ [Sistema operacional]
+  Sistema operacional:                    Microsoft Windows 10 IoT Enterprise LTSC (x64) Build 19045.2913 (22H2)
+  Inicialização UEFI:                     Presente
+  Inicialização segura:                   Desativado
+  Integridade de código protegida por hipervisor (HVCI): Desativado
+
+Processador(es) central ---------------------------------------------------
+
+ [Contagem de unidades de CPU]
+  Número de pacotes do processador (físico): 1
+  Número de núcleos de processador:       2
+  Número de processadores lógicos:        4
+
+Intel Core i3-2120 --------------------------------------------------------
+
+ [Informações gerais]
+  Nome do processador:                    Intel Core i3-2120
+  Freqüência do processador original:     3300.0 MHz
+  Original Processor Frequency [MHz]:     3300
+  CPU ID:                                 000206A7
+  Nome da marca da CPU:                   Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
+  Fornecedor de CPU:                      GenuineIntel
+  CPU Stepping:                           Q0
+  Nome do código da CPU:                  Sandy Bridge-DT
+  Tecnologia de CPU:                      32 nm
+  CPU S-Spec:                             SR05Y
+  Potência do design térmico da CPU (TDP): 65.0 W
+  Corrente do projeto térmico dos núcleos IA da CPU (TDC): 112.0 A
+  Corrente do projeto térmico dos núcleos GT da CPU (TDC): 46.0 A
+  Limites de potência da CPU (máx.):      Potência = 84.00 W, Tempo = 1.00 sec
+  Limite de potência PL1 da CPU (longa duração) / Potência básica do processador (PBP): Potência = 65.00 W, Tempo = 1.00 sec [Bloqueado]
+  Limite de potência PL2 da CPU (curta duração) / Potência turbo máxima (MTP): Potência = 81.25 W, Tempo = Ilimitado [Bloqueado]
+  CPU máx. Temperatura da junção (Tj, max): 102 °C
+  Tipo de CPU:                            Unidade de produção
+  Plataforma de CPU:                      Socket H2 (LGA1155)
+  Revisão de atualização do microcódigo:  2F
+  Número de núcleos de CPU:               2
+  Número de CPUs lógicas:                 4
+ [Pontos Operacionais]
+  CPU LFM (mínimo):                       1600.0 MHz = 16 x 100.0 MHz
+  CPU HFM (Base):                         3300.0 MHz = 33 x 100.0 MHz
+  CPU Turbo Max:                          3300.0 MHz = 33 x 100.0 MHz [Locked]
+  Limites de relação turbo:               33x (1-4c)
+  CPU atual:                              3292.9 MHz = 33 x 99.8 MHz @ 1.1559 V
+  Tipo de barramento de CPU:              Intel Direct Media Interface (DMI) v2.0
+  Velocidade máxima do link DMI:          5.0 GT/s
+  Velocidade atual do link DMI:           5.0 GT/s
+ [Cache e TLB]
+  Cache L1:                               Instruction: 2 x 32 KBytes, Data: 2 x 32 KBytes
+  Cache L2:                               Integrated: 2 x 256 KBytes
+  Cache L3:                               3 MBytes
+  Instruction TLB:                        2MB/4MB Pages, Fully associative, 8 entries
+  Data TLB:                               4 KB Pages, 4-way set associative, 64 entries
+ [Sinalizadores de recurso padrão]
+  FPU on Chip                             Presente
+  Enhanced Virtual-86 Mode                Presente
+  I/O Breakpoints                         Presente
+  Page Size Extensions                    Presente
+  Time Stamp Counter                      Presente
+  Pentium-style Model Specific Registers  Presente
+  Physical Address Extension              Presente
+  Machine Check Exception                 Presente
+  CMPXCHG8B Instruction                   Presente
+  APIC On Chip / PGE (AMD)                Presente
+  Fast System Call                        Presente
+  Memory Type Range Registers             Presente
+  Page Global Feature                     Presente
+  Machine Check Architecture              Presente
+  CMOV Instruction                        Presente
+  Page Attribute Table                    Presente
+  36-bit Page Size Extensions             Presente
+  Processor Number                        Não presente
+  CLFLUSH Instruction                     Presente
+  Debug Trace and EMON Store              Presente
+  Internal ACPI Support                   Presente
+  MMX Technology                          Presente
+  Fast FP Save/Restore (IA MMX-2)         Presente
+  Streaming SIMD Extensions               Presente
+  Streaming SIMD Extensions 2             Presente
+  Self-Snoop                              Presente
+  Multi-Threading Capable                 Presente
+  Automatic Clock Control                 Presente
+  IA-64 Processor                         Não presente
+  Signal Break on FERR                    Presente
+  Virtual Machine Extensions (VMX)        Presente
+  Safer Mode Extensions (Intel TXT)       Não presente
+  Streaming SIMD Extensions 3             Presente
+  Supplemental Streaming SIMD Extensions 3 Presente
+  Streaming SIMD Extensions 4.1           Presente
+  Streaming SIMD Extensions 4.2           Presente
+  AVX Support                             Presente
+  Fused Multiply Add (FMA)                Não presente
+  Carryless Multiplication (PCLMULQDQ)/GFMUL Presente
+  CMPXCHG16B Support                      Presente
+  MOVBE Instruction                       Não presente
+  POPCNT Instruction                      Presente
+  XSAVE/XRSTOR/XSETBV/XGETBV Instructions Presente
+  XGETBV/XSETBV OS Enabled                Presente
+  Float16 Instructions                    Não presente
+  AES Cryptography Support                Não presente
+  Random Number Read Instruction (RDRAND) Não presente
+  Extended xAPIC                          Não presente
+  MONITOR/MWAIT Support                   Presente
+  Thermal Monitor 2                       Presente
+  Enhanced SpeedStep Technology           Presente
+  L1 Context ID                           Não presente
+  Send Task Priority Messages Disabling   Presente
+  Processor Context ID                    Presente
+  Direct Cache Access                     Não presente
+  TSC-deadline Timer                      Presente
+  Performance/Debug Capability MSR        Presente
+  IA32 Debug Interface Support            Não presente
+  64-Bit Debug Store                      Presente
+  CPL Qualified Debug Store               Presente
+ [Sinalizadores de recurso estendido]
+  64-bit Extensions                       Presente
+  RDTSCP and TSC_AUX Support              Presente
+  1 GB large page support                 Não presente
+  No Execute                              Presente
+  SYSCALL/SYSRET Support                  Presente
+  Bit Manipulation Instructions Set 1     Não presente
+  Bit Manipulation Instructions Set 2     Não presente
+  Advanced Vector Extensions 2 (AVX2)     Não presente
+  Advanced Vector Extensions 512 (AVX-512) Foundation Não presente
+  AVX-512 Prefetch Instructions           Não presente
+  AVX-512 Exponential and Reciprocal Instructions Não presente
+  AVX-512 Conflict Detection Instructions Não presente
+  AVX-512 Doubleword and Quadword Instructions Não presente
+  AVX-512 Byte and Word Instructions      Não presente
+  AVX-512 Vector Length Extensions        Não presente
+  AVX-512 52-bit Integer FMA Instructions Não presente
+  Secure Hash Algorithm (SHA) Extensions  Não presente
+  Software Guard Extensions (SGX) Support Não presente
+  Supervisor Mode Execution Protection (SMEP) Não presente
+  Supervisor Mode Access Prevention (SMAP) Não presente
+  Hardware Lock Elision (HLE)             Não presente
+  Restricted Transactional Memory (RTM)   Não presente
+  Memory Protection Extensions (MPX)      Não presente
+  Read/Write FS/GS Base Instructions      Não presente
+  Enhanced Performance String Instruction Não presente
+  INVPCID Instruction                     Não presente
+  RDSEED Instruction                      Não presente
+  Multi-precision Add Carry Instructions (ADX) Não presente
+  PCOMMIT Instructions                    Não presente
+  CLFLUSHOPT Instructions                 Não presente
+  CLWB Instructions                       Não presente
+  TSC_THREAD_OFFSET                       Não presente
+  Platform Quality of Service Monitoring (PQM) Não presente
+  Platform Quality of Service Enforcement (PQE) Não presente
+  FPU Data Pointer updated only on x87 Exceptions Não presente
+  Deprecated FPU CS and FPU DS            Não presente
+  Intel Processor Trace                   Não presente
+  PREFETCHWT1 Instruction                 Não presente
+  AVX-512 Vector Bit Manipulation Instructions Não presente
+  AVX-512 Vector Bit Manipulation Instructions 2 Não presente
+  AVX-512 Galois Fields New Instructions  Não presente
+  AVX-512 Vector AES                      Não presente
+  AVX-512 Vector Neural Network Instructions Não presente
+  AVX-512 Bit Algorithms                  Não presente
+  AVX-512 Carry-Less Multiplication Quadword (VPCLMULQDQ) Não presente
+  AVX-512 Vector POPCNT (VPOPCNTD/VPOPCNTQ) Não presente
+  User-Mode Instruction Prevention        Não presente
+  Protection Keys for User-mode Pages     Não presente
+  OS Enabled Protection Keys              Não presente
+  Wait and Pause Enhancements (WAITPKG)   Não presente
+  Total Memory Encryption                 Não presente
+  Key Locker                              Não presente
+  57-bit Linear Addresses, 5-level Paging Não presente
+  Read Processor ID                       Não presente
+  OS Bus-Lock Detection                   Não presente
+  Cache Line Demote                       Não presente
+  MOVDIRI: Direct Stores                  Não presente
+  MOVDIR64B: Direct Stores                Não presente
+  ENQCMD: Enqueue Stores                  Não presente
+  SGX Launch Configuration                Não presente
+  Protection Keys for Supervisor-Mode Pages Não presente
+  Control-Flow Enforcement Technology (CET) Shadow Stack Não presente
+  Attestation Services for Intel SGX      Não presente
+  AVX-512 4 x Vector Neural Network Instructions Word Variable Precision Não presente
+  AVX-512 4 x Fused Multiply Accumulation Packed Single Precision Não presente
+  Fast Short REP MOV                      Não presente
+  User Interrupts                         Não presente
+  AVX-512 VP2INTERSECT Support            Não presente
+  AVX-512 FP16                            Não presente
+  MD_CLEAR Support                        Presente
+  IA32_MCU_OPT_CTRL MSR Support           Não presente
+  Restricted Transactional Memory (RTM) Always Abort Não presente
+  Restricted Transactional Memory (RTM) Force Abort Não presente
+  SERIALIZE                               Não presente
+  Hybrid Processor                        Não presente
+  TSX Suspend Load Address Tracking       Não presente
+  Platform Configuration (PCONFIG)        Não presente
+  Architectural LBRs                      Não presente
+  Indirect Branch Restricted Speculation (IBRS), Indirect Branch Predictor Barrier (IBPB) Presente
+  Single Thread Indirect Branch Predictors (STIBP) Presente
+  L1D_FLUSH Support                       Presente
+  IA32_ARCH_CAPABILITIES MSR              Não presente
+  IA32_CORE_CAPABILITIES MSR              Não presente
+  Speculative Store Bypass Disable (SSBD) Presente
+  Control-Flow Enforcement Technology (CET) Indirect Branch Tracking Não presente
+  Advanced Matrix Extensions (AMX) Tile Architecture Não presente
+  Advanced Matrix Extensions (AMX) bfloat16 Support Não presente
+  Advanced Matrix Extensions (AMX) 8-bit Integer Operations Não presente
+  SHA512 Instructions                     Não presente
+  SM3 Instructions                        Não presente
+  SM4 Instructions                        Não presente
+  Advanced Matrix Extensions (AMX) FP16 Instructions Não presente
+  AVX (VEX-encoded) Vector Neural Network Instructions Não presente
+  AVX-512 BFLOAT16 Instructions           Não presente
+  Fast Zero-Length MOVSB                  Não presente
+  Fast Short STOSB                        Não presente
+  Fast Short CMPSB, SCASB                 Não presente
+  History Reset                           Não presente
+  Linear Address Masking                  Não presente
+  Linear Address Space Separation         Não presente
+  RAO-INT Instructions                    Não presente
+  CMPccXADD Instructions                  Não presente
+  Flexible Return and Event Delivery (FRED) Não presente
+  LKGS Instruction                        Não presente
+  WRMSRNS Instruction                     Não presente
+  NMI-source Reporting                    Não presente
+  AVX-IFMA Instructions                   Não presente
+  RD/WR MSRLIST Instructions              Não presente
+  INVD Execution Prevention After BIOS-Done Não presente
+  Protected Processor Inventory Number (IA32_PPIN) Support Não presente
+  PBNDKB Instruction                      Não presente
+  AVX-VNNI-INT8 Instructions              Não presente
+  AVX-VNNI-INT16 Instructions             Presente
+  AVX-NE-CONVERT Instructions             Não presente
+  PREFETCHIT0/1 Instructions              Não presente
+  URDMSR/UWRMSR Instructions              Não presente
+  AMX-COMPLEX Instructions                Não presente
+  CET Supervisor Shadow-Stack             Não presente
+  UIRET Support                           Não presente
+  Advanced Vector Extensions 10 (AVX10)   Não presente
+  Advanced Performance Extensions (APX) Foundation Não presente
+  Not Exhibiting MXCSR Configuration Dependent Timing (MCDT) Não presente
+  UC-Lock Disable Feature                 Não presente
+ [Recursos aprimorados]
+  Thermal Monitor 1:                      Suportado, Habilitado
+  Thermal Monitor 2:                      Suportado, Habilitado
+  Enhanced Intel SpeedStep (GV3):         Suportado, Habilitado
+  Bi-directional PROCHOT#:                Habilitado
+  Extended Auto-HALT State C1E:           Habilitado
+  MLC Streamer Prefetcher                 Suportado, Habilitado
+  MLC Spatial Prefetcher                  Suportado, Habilitado
+  DCU Streamer Prefetcher                 Suportado, Habilitado
+  DCU IP Prefetcher                       Suportado, Habilitado
+  Intel Dynamic Acceleration (IDA) Technology: Não suportado
+  Intel Dynamic FSB Switching:            Não suportado
+  Intel Turbo Boost Technology:           Não suportado
+  Programmable Ratio Limits:              Não suportado
+  Programmable TDC/TDP Limits:            Suportado, Desativado
+  Hardware Duty Cycling:                  Não suportado
+  Intel Speed Select:                     Não suportado
+ [CPU SNB Features]
+  Internal Graphics:                      Suportado
+  2 DIMMS per Channel:                    Suportado
+  VT-d:                                   Não suportado
+  ECC:                                    Não suportado
+  DDR3 Frequency Support:                 667 MHz (DDR3-1333)
+ [Intervalos de memória]
+  Tamanho máximo do endereço físico:      36-bit (64 GBytes)
+  Tamanho máximo do endereço virtual:     48-bit (256 TBytes)
+ [MTRRs]
+  Range 0-100000000 (0MB-4096MB) Type:    Write Back (WB)
+  Range 100000000-120000000 (4096MB-4608MB) Type: Write Back (WB)
+  Range E0000000-100000000 (3584MB-4096MB) Type: Uncacheable (UC)
+  Range DC000000-E0000000 (3520MB-3584MB) Type: Uncacheable (UC)
+  Range DB800000-DC000000 (3512MB-3520MB) Type: Uncacheable (UC)
+  Range 11F800000-120000000 (4600MB-4608MB) Type: Uncacheable (UC)
+  Range 11F600000-11F800000 (4598MB-4600MB) Type: Uncacheable (UC)
+
+Placa-mãe -----------------------------------------------------------------
+
+ [Computador]
+  Nome da marca do computador:            Desconhecido ou sem nome
+ [Placa-mãe]
+  Modelo de placa-mãe:                    INTEL Corporation B75
+  Chipset da placa-mãe:                   Intel H77 (Panther Point Base)
+  Slots da placa-mãe:                     4xPCI Express x1, 1xPCI Express x4, 1xPCI Express x16
+  Versão PCI Express suportada:           v2.0
+  Versão USB suportada:                   v3.0
+ [PCH Características]
+  USB Port Count:                         14 ports
+  RAID Capability:                        RAID0/1/5/10 + Smart Response Technology
+  SATA Ports 2 and 3:                     Suportado
+  SATA Port 1 6 Gb/s:                     Suportado
+  SATA Port 0 6 Gb/s:                     Suportado
+  PCI Interface:                          Não suportado
+  PCI Express Ports 5 and 6:              Suportado
+  USB Redirect (USBr):                    Não suportado
+  Intel Anti-Theft Technology:            Não suportado
+  PCI Express Ports 7 and 8:              Suportado
+  PCH Integrated Graphics Support:        Suportado
+  Data Center Manageability Interface (DCMI): Suportado
+  Node Manager:                           Suportado
+ [BIOS]
+  Fabricante da BIOS:                     American Megatrends
+  Data BIOS (mm/dd/yyyy):                 09/29/2021
+  Versão do BIOS:                         4.6.5
+  UEFI BIOS:                              Capaz
+  Chip Super-IO / LPC:                    Unknown
+  Chip Trusted Platform Module (TPM):     Not Found
+
+Dispositivos ACPI ---------------------------------------------------------
+
+
+Legacy device -------------------------------------------------------------
+
+  Nome do dispositivo:                    Legacy device
+ [Recursos Atribuídos]
+  Localização da memória:                 FF000000 - FFFFFFFF
+ [Alternative 1]
+  Localização da memória:                 FF000000 - FFFFFFFF
+
+Motherboard resources -----------------------------------------------------
+
+  Nome do dispositivo:                    Motherboard resources
+ [Recursos Atribuídos]
+  Porta de E/S:                           0454 - 0457
+ [Alternative 1]
+  Porta de E/S:                           0454 - 0457
+
+Programmable interrupt controller -----------------------------------------
+
+  Nome do dispositivo:                    Programmable interrupt controller
+ [Recursos Atribuídos]
+  Porta de E/S:                           0020 - 0021
+  Porta de E/S:                           0030 - 0031
+  Porta de E/S:                           00A0 - 00A1
+  Porta de E/S:                           00B0 - 00B1
+  IRQ:                                    1114369
+  IRQ:                                    1114369
+  IRQ:                                    1114369
+  IRQ:                                    1114369
+ [Alternative 1]
+  Porta de E/S:                           0020 - 0021
+  Porta de E/S:                           0024 - 0025
+  Porta de E/S:                           0028 - 0029
+  Porta de E/S:                           002C - 002D
+  Porta de E/S:                           0030 - 0031
+  Porta de E/S:                           0034 - 0035
+  Porta de E/S:                           0038 - 0039
+  Porta de E/S:                           003C - 003D
+  Porta de E/S:                           00A0 - 00A1
+  Porta de E/S:                           00A4 - 00A5
+  Porta de E/S:                           00A8 - 00A9
+  Porta de E/S:                           00AC - 00AD
+  Porta de E/S:                           00B0 - 00B1
+  Porta de E/S:                           00B4 - 00B5
+  Porta de E/S:                           00B8 - 00B9
+  Porta de E/S:                           00BC - 00BD
+  Porta de E/S:                           04D0 - 04D1
+
+System timer --------------------------------------------------------------
+
+  Nome do dispositivo:                    System timer
+ [Recursos Atribuídos]
+  Porta de E/S:                           0040 - 0043
+  DMA:                                    0
+ [Alternative 1]
+  Porta de E/S:                           0040 - 0043
+  Porta de E/S:                           0050 - 0053
+  IRQ:                                    0
+
+High precision event timer ------------------------------------------------
+
+  Nome do dispositivo:                    High precision event timer
+ [Recursos Atribuídos]
+  Localização da memória:                 FED00000 - FED003FF
+ [Alternative 1]
+  Localização da memória:                 FED00000 - FED003FF
+
+Direct memory access controller -------------------------------------------
+
+  Nome do dispositivo:                    Direct memory access controller
+ [Recursos Atribuídos]
+  Porta de E/S:                           0000 - 001F
+ [Alternative 1]
+  Porta de E/S:                           0000 - 001F
+  Porta de E/S:                           0081 - 0091
+  Porta de E/S:                           0093 - 009F
+  Porta de E/S:                           00C0 - 00DF
+  DMA:                                    4
+
+PCI Express Root Complex --------------------------------------------------
+
+  Nome do dispositivo:                    PCI Express Root Complex
+ [Recursos Atribuídos]
+  Porta de E/S:                           0000 - FFFFFFFF
+  Localização da memória:                 000A0000 - 000BFFFF
+  Localização da memória:                 000D4000 - 000D3FFF
+  Localização da memória:                 000DC000 - 000DFFFF
+ [Alternative 1]
+  Porta de E/S:                           0000 - 0CF7
+  Porta de E/S:                           0D00 - FFFF
+  Localização da memória:                 000A0000 - 000BFFFF
+  Localização da memória:                 000D0000 - 000D3FFF
+  Localização da memória:                 000D4000 - 000D7FFF
+  Localização da memória:                 000D8000 - 000DBFFF
+  Localização da memória:                 000DC000 - 000DFFFF
+  Localização da memória:                 DFA00000 - FEAFFFFF
+
+System CMOS/real time clock -----------------------------------------------
+
+  Nome do dispositivo:                    System CMOS/real time clock
+ [Recursos Atribuídos]
+  Porta de E/S:                           0070 - 0077
+ [Alternative 1]
+  Porta de E/S:                           0070 - 0077
+  IRQ:                                    8
+
+System board --------------------------------------------------------------
+
+  Nome do dispositivo:                    System board
+ [Recursos Atribuídos]
+  Localização da memória:                 FED40000 - FED44FFF
+ [Alternative 1]
+  Localização da memória:                 FED40000 - FED44FFF
+
+System board --------------------------------------------------------------
+
+  Nome do dispositivo:                    System board
+ [Recursos Atribuídos]
+  Localização da memória:                 20000000 - 201FFFFF
+ [Alternative 1]
+  Localização da memória:                 20000000 - 201FFFFF
+  Localização da memória:                 40000000 - 401FFFFF
+
+Motherboard resources -----------------------------------------------------
+
+  Nome do dispositivo:                    Motherboard resources
+ [Recursos Atribuídos]
+  Localização da memória:                 FED1C000 - FED1FFFF
+  Localização da memória:                 F8000000 - FBFFFFFF
+  Localização da memória:                 FF000000 - FFFFFFFF
+ [Alternative 1]
+  Localização da memória:                 FED1C000 - FED1FFFF
+  Localização da memória:                 FED10000 - FED17FFF
+  Localização da memória:                 FED18000 - FED18FFF
+  Localização da memória:                 FED19000 - FED19FFF
+  Localização da memória:                 F8000000 - FBFFFFFF
+  Localização da memória:                 FED20000 - FED3FFFF
+  Localização da memória:                 FED90000 - FED93FFF
+  Localização da memória:                 FED45000 - FED8FFFF
+  Localização da memória:                 FF000000 - FFFFFFFF
+  Localização da memória:                 FEE00000 - FEEFFFFF
+  Localização da memória:                 DFA00000 - DFA00FFF
+
+Motherboard resources -----------------------------------------------------
+
+  Nome do dispositivo:                    Motherboard resources
+ [Recursos Atribuídos]
+  Porta de E/S:                           0010 - 001F
+  Porta de E/S:                           0065 - 006F
+  Porta de E/S:                           0088
+  Localização da memória:                 00000000 - 0000008F
+ [Alternative 1]
+  Porta de E/S:                           0010 - 001F
+  Porta de E/S:                           0022 - 003F
+  Porta de E/S:                           0044 - 005F
+  Porta de E/S:                           0062 - 0063
+  Porta de E/S:                           0065 - 006F
+  Porta de E/S:                           0072 - 007F
+  Porta de E/S:                           0080
+  Porta de E/S:                           0084 - 0086
+  Porta de E/S:                           0088
+  Porta de E/S:                           008C - 008E
+  Porta de E/S:                           0090 - 009F
+  Porta de E/S:                           00A2 - 00BF
+  Porta de E/S:                           00E0 - 00EF
+  Porta de E/S:                           04D0 - 04D1
+
+Motherboard resources -----------------------------------------------------
+
+  Nome do dispositivo:                    Motherboard resources
+ [Recursos Atribuídos]
+  Porta de E/S:                           002E - 002F
+  Porta de E/S:                           0065
+  Porta de E/S:                           0000 - 006F
+  Porta de E/S:                           0092
+  Porta de E/S:                           FFFF
+  Porta de E/S:                           0000 - 03FF
+  IRQ:                                    1114369
+  IRQ:                                    1114369
+ [Alternative 1]
+  Porta de E/S:                           002E - 002F
+  Porta de E/S:                           004E - 004F
+  Porta de E/S:                           0061
+  Porta de E/S:                           0063
+  Porta de E/S:                           0065
+  Porta de E/S:                           0067
+  Porta de E/S:                           0070
+  Porta de E/S:                           0080
+  Porta de E/S:                           0092
+  Porta de E/S:                           00B2 - 00B3
+  Porta de E/S:                           0680 - 069F
+  Porta de E/S:                           1000 - 100F
+  Porta de E/S:                           FFFF
+  Porta de E/S:                           FFFF
+  Porta de E/S:                           0400 - 0453
+  Porta de E/S:                           0458 - 047F
+  Porta de E/S:                           0500 - 057F
+  Porta de E/S:                           164E - 164F
+
+Numeric data processor ----------------------------------------------------
+
+  Nome do dispositivo:                    Numeric data processor
+ [Recursos Atribuídos]
+  Porta de E/S:                           00F0 - 00FF
+ [Alternative 1]
+  Porta de E/S:                           00F0 - 00FF
+  IRQ:                                    13
+
+SMBIOS DMI ----------------------------------------------------------------
+
+
+BIOS ----------------------------------------------------------------------
+
+  Fabricante da BIOS:                     American Megatrends Inc.
+  Versão do BIOS:                         4.6.5
+  Data de lançamento do BIOS (mm/dd/yyyy): 09/29/2021
+  Segmento de inicialização do BIOS:      F000
+  Tamanho do BIOS:                        2560 KBytes
+  Versão do BIOS do sistema:              4.6
+  ISA Support:                            Não presente
+  MCA Support:                            Não presente
+  EISA Support:                           Não presente
+  PCI Support:                            Presente
+  PC Card (PCMCIA) Support:               Não presente
+  Plug-and-Play Support:                  Não presente
+  APM Support:                            Não presente
+  Flash BIOS:                             Presente
+  BIOS Shadow:                            Presente
+  VL-VESA Support:                        Não presente
+  ESCD Support:                           Não presente
+  Boot from CD:                           Presente
+  Selectable Boot:                        Presente
+  BIOS ROM Socketed:                      Presente
+  Boot from PC Card:                      Não presente
+  EDD Support:                            Presente
+  NEC PC-98 Support:                      Não presente
+  ACPI Support:                           Presente
+  USB Legacy Support:                     Presente
+  AGP Support:                            Não presente
+  I2O Boot Support:                       Não presente
+  LS-120 Boot Support:                    Não presente
+  ATAPI ZIP Drive Boot Support:           Não presente
+  IEE1394 Boot Support:                   Não presente
+  Smart Battery Support:                  Não presente
+  BIOS Boot Specification Support:        Presente
+  Function key-initiated Network Service Boot Support: Não presente
+  Targeted Content Distribution Support:  Presente
+  UEFI Specification Support:             Presente
+  Virtual Machine:                        Não presente
+
+Sistema -------------------------------------------------------------------
+
+  Fabricante do sistema:                  To be filled by O.E.M.
+  Nome do produto:                        To be filled by O.E.M.
+  Versão do produto:                      To be filled by O.E.M.
+  Número de série do produto:             To be filled by O.E.M.
+  SKU Number:                             To be filled by O.E.M.
+  Family:                                 To be filled by O.E.M.
+
+Placa-mãe -----------------------------------------------------------------
+
+  Fabricante da placa-mãe:                INTEL Corporation
+  Nome da placa-mãe:                      B75
+  Versão da placa-mãe:                    To be filled by O.E.M.
+  Número de série da placa-mãe:           To be filled by O.E.M.
+  Ativo Tag:                              To be filled by O.E.M.
+  Localização no chassi do:               To be filled by O.E.M.
+
+Gabinete do sistema -------------------------------------------------------
+
+  Fabricante:                             To Be Filled By O.E.M.
+  Tipo de caixa:                          Desktop
+  Versão:                                 To Be Filled By O.E.M.
+  Número de série:                        To Be Filled By O.E.M.
+  Número da etiqueta do ativo:            To Be Filled By O.E.M.
+
+Dispositivo a bordo -------------------------------------------------------
+
+  Descrição do dispositivo:                  To Be Filled By O.E.M.
+  Tipo de dispositivo:                    Video Adapter
+  Status do dispositivo:                  Habilitado
+
+Strings de texto OEM ------------------------------------------------------
+
+
+
+Opções de configuração do sistema -----------------------------------------
+
+
+
+Informações de inicialização do sistema -----------------------------------
+
+  Status de inicialização:                Não ocorreu nenhum erro
+
+Dispositivo de Gestão -----------------------------------------------------
+
+  Descrição do dispositivo:               LM78-1
+  Tipo de dispositivo:                    National Semiconductor LM78
+  Device Address:                         I/O: 0
+
+Sonda de Tensão -----------------------------------------------------------
+
+  Descrição:                              LM78A
+  Location:                               Desconhecido
+  Status:                                 Desconhecido
+  Maximum Value:                          Unknown
+  Minimum Value:                          Unknown
+  Resolution:                             Unknown
+  Tolerance:                              Unknown
+  Accuracy:                               Unknown
+
+Management Device Threshold Data ------------------------------------------
+
+
+Componente de dispositivo de gerenciamento --------------------------------
+
+
+Sonda de temperatura ------------------------------------------------------
+
+  Descrição:                              LM78A
+  Location:                               Unknown
+  Status:                                 Unknown
+  Maximum Value:                          Unknown
+  Minimum Value:                          Unknown
+  Nominal Value:                          Unknown
+  Resolution:                             Unknown
+  Tolerance:                              Unknown
+  Accuracy:                               Unknown
+
+Management Device Threshold Data ------------------------------------------
+
+
+Componente de dispositivo de gerenciamento --------------------------------
+
+
+Dispositivo de resfriamento -----------------------------------------------
+
+  Modelo:                                 Unknown
+  Descrição:                              Cooling Dev 1
+  Status:                                 Unknown
+
+Management Device Threshold Data ------------------------------------------
+
+
+Componente de dispositivo de gerenciamento --------------------------------
+
+
+Dispositivo de resfriamento -----------------------------------------------
+
+  Modelo:                                 Unknown
+  Descrição:                              
+  Status:                                 Unknown
+
+Management Device Threshold Data ------------------------------------------
+
+
+Componente de dispositivo de gerenciamento --------------------------------
+
+
+Sonda de corrente elétrica ------------------------------------------------
+
+  Descrição:                              ABC
+  Location:                               Desconhecido
+  Status:                                 Desconhecido
+  Maximum Value:                          Unknown
+  Minimum Value:                          Unknown
+  Resolution:                             Unknown
+  Tolerance:                              Unknown
+  Accuracy:                               Unknown
+
+Management Device Threshold Data ------------------------------------------
+
+
+Componente de dispositivo de gerenciamento --------------------------------
+
+
+Sonda de Tensão -----------------------------------------------------------
+
+  Descrição:                              LM78A
+  Location:                               Consumo de energia Unit
+  Status:                                 OK
+  Maximum Value:                          Unknown
+  Minimum Value:                          Unknown
+  Resolution:                             Unknown
+  Tolerance:                              Unknown
+  Accuracy:                               Unknown
+
+Sonda de temperatura ------------------------------------------------------
+
+  Descrição:                              LM78A
+  Location:                               Power Unit
+  Status:                                 OK
+  Maximum Value:                          Unknown
+  Minimum Value:                          OK
+  Nominal Value:                          OK
+  Resolution:                             OK
+  Tolerance:                              OK
+  Accuracy:                               Unknown
+
+Dispositivo de resfriamento -----------------------------------------------
+
+  Modelo:                                 Power Supply Fan
+  Descrição:                              Cooling Dev 1
+  Status:                                 OK
+
+Sonda de corrente elétrica ------------------------------------------------
+
+  Descrição:                              ABC
+  Location:                               Consumo de energia Unit
+  Status:                                 OK
+  Maximum Value:                          Unknown
+  Minimum Value:                          Unknown
+  Resolution:                             Unknown
+  Tolerance:                              Unknown
+  Accuracy:                               Unknown
+
+Fonte de alimentação do sistema -------------------------------------------
+
+  Location:                               To Be Filled By O.E.M.
+  Nome do dispositivo:                    To Be Filled By O.E.M.
+  Fabricante:                             To Be Filled By O.E.M.
+  Número de série:                        To Be Filled By O.E.M.
+  Número da etiqueta do ativo:            To Be Filled By O.E.M.
+  Model Part Number:                      To Be Filled By O.E.M.
+  Revision Level:                         To Be Filled By O.E.M.
+  Power Supply Status:                    Presente
+  Power Supply Type:                      Switching
+  Status de energia:                      OK
+  Hot replaceable:                        Não
+  Unplugged from wall:                    Não
+
+Dispositivo a bordo -------------------------------------------------------
+
+  Descrição do dispositivo:                Onboard IGD
+  Tipo de dispositivo:                    Video Adapter
+  Status do dispositivo:                  Habilitado
+
+Dispositivo a bordo -------------------------------------------------------
+
+  Descrição do dispositivo:                Onboard LAN
+  Tipo de dispositivo:                    Ethernet Adapter
+  Status do dispositivo:                  Habilitado
+
+Dispositivo a bordo -------------------------------------------------------
+
+  Descrição do dispositivo:                Onboard 1394
+  Tipo de dispositivo:                    Unknown
+  Status do dispositivo:                  Habilitado
+
+CPU Interno L2 ------------------------------------------------------------
+
+  Designação de soquete:                  CPU Internal L2
+  Estado do cache:                        Habilitado
+  Localização do cache:                   Interno
+  Tipo de cache:                          L2 Unified
+  Esquema de cache:                       Write-Through
+  Tipo de SRAM com suporte:               
+  Tipo de SRAM atual:                     
+  Velocidade do cache:                    Unknown
+  Tipo de correção de erro:               Multi-bit ECC
+  Tamanho máximo do cache:                512 KBytes
+  Tamanho do cache instalado:             512 KBytes
+  Associatividade do cache:               8-way Set-Associative
+
+CPU Interno L1 ------------------------------------------------------------
+
+  Designação de soquete:                  CPU Internal L1
+  Estado do cache:                        Habilitado
+  Localização do cache:                   Interno
+  Tipo de cache:                          L1 Data
+  Esquema de cache:                       Write-Through
+  Tipo de SRAM com suporte:               
+  Tipo de SRAM atual:                     
+  Velocidade do cache:                    Unknown
+  Tipo de correção de erro:               Parity
+  Tamanho máximo do cache:                128 KBytes
+  Tamanho do cache instalado:             128 KBytes
+  Associatividade do cache:               8-way Set-Associative
+
+CPU Interno L3 ------------------------------------------------------------
+
+  Designação de soquete:                  CPU Internal L3
+  Estado do cache:                        Habilitado
+  Localização do cache:                   Interno
+  Tipo de cache:                          L3 Unified
+  Esquema de cache:                       Write-Back
+  Tipo de SRAM com suporte:               
+  Tipo de SRAM atual:                     
+  Velocidade do cache:                    Unknown
+  Tipo de correção de erro:               Multi-bit ECC
+  Tamanho máximo do cache:                3072 KBytes
+  Tamanho do cache instalado:             3072 KBytes
+  Associatividade do cache:               12-way Set-Associative
+
+Processador ---------------------------------------------------------------
+
+  Fabricante do processador:              Intel(R) Corporation
+  Versão do processador:                  Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
+  Freqüência externa:                     100 MHz
+  Frequência máxima suportada:            3800 MHz
+  Frequência atual:                       3300 MHz
+  Soquete de CPU:                         Preenchida
+  Status da CPU:                          Habilitado
+  Tipo de processador:                    Processador central
+  Tensão do processador:                  1.1 V
+  Atualização do processador:             Socket BGA1155
+  Designação de soquete:                  SOCKET 0
+
+Idioma da BIOS ------------------------------------------------------------
+
+
+
+Dispositivos de memória ---------------------------------------------------
+
+
+Matriz de memória física --------------------------------------------------
+
+  Localização da matriz:                  System board
+  Uso da matriz:                          System memory
+  Método de detecção de erros:            Nenhum
+  Capacidade de memória:                  32 GBytes
+  Dispositivos de memória:                4
+
+Dispositivo de memória ----------------------------------------------------
+
+  Largura Total:                          64 bits
+  Largura dos dados:                      64 bits
+  Tamanho do dispositivo:                 2048 MBytes
+  Fator de forma do dispositivo:          DIMM
+  Localizador de dispositivos:            ChannelA-DIMM0
+  Localizador de bancos:                  BANK 0
+  Tipo de dispositivo:                    DDR3 SDRAM
+  Detalhe do tipo de dispositivo:         Synchronous
+  Fabricante:                             Micron
+  Número de série:                        DFC6D729
+  Número da peça:                         4JTF25664AZ-1G6E1 
+  Ativo Tag:                              9876543210
+
+Dispositivo de memória ----------------------------------------------------
+
+  Largura Total:                          0 bits
+  Largura dos dados:                      0 bits
+  Tamanho do dispositivo:                 0 MBytes
+  Fator de forma do dispositivo:          DIMM
+  Localizador de dispositivos:            ChannelA-DIMM1
+  Localizador de bancos:                  BANK 1
+  Tipo de dispositivo:                    Unknown
+  Detalhe do tipo de dispositivo:         
+  Fabricante:                             [Empty]
+  Número de série:                        [Empty]
+  Número da peça:                         [Empty]
+  Ativo Tag:                              9876543210
+
+Dispositivo de memória ----------------------------------------------------
+
+  Largura Total:                          64 bits
+  Largura dos dados:                      64 bits
+  Tamanho do dispositivo:                 2048 MBytes
+  Fator de forma do dispositivo:          DIMM
+  Localizador de dispositivos:            ChannelB-DIMM0
+  Localizador de bancos:                  BANK 2
+  Tipo de dispositivo:                    DDR3 SDRAM
+  Detalhe do tipo de dispositivo:         Synchronous
+  Fabricante:                             Micron
+  Número de série:                        DEA3D2E7
+  Número da peça:                         4JTF25664AZ-1G6E1 
+  Ativo Tag:                              9876543210
+
+Dispositivo de memória ----------------------------------------------------
+
+  Largura Total:                          0 bits
+  Largura dos dados:                      0 bits
+  Tamanho do dispositivo:                 0 MBytes
+  Fator de forma do dispositivo:          DIMM
+  Localizador de dispositivos:            ChannelB-DIMM1
+  Localizador de bancos:                  BANK 3
+  Tipo de dispositivo:                    Unknown
+  Detalhe do tipo de dispositivo:         
+  Fabricante:                             [Empty]
+  Número de série:                        [Empty]
+  Número da peça:                         [Empty]
+  Ativo Tag:                              9876543210
+
+Endereço mapeado da matriz de memória -------------------------------------
+
+  Endereço inicial:                       00000000
+  Endereço final:                         003FFFFF
+  Largura da partição:                    4
+
+Conectores de porta -------------------------------------------------------
+
+
+Mouse Port ----------------------------------------------------------------
+
+  Tipo de porta:                          Mouse Port
+  Referência interna:                     J1A1
+  Tipo de conector interno:               Nenhum
+  Referência externa:                     PS2Mouse
+  Tipo de conector externo:               PS/2
+
+Keyboard Port -------------------------------------------------------------
+
+  Tipo de porta:                          Keyboard Port
+  Referência interna:                     J1A1
+  Tipo de conector interno:               Nenhum
+  Referência externa:                     Keyboard
+  Tipo de conector externo:               PS/2
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J2A1
+  Tipo de conector interno:               Nenhum
+  Referência externa:                     TV Out
+  Tipo de conector externo:               Mini-Centronics Type-14
+
+Serial Port 16550A Compatible ---------------------------------------------
+
+  Tipo de porta:                          Serial Port 16550A Compatible
+  Referência interna:                     J2A2A
+  Tipo de conector interno:               Nenhum
+  Referência externa:                     COM A
+  Tipo de conector externo:               DB-9 pin male
+
+Video Port ----------------------------------------------------------------
+
+  Tipo de porta:                          Video Port
+  Referência interna:                     J2A2B
+  Tipo de conector interno:               Nenhum
+  Referência externa:                     Video
+  Tipo de conector externo:               DB-15 pin female
+
+USB -----------------------------------------------------------------------
+
+  Tipo de porta:                          USB
+  Referência interna:                     J3A1
+  Tipo de conector interno:               Nenhum
+  Referência externa:                     USB1
+  Tipo de conector externo:               Access Bus (USB)
+
+USB -----------------------------------------------------------------------
+
+  Tipo de porta:                          USB
+  Referência interna:                     J3A1
+  Tipo de conector interno:               Nenhum
+  Referência externa:                     USB2
+  Tipo de conector externo:               Access Bus (USB)
+
+USB -----------------------------------------------------------------------
+
+  Tipo de porta:                          USB
+  Referência interna:                     J3A1
+  Tipo de conector interno:               Nenhum
+  Referência externa:                     USB3
+  Tipo de conector externo:               Access Bus (USB)
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J9A1 - TPM HDR
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J9C1 - PCIE DOCKING CONN
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J2B3 - CPU FAN
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J6C2 - EXT HDMI
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J3C1 - GMCH FAN
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J1D1 - ITP
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J9E2 - MDC INTPSR
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J9E4 - MDC INTPSR
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J9E3 - LPC HOT DOCKING
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J9E1 - SCAN MATRIX
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J9G1 - LPC SIDE BAND
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J8F1 - UNIFIED
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J6F1 - LVDS
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J2F1 - LAI FAN
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J2G1 - GFX VID
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Conector de porta ---------------------------------------------------------
+
+  Tipo de porta:                          Desconhecido
+  Referência interna:                     J1G6 - AC JACK
+  Tipo de conector interno:               Desconhecido
+  Referência externa:                     
+  Tipo de conector externo:               Nenhum
+
+Slots do sistema ----------------------------------------------------------
+
+
+J6B2 ----------------------------------------------------------------------
+
+  Designação de slot:                     J6B2
+  Tipo de slot:                           PCI Express
+  Uso de slot:                            Em uso
+  Largura do barramento de dados do slot: 16x / x16
+  Comprimento do slot:                    Grandes
+  Base Bus:Device:Function Number:        0:1:0
+
+J6B1 ----------------------------------------------------------------------
+
+  Designação de slot:                     J6B1
+  Tipo de slot:                           PCI Express
+  Uso de slot:                            Em uso
+  Largura do barramento de dados do slot: 1x / x1
+  Comprimento do slot:                    Baixo
+  Base Bus:Device:Function Number:        0:28:3
+
+J6D1 ----------------------------------------------------------------------
+
+  Designação de slot:                     J6D1
+  Tipo de slot:                           PCI Express
+  Uso de slot:                            Em uso
+  Largura do barramento de dados do slot: 1x / x1
+  Comprimento do slot:                    Baixo
+  Base Bus:Device:Function Number:        0:28:4
+
+J7B1 ----------------------------------------------------------------------
+
+  Designação de slot:                     J7B1
+  Tipo de slot:                           PCI Express
+  Uso de slot:                            Em uso
+  Largura do barramento de dados do slot: 1x / x1
+  Comprimento do slot:                    Baixo
+  Base Bus:Device:Function Number:        0:28:5
+
+J8B4 ----------------------------------------------------------------------
+
+  Designação de slot:                     J8B4
+  Tipo de slot:                           PCI Express
+  Uso de slot:                            Em uso
+  Largura do barramento de dados do slot: 1x / x1
+  Comprimento do slot:                    Baixo
+  Base Bus:Device:Function Number:        0:28:6
+
+Memória -------------------------------------------------------------------
+
+ [Informações gerais]
+  Tamanho total da memória:               4 GBytes
+  Total Memory Size [MB]:                 4096
+ [Configurações atuais de desempenho]
+  Frequência máxima de memória suportada: 666.7 MHz
+  Frequência de memória atual:            665.2 MHz
+  Tempo Atual (tCAS-tRCD-tRP-tRAS):       9-9-9-24
+  Canais de memória suportados:           2
+  Canais de memória ativos:               2
+  Taxa de comando (CR):                   1T
+  Read to Read Delay (tRDRD_DG/TrdrdScDlr) Different Bank Group: 1T
+  Read to Read Delay (tRDRD_DD) Different DIMM: 3T
+  Write to Write Delay (tWRWR_DG/TwrwrScDlr) Different Bank Group: 3T
+  Write to Write Delay (tWRWR_DD) Different DIMM: 5T
+  Read to Write Delay (tRDWR_SG/TrdwrScL) Same Bank Group: 3T
+  Read to Write Delay (tRDWR_DG/TrdwrScDlr) Different Bank Group: 3T
+  Read to Write Delay (tRDWR_DD) Different DIMM: 3T
+  Write to Read Delay (tWRRD_SG/TwrrdScL) Same Bank Group: 5T
+  Write to Read Delay (tWRRD_DG/TwrrdScDlr) Different Bank Group: 1T
+  Write to Read Delay (tWRRD_DD) Different DIMM: 1T
+  Read to Precharge Delay (tRTP):         5T
+  Write to Precharge Delay (tWTP):        21T
+  Write Recovery Time (tWR):              10T
+  RAS# to RAS# Delay (tRRD):              5T
+  Row Cycle Time (tRC):                   33T
+  Refresh Cycle Time (tRFC):              174T
+  Four Activate Window (tFAW):            27T
+
+Fileira: 0 [BANK 0/ChannelA-DIMM0] - 2 GB PC3-12800 DDR3 SDRAM Micron 4JTF25664AZ-1G6E1
+
+ [Informações gerais do módulo]
+  Número do módulo:                       0
+  Tamanho do módulo:                      2 GBytes
+  Tipo de memória:                        DDR3 SDRAM
+  Tipo de módulo:                         Unbuffered DIMM (UDIMM)
+  Velocidade da memória:                  800.0 MHz (DDR3-1600 / PC3-12800)
+  Fabricante do módulo:                   Micron
+  Número da peça do módulo:               4JTF25664AZ-1G6E1
+  Revisão do módulo:                      12613
+  Número de série do módulo:              702007007 (DFC6D729)
+  Data de fabricação do módulo:           Ano: 2014, Semana: 18
+  Local de fabricação do módulo:          15
+  SDRAM Fabricante:                       Micron
+  Verificação / correção de erros:        Nenhum
+ [Características do Módulo]
+  Bits de endereço de linha:              15
+  Bits de endereço de coluna:             10
+  Number Of Banks:                        8
+  Densidade do módulo:                    4096 Mb
+  Número de classificações:               1
+  Largura do dispositivo:                 16 bits
+  Bus Width:                              64 bits
+  Tensão nominal do módulo (VDD):         1.5 V
+ [Module timing]
+  Minimum SDRAM Cycle Time (tCKmin):      1.250 ns
+  CAS # Latências suportadas:             5, 6, 7, 8, 9, 10, 11
+  Tempo mínimo de latência CAS # (tAAmin): 13.125 ns
+  Atraso mínimo de RAS # para CAS # (tRCDmin): 13.125 ns
+  Minimum Row Precharge Time (tRPmin):    13.125 ns
+  Minimum Active to Precharge Time (tRASmin): 35.000 ns
+  Temporização do módulo com suporte a 800.0 MHz: 11-11-11-28
+  Temporização do módulo com suporte a 666.7 MHz: 9-9-9-24
+  Temporização do módulo com suporte a 533.3 MHz: 7-7-7-19
+  Temporização do módulo com suporte a 400.0 MHz: 6-6-6-14
+  Temporização do módulo com suporte a 333.3 MHz: 5-5-5-12
+  Minimum Write Recovery Time (tWRmin):   15.000 ns
+  Minimum Row Active to Row Active Delay (tRRDmin): 7.500 ns
+  Minimum Active to Active/Refresh Time (tRCmin): 48.125 ns
+  Minimum Refresh Recovery Time Delay (tRFCmin): 260.000 ns
+  Minimum Internal Write to Read Command Delay (tWTRmin): 7.500 ns
+  Minimum Internal Read to Precharge Command Delay (tRTPmin): 7.500 ns
+  Minimum Four Activate Window Delay Time (tFAWmin): 40.000 ns
+ [Características]
+  Partial Array Self Refresh (PASR):      Não suportado
+  On-die Thermal Sensor (ODTS) Readout:   Não suportado
+  Auto Self Refresh (ASR):                Suportado
+  Extended Temperature 1X Refresh Rate:   Não suportado
+  Extended Temperature Range:             Suportado
+  Module Temperature Sensor:              Não suportado
+  Pseudo Target Row Refresh (pTRR):       Não suportado
+  Altura nominal do módulo:               29 - 30 mm
+  Espessura máxima do módulo (frente):    1 - 2 mm
+  Espessura máxima do módulo (traseira):  <= 1 mm
+
+Fileira: 2 [BANK 2/ChannelB-DIMM0] - 2 GB PC3-12800 DDR3 SDRAM Micron 4JTF25664AZ-1G6E1
+
+ [Informações gerais do módulo]
+  Número do módulo:                       2
+  Tamanho do módulo:                      2 GBytes
+  Tipo de memória:                        DDR3 SDRAM
+  Tipo de módulo:                         Unbuffered DIMM (UDIMM)
+  Velocidade da memória:                  800.0 MHz (DDR3-1600 / PC3-12800)
+  Fabricante do módulo:                   Micron
+  Número da peça do módulo:               4JTF25664AZ-1G6E1
+  Revisão do módulo:                      12613
+  Número de série do módulo:              3889341406 (DEA3D2E7)
+  Data de fabricação do módulo:           Ano: 2013, Semana: 8
+  Local de fabricação do módulo:          15
+  SDRAM Fabricante:                       Micron
+  Verificação / correção de erros:        Nenhum
+ [Características do Módulo]
+  Bits de endereço de linha:              15
+  Bits de endereço de coluna:             10
+  Number Of Banks:                        8
+  Densidade do módulo:                    4096 Mb
+  Número de classificações:               1
+  Largura do dispositivo:                 16 bits
+  Bus Width:                              64 bits
+  Tensão nominal do módulo (VDD):         1.5 V
+ [Module timing]
+  Minimum SDRAM Cycle Time (tCKmin):      1.250 ns
+  CAS # Latências suportadas:             5, 6, 7, 8, 9, 10, 11
+  Tempo mínimo de latência CAS # (tAAmin): 13.125 ns
+  Atraso mínimo de RAS # para CAS # (tRCDmin): 13.125 ns
+  Minimum Row Precharge Time (tRPmin):    13.125 ns
+  Minimum Active to Precharge Time (tRASmin): 35.000 ns
+  Temporização do módulo com suporte a 800.0 MHz: 11-11-11-28
+  Temporização do módulo com suporte a 666.7 MHz: 9-9-9-24
+  Temporização do módulo com suporte a 533.3 MHz: 7-7-7-19
+  Temporização do módulo com suporte a 400.0 MHz: 6-6-6-14
+  Temporização do módulo com suporte a 333.3 MHz: 5-5-5-12
+  Minimum Write Recovery Time (tWRmin):   15.000 ns
+  Minimum Row Active to Row Active Delay (tRRDmin): 7.500 ns
+  Minimum Active to Active/Refresh Time (tRCmin): 48.125 ns
+  Minimum Refresh Recovery Time Delay (tRFCmin): 260.000 ns
+  Minimum Internal Write to Read Command Delay (tWTRmin): 7.500 ns
+  Minimum Internal Read to Precharge Command Delay (tRTPmin): 7.500 ns
+  Minimum Four Activate Window Delay Time (tFAWmin): 40.000 ns
+ [Características]
+  Partial Array Self Refresh (PASR):      Não suportado
+  On-die Thermal Sensor (ODTS) Readout:   Não suportado
+  Auto Self Refresh (ASR):                Suportado
+  Extended Temperature 1X Refresh Rate:   Não suportado
+  Extended Temperature Range:             Suportado
+  Module Temperature Sensor:              Não suportado
+  Pseudo Target Row Refresh (pTRR):       Não suportado
+  Altura nominal do módulo:               29 - 30 mm
+  Espessura máxima do módulo (frente):    1 - 2 mm
+  Espessura máxima do módulo (traseira):  <= 1 mm
+
+Barramento ----------------------------------------------------------------
+
+
+PCI Barramento #0 ---------------------------------------------------------
+
+
+Intel Sandy Bridge-DT - Host Bridge/DRAM Controller [D2/J1/Q0] ------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Sandy Bridge-DT - Host Bridge/DRAM Controller [D2/J1/Q0]
+  Nome do dispositivo original:           Intel Sandy Bridge-DT - Host Bridge/DRAM Controller [D2/J1/Q0]
+  Classe de dispositivo:                  Host-to-PCI Bridge
+  ID de revisão:                          9 [D2/J1/Q0]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:0:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_0100&SUBSYS_01008086&REV_09
+ [Recursos do Sistema]
+  Linha de interrupção:                   N/A
+  Pin de interrupção:                     N/A
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Capaz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Intel
+  Descrição do driver:                    Controlador de Memória
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        PCI\VEN_8086&DEV_0100&SUBSYS_01008086&REV_09\3&11583659&0&00
+  Caminhos de localização                 PCIROOT(0)#PCI(0000)
+
+Intel Sandy Bridge-DT GT1 - Integrated Graphics [D2/J1/Q0] ----------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Sandy Bridge-DT GT1 - Integrated Graphics [D2/J1/Q0]
+  Nome do dispositivo original:           Intel Sandy Bridge-DT GT1 - Integrated Graphics [D2/J1/Q0]
+  Classe de dispositivo:                  VGA Compatible Adapter
+  ID de revisão:                          9 [D2/J1/Q0]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:2:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_0102&SUBSYS_21118086&REV_09
+ [Recursos do Sistema]
+  Linha de interrupção:                   N/A
+  Pin de interrupção:                     INTA#
+  Endereço de base de memória 0           F7800000
+  Endereço de base de memória 2           E0000000
+  Endereço de base de E/S 4               F000
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Capaz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Intel Corporation
+  Descrição do driver:                    Intel(R) HD Graphics
+  Fornecedor de driver:                   Intel Corporation
+  Versão do driver:                       9.17.10.4459
+  Data do driver:                         18-May-2016
+  DCH/UWD Driver:                         Não capaz
+  DeviceInstanceId                        PCI\VEN_8086&DEV_0102&SUBSYS_21118086&REV_09\3&11583659&0&10
+  Caminhos de localização                 PCIROOT(0)#PCI(0200)
+
+Intel Panther Point PCH - USB 3.0 xHCI Controller [C1] --------------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Panther Point PCH - USB 3.0 xHCI Controller [C1]
+  Nome do dispositivo original:           Intel Panther Point PCH - USB 3.0 xHCI Controller [C1]
+  Classe de dispositivo:                  USB xHCI Controller
+  ID de revisão:                          4 [C1]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:20:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E31&SUBSYS_1E318086&REV_04
+ [Recursos do Sistema]
+  Linha de interrupção:                   N/A
+  Pin de interrupção:                     INTA#
+  Endereço de base de memória 0           F7D00000
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Capaz
+  Versão USB suportada:                   3.0
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Controlador Host USB xHCI Genérico
+  Descrição do driver:                    Controlador Host Compatível com USB xHCI
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3996
+  Data do driver:                         17-Jan-2024
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E31&SUBSYS_1E318086&REV_04\3&11583659&0&A0
+  Caminhos de localização                 PCIROOT(0)#PCI(1400)
+
+USB Root Hub --------------------------------------------------------------
+
+
+[Port1] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+[Port3] : No Device Connected ---------------------------------------------
+
+
+[Port4] : No Device Connected ---------------------------------------------
+
+
+[Port5] : No Device Connected ---------------------------------------------
+
+
+[Port6] : No Device Connected ---------------------------------------------
+
+
+[Port7] : No Device Connected ---------------------------------------------
+
+
+[Port8] : No Device Connected ---------------------------------------------
+
+
+Intel Panther Point PCH - USB 2.0 EHCI Controller #2 [C1] -----------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Panther Point PCH - USB 2.0 EHCI Controller #2 [C1]
+  Nome do dispositivo original:           Intel Panther Point PCH - USB 2.0 EHCI Controller #2 [C1]
+  Classe de dispositivo:                  USB EHCI Controller
+  ID de revisão:                          4 [C1]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:26:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E2D&SUBSYS_1E2D8086&REV_04
+ [Recursos do Sistema]
+  Linha de interrupção:                   IRQ16
+  Pin de interrupção:                     INTA#
+  Endereço de base de memória 0           F7D18000
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Capaz
+  Versão USB suportada:                   2.0
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Intel
+  Descrição do driver:                    Intel(R) 7 Series/C216 Chipset Family USB Enhanced Host Controller - 1E2D
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.4170
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E2D&SUBSYS_1E2D8086&REV_04\3&11583659&0&D0
+  Caminhos de localização                 PCIROOT(0)#PCI(1A00)
+
+USB Root Hub --------------------------------------------------------------
+
+
+[Port1] : Intel Integrated Rate Matching Hub ------------------------------
+
+ [Informação de dispositivo]
+  Fabricante do dispositivo:              Intel
+  Nome do produto:                        Intel Integrated Rate Matching Hub
+  Número de série:                        
+  Versão USB suportada:                   2.00
+  Velocidade do dispositivo USB:          USB 2.0 High-speed
+  Descrição do driver:                    Generic USB Hub
+  ID de hardware:                         USB\VID_8087&PID_0024
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Generic USB Hub)
+  Descrição do driver:                    Generic USB Hub
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.4046
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        USB\VID_8087&PID_0024\5&DCEB327&0&1
+  Caminhos de localização                 PCIROOT(0)#PCI(1A00)#USBROOT(0)#USB(1)
+
+[Port1] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+[Port3] : China Resource Semico, PID=6004 ---------------------------------
+
+ [Informação de dispositivo]
+  Fabricante do dispositivo:              SEMICO
+  Nome do produto:                        USB Keyboard
+  Número de série:                        N/A
+  Versão USB suportada:                   1.10
+  Velocidade do dispositivo USB:          USB 1.1 Low-speed
+  Descrição do driver:                    USB Composite Device
+  ID de hardware:                         USB\VID_1A2C&PID_6004
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Standard USB Host Controller)
+  Descrição do driver:                    USB Composite Device
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.4046
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        USB\VID_1A2C&PID_6004\6&C16AD95&0&3
+  Caminhos de localização                 PCIROOT(0)#PCI(1A00)#USBROOT(0)#USB(1)#USB(3)
+
+[Port4] : Cygnal, PID=8108 ------------------------------------------------
+
+ [Informação de dispositivo]
+  Fabricante do dispositivo:              YSPRINGTECH
+  Nome do produto:                        USB OPTICAL MOUSE
+  Número de série:                        N/A
+  Versão USB suportada:                   2.00
+  Velocidade do dispositivo USB:          USB 1.1 Low-speed
+  Descrição do driver:                    Dispositivo de Entrada USB
+  ID de hardware:                         USB\VID_10C4&PID_8108
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Dispositivos padrão do sistema)
+  Descrição do driver:                    Dispositivo de Entrada USB
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        USB\VID_10C4&PID_8108\6&C16AD95&0&4
+  Caminhos de localização                 PCIROOT(0)#PCI(1A00)#USBROOT(0)#USB(1)#USB(4)
+
+[Port5] : No Device Connected ---------------------------------------------
+
+
+[Port6] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+Intel Panther Point PCH - High Definition Audio Controller [C1] -----------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Panther Point PCH - High Definition Audio Controller [C1]
+  Nome do dispositivo original:           Intel Panther Point PCH - High Definition Audio Controller [C1]
+  Classe de dispositivo:                  High Definition Audio
+  ID de revisão:                          4 [C1]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:27:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E20&SUBSYS_1E208086&REV_04
+ [PCI Express]
+  Versão:                                 1.1
+  Largura do link atual:                  Não negociado
+  Tipo de dispositivo / porta:            Ponto final integrado do complexo raiz
+  Slot implementado:                      Não
+  Emergency Power Reduction:              Não suportado
+  Active State Power Management (ASPM) Support: Nenhum
+  Active State Power Management (ASPM) Status: Desativado
+  L0s Exit Latency:                       < 64 ns
+  L1 Exit Latency:                        < 1 us
+  Maximum Payload Size Supported:         128 bytes
+  Maximum Payload Size:                   128 bytes
+  Suporte BAR redimensionável:            Não suportado
+ [Recursos do Sistema]
+  Linha de interrupção:                   IRQ22
+  Pin de interrupção:                     INTA#
+  Endereço de base de memória 0           FEAFC000
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Não capaz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Microsoft
+  Descrição do driver:                    Controlador de High Definition Audio
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         18-Oct-2023
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E20&SUBSYS_1E208086&REV_04\3&11583659&0&D8
+  Caminhos de localização                 PCIROOT(0)#PCI(1B00)
+
+Intel Panther Point PCH - PCI Express Port 1 ------------------------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Panther Point PCH - PCI Express Port 1
+  Nome do dispositivo original:           Intel Panther Point PCH - PCI Express Port 1
+  Classe de dispositivo:                  PCI-to-PCI Bridge
+  ID de revisão:                          C4
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:28:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E10&SUBSYS_00000000&REV_C4
+ [PCI Express]
+  Versão:                                 2.0
+  Largura máxima do link:                 x4
+  Largura do link atual:                  Não negociado
+  Velocidade máxima do link:              5.0 GT/s
+  Velocidade do link atual:               2.5 GT/s
+  Tipo de dispositivo / porta:            Porta raiz do complexo raiz PCI Express
+  Slot implementado:                      Sim
+  Hot-Plug:                               Não capaz
+  Hot-Plug Surprise:                      Não capaz
+  Limite de potência do slot:             25.000 W
+  Emergency Power Reduction:              Não suportado
+  Active State Power Management (ASPM) Support: L0s and L1
+  Active State Power Management (ASPM) Status: Desativado
+  L0s Exit Latency:                       512 ns - 1 us
+  L1 Exit Latency:                        8 - 16 us
+  Maximum Payload Size Supported:         128 bytes
+  Maximum Payload Size:                   128 bytes
+  Suporte BAR redimensionável:            Não suportado
+ [Recursos do Sistema]
+  Linha de interrupção:                   IRQ11
+  Pin de interrupção:                     INTA#
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Não capaz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Dispositivos padrão do sistema)
+  Descrição do driver:                    Ponte PCI para PCI
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3996
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E10&SUBSYS_1E108086&REV_C4\3&11583659&0&E0
+  Caminhos de localização                 PCIROOT(0)#PCI(1C00)
+
+PCI Express x4 Barramento #1 ----------------------------------------------
+
+
+Intel Panther Point PCH - PCI Express Port 6 ------------------------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Panther Point PCH - PCI Express Port 6
+  Nome do dispositivo original:           Intel Panther Point PCH - PCI Express Port 6
+  Classe de dispositivo:                  PCI-to-PCI Bridge
+  ID de revisão:                          C4
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:28:5
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E1A&SUBSYS_00000000&REV_C4
+ [PCI Express]
+  Versão:                                 2.0
+  Largura máxima do link:                 x1
+  Largura do link atual:                  x1
+  Velocidade máxima do link:              5.0 GT/s
+  Velocidade do link atual:               2.5 GT/s
+  Tipo de dispositivo / porta:            Porta raiz do complexo raiz PCI Express
+  Slot implementado:                      Sim
+  Hot-Plug:                               Não capaz
+  Hot-Plug Surprise:                      Não capaz
+  Limite de potência do slot:             10.000 W
+  Emergency Power Reduction:              Não suportado
+  Active State Power Management (ASPM) Support: L0s and L1
+  Active State Power Management (ASPM) Status: Desativado
+  L0s Exit Latency:                       256 - 512 ns
+  L1 Exit Latency:                        8 - 16 us
+  Maximum Payload Size Supported:         128 bytes
+  Maximum Payload Size:                   128 bytes
+  Suporte BAR redimensionável:            Não suportado
+ [Recursos do Sistema]
+  Linha de interrupção:                   IRQ5
+  Pin de interrupção:                     INTB#
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Não capaz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Dispositivos padrão do sistema)
+  Descrição do driver:                    Ponte PCI para PCI
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3996
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E1A&SUBSYS_1E1A8086&REV_C4\3&11583659&0&E5
+  Caminhos de localização                 PCIROOT(0)#PCI(1C05)
+
+PCI Express x1 Barramento #2 [J7B1] ---------------------------------------
+
+
+RealTek Semiconductor RTL8168/8111 PCI-E Gigabit Ethernet NIC -------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    RealTek Semiconductor RTL8168/8111 PCI-E Gigabit Ethernet NIC
+  Nome do dispositivo original:           RealTek Semiconductor RTL8168/8111 PCI-E Gigabit Ethernet NIC
+  Classe de dispositivo:                  Ethernet Adapter
+  ID de revisão:                          C
+  Número do endereço PCI (Barramento: Dispositivo: Função): 2:0:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_10EC&DEV_8168&SUBSYS_012310EC&REV_0C
+ [PCI Express]
+  Versão:                                 1.1
+  Largura máxima do link:                 x1
+  Largura do link atual:                  x1
+  Velocidade máxima do link:              2.5 GT/s
+  Velocidade do link atual:               2.5 GT/s
+  Tipo de dispositivo / porta:            Ponto final do PCI Express
+  Slot implementado:                      Não
+  Emergency Power Reduction:              Não suportado
+  Active State Power Management (ASPM) Support: L0s and L1
+  Active State Power Management (ASPM) Status: Desativado
+  L0s Exit Latency:                       >4 us
+  L1 Exit Latency:                        32 - 64 us
+  Maximum Payload Size Supported:         128 bytes
+  Maximum Payload Size:                   128 bytes
+  Suporte BAR redimensionável:            Não suportado
+ [Recursos do Sistema]
+  Linha de interrupção:                   N/A
+  Pin de interrupção:                     INTA#
+  Endereço de base de E/S 0               E000
+  Endereço de base de memória 2           F7C00000
+  Endereço de base de memória 4           F0000000
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Não capaz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Realtek
+  Descrição do driver:                    Realtek PCIe GbE Family Controller
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       9.1.410.2015
+  Data do driver:                         09-Apr-2015
+  DeviceInstanceId                        PCI\VEN_10EC&DEV_8168&SUBSYS_012310EC&REV_0C\4&24EEA448&0&00E5
+  Caminhos de localização                 PCIROOT(0)#PCI(1C05)#PCI(0000)
+
+Intel Panther Point PCH - USB 2.0 EHCI Controller #1 [C1] -----------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Panther Point PCH - USB 2.0 EHCI Controller #1 [C1]
+  Nome do dispositivo original:           Intel Panther Point PCH - USB 2.0 EHCI Controller #1 [C1]
+  Classe de dispositivo:                  USB EHCI Controller
+  ID de revisão:                          4 [C1]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:29:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E26&SUBSYS_1E268086&REV_04
+ [Recursos do Sistema]
+  Linha de interrupção:                   IRQ23
+  Pin de interrupção:                     INTA#
+  Endereço de base de memória 0           F7D17000
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Capaz
+  Versão USB suportada:                   2.0
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Intel
+  Descrição do driver:                    Intel(R) 7 Series/C216 Chipset Family USB Enhanced Host Controller - 1E26
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.4170
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E26&SUBSYS_1E268086&REV_04\3&11583659&0&E8
+  Caminhos de localização                 PCIROOT(0)#PCI(1D00)
+
+USB Root Hub --------------------------------------------------------------
+
+
+[Port1] : Intel Integrated Rate Matching Hub ------------------------------
+
+ [Informação de dispositivo]
+  Fabricante do dispositivo:              Intel
+  Nome do produto:                        Intel Integrated Rate Matching Hub
+  Número de série:                        
+  Versão USB suportada:                   2.00
+  Velocidade do dispositivo USB:          USB 2.0 High-speed
+  Descrição do driver:                    Generic USB Hub
+  ID de hardware:                         USB\VID_8087&PID_0024
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Generic USB Hub)
+  Descrição do driver:                    Generic USB Hub
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.4046
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        USB\VID_8087&PID_0024\5&1A7E2FBD&0&1
+  Caminhos de localização                 PCIROOT(0)#PCI(1D00)#USBROOT(0)#USB(1)
+
+[Port1] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+[Port3] : No Device Connected ---------------------------------------------
+
+
+[Port4] : No Device Connected ---------------------------------------------
+
+
+[Port5] : No Device Connected ---------------------------------------------
+
+
+[Port6] : No Device Connected ---------------------------------------------
+
+
+[Port7] : No Device Connected ---------------------------------------------
+
+
+[Port8] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+Intel H77 Express Chipset - LPC Interface Controller [C1] -----------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel H77 Express Chipset - LPC Interface Controller [C1]
+  Nome do dispositivo original:           Intel H77 Express Chipset - LPC Interface Controller [C1]
+  Classe de dispositivo:                  PCI-to-ISA Bridge
+  ID de revisão:                          4 [C1]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:31:0
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E4A&SUBSYS_1E4A8086&REV_04
+ [Recursos do Sistema]
+  Linha de interrupção:                   N/A
+  Pin de interrupção:                     N/A
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Não capaz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Intel
+  Descrição do driver:                    Controlador LPC
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E4A&SUBSYS_1E4A8086&REV_04\3&11583659&0&F8
+  Caminhos de localização                 PCIROOT(0)#PCI(1F00)
+
+Intel Panther Point PCH - SATA AHCI Controller [C1] -----------------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Panther Point PCH - SATA AHCI Controller [C1]
+  Nome do dispositivo original:           Intel Panther Point PCH - SATA AHCI Controller [C1]
+  Classe de dispositivo:                  SATA AHCI Controller
+  ID de revisão:                          4 [C1]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:31:2
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E02&SUBSYS_1E028086&REV_04
+ [Recursos do Sistema]
+  Linha de interrupção:                   N/A
+  Pin de interrupção:                     INTB#
+  Endereço de base de E/S 0               F0B0
+  Endereço de base de E/S 1               F0A0
+  Endereço de base de E/S 2               F090
+  Endereço de base de E/S 3               F080
+  Endereço de base de E/S 4               F060
+  Endereço de base de memória 5           F7D16000
+ [Características]
+  Bus Mastering:                          Habilitado
+  Running At 66 MHz:                      Capaz
+  Fast Back-to-Back Transactions:         Capaz
+ [SATA Host Controller]
+  Velocidade de interface suportada:      Gen3 6.0 Gbps
+  Número de portas:                       6
+  Suporte SATA externo:                   Não capaz
+  Aggressive Link Power Management:       Capaz
+  Staggered Spin-up:                      Não capaz
+  Mechanical Presence Switch:             Não capaz
+  Command Queue Acceleration:             Capaz
+  64-bit Addressing:                      Capaz
+  Status AHCI:                            Habilitado
+  Versão AHCI:                            1.30
+  Portas implementadas:                   0
+ [SATA Port#0]
+  Status da porta:                        Dispositivo presente, comunicação Phy estabelecida
+  Velocidade da interface atual:          Gen3 6.0 Gbps
+  Porta SATA externa:                     Não capaz
+  Hot Plug:                               Não capaz
+  Tipo de dispositivo:                    SATA
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Controlador AHCI SATA Padrão
+  Descrição do driver:                    Controlador AHCI SATA Padrão
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E02&SUBSYS_1E028086&REV_04\3&11583659&0&FA
+  Caminhos de localização                 PCIROOT(0)#PCI(1F02)
+
+Intel Panther Point PCH - SMBus Controller [C1] ---------------------------
+
+ [Informações gerais]
+  Nome do dispositivo:                    Intel Panther Point PCH - SMBus Controller [C1]
+  Nome do dispositivo original:           Intel Panther Point PCH - SMBus Controller [C1]
+  Classe de dispositivo:                  SMBus (System Management Bus)
+  ID de revisão:                          4 [C1]
+  Número do endereço PCI (Barramento: Dispositivo: Função): 0:31:3
+  PCI Latency Timer:                      0
+  ID de hardware:                         PCI\VEN_8086&DEV_1E22&SUBSYS_1E228086&REV_04
+ [Recursos do Sistema]
+  Linha de interrupção:                   IRQ11
+  Pin de interrupção:                     INTC#
+  Endereço de base de memória 0           F7D15000
+  Endereço de base de E/S 4               F040
+ [Características]
+  Bus Mastering:                          Desativado
+  Running At 66 MHz:                      Não capaz
+  Fast Back-to-Back Transactions:         Capaz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Intel
+  Descrição do driver:                    Controlador de Barramento SM
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        PCI\VEN_8086&DEV_1E22&SUBSYS_1E228086&REV_04\3&11583659&0&FB
+  Caminhos de localização                 PCIROOT(0)#PCI(1F03)
+
+Adaptador gráfico ---------------------------------------------------------
+
+
+Intel HD Graphics 2000 ----------------------------------------------------
+
+ [Conjunto de chips gráficos]
+  Conjunto de chips gráficos:             Intel HD Graphics 2000
+  Nome de código do chipset gráfico:      Sandy Bridge GT1
+  Memória gráfica:                        1584116 KBytes
+ [Placa de vídeo]
+  Placa de vídeo:                         Intel Sandy Bridge-DT GT1 - Integrated Graphics [D2/J1/Q0] [Intel]
+  Barramento de placa gráfica:            PCI
+  GPU Type:                               Integrated
+  RAMDAC de gráficos:                     Internal
+  Versão do BIOS de vídeo:                2165 PC 14.34  01/17/2013  00:56:53
+ [Desempenho]
+  Freqüência do processador gráfico:      848.2 MHz
+  Frequência de memória gráfica:          665.0 MHz
+  Suporte para BAR redimensionável (ReBAR): Não suportado
+  ID de hardware:                         PCI\VEN_8086&DEV_0102&SUBSYS_21118086&REV_09
+  Localização PCI (Barramento:Dispositivo:Função): 0:02:0
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Intel Corporation
+  Descrição do driver:                    Intel(R) HD Graphics
+  Fornecedor de driver:                   Intel Corporation
+  Versão do driver:                       9.17.10.4459
+  Data do driver:                         18-May-2016
+  DCH/UWD Driver:                         Não capaz
+  DeviceInstanceId                        PCI\VEN_8086&DEV_0102&SUBSYS_21118086&REV_09\3&11583659&0&10
+  Caminhos de localização                 PCIROOT(0)#PCI(0200)
+
+Monitor -------------------------------------------------------------------
+
+
+Desconhecido --------------------------------------------------------------
+
+ [Informações gerais]
+  Nome do monitor:                        Unknown
+  Nome do monitor (do fabricante):        LED MONITOR  
+  Número de série:                        507468094
+  Data de fabricação:                     Semana: 35, Ano: 2020
+  ID de hardware monitor:                 Monitor\FOX952D
+  Máx. Tamanho vertical:                  26 cm
+  Máx. Tamanho horizontal:                41 cm
+  Frequência horizontal:                  30 - 81 kHz
+  Frequência vertical:                    56 - 75 Hz
+  Relógio máximo de pixels:               140 MHz
+ [Parâmetros avançados]
+  Sinal de entrada:                       Digital
+  Gamma Factor:                           2.20
+ [Modos DPMS]
+  Standby:                                Suportado
+  Suspend:                                Suportado
+  Active Off:                             Suportado
+  Standard Colour Space (sRGB) Default:   Não suportado
+  Preferred Timing Mode:                  Suportado
+  Default GTF (Continuous Frequency):     Não suportado
+  DFP 1.x Compatible:                     Não
+ [Modos de vídeo suportados]
+  1280 x 1024                             60 Hz
+  1440 x 900                              60 Hz
+  1440 x 900                              75 Hz
+  1440 x 900                              70 Hz
+  1440 x 900                              72 Hz
+  1440 x 900                              410 x 256 mm, Relógio de pixel 136.75 MHz
+  1440 x 900                              410 x 256 mm, Relógio de pixel 106.50 MHz
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Tipos de monitor padrão)
+  Descrição do driver:                    Monitor Genérico PnP
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        DISPLAY\FOX952D\4&4F3D31F&0&UID50529024
+
+Unidades de disco ---------------------------------------------------------
+
+
+Unidades (S)ATA/ATAPI -----------------------------------------------------
+
+
+SSD 128GB -----------------------------------------------------------------
+
+ [Informações gerais]
+  Controlador de disco:                   Serial ATA 6Gb/s @ 6Gb/s
+  Controlador de host:                    Intel Panther Point PCH - SATA AHCI Controller [C1]
+  Modelo de unidade:                      SSD 128GB
+  Revisão do firmware da unidade:         HPS2227P
+  Número de série da unidade:             YS202208436883HP
+  Nome mundial (WWN):                     0000
+  Capacidade de unidade:                  122,104 MBytes (128 GB)
+  Drive Capacity [MB]:                    122104
+  Taxa de rotação de mídia:               Unidade SSD (sem rotação)
+  Fator de forma nominal:                 2.5"
+  Versão principal do ATA suportada:      ATA/ATAPI-5, ATA/ATAPI-6, ATA/ATAPI-7, ATA8-ACS, ACS-2
+  Versão secundária do ATA suportada:     ACS-2 Revision 3
+  Versão de transporte ATA suportada:     SATA 3.2
+ [Geometria da disco]
+  Numero de cilindros:                    16383
+  Número de cabeças:                      16
+  Setores por trilha:                     63
+  Número de setores:                      16514064
+  Total de setores LBA de 32 bits:        250069680
+  Total de setores LBA de 48 bits:        250069680
+  Tamanho do setor lógico:                512 Bytes
+  Tamanho do buffer/cache:                N/A
+ [Modos de transferência]
+  Setores por interrupção:                Total: 8, Active: 8
+  Máx. Modo de transferência PIO:         4
+  Multiword DMA Mode:                     Total: 2, Active: -
+  Singleword DMA Mode:                    Total: -, Active: -
+  Ultra-DMA Mode:                         Total: 6 (ATA-133), Active: 5 (ATA-100)
+  Max. Multiword DMA Transfer Rate:       16.7 MBytes/s
+  Max. PIO with IORDY Transfer Rate:      16.7 MBytes/s
+  Max. PIO w/o IORDY Transfer Rate:       16.7 MBytes/s
+  Native Command Queuing:                 Suportado, Máx. Profundidade: 32
+  Comando TRIM:                           Suportado (leitura indeterminada após TRIM)
+ [Sinalizadores de dispositivo]
+  Acionamento fixo:                       Presente
+  Unidade removível:                      Não presente
+  Armazenamento magnético:                Presente
+  Modo LBA:                               Suportado
+  Modo DMA:                               Suportado
+  IORDY:                                  Suportado
+  IORDY Desativar:                        Suportado
+ [Características]
+  Cache gravável:                         Presente, Ativo
+  Recurso SMART:                          Presente, Ativo
+  Recurso de segurança:                   Presente, Inativo
+  Recurso de mídia removível:             Não presente, Desativado
+  Gerenciamento de energia:               Presente, Ativo
+  Gerenciamento avançado de energia:      Não presente, Inativo
+  Interface do pacote:                    Não presente, Desativado
+  Buffer de antecipação:                  Presente, Ativo
+  Área Protegida do Anfitrião:            Não presente, Habilitado
+  Inicialização em espera:                Não suportado, Inativo
+  Gerenciamento acústico automático:      Não suportado, Inativo
+  48-bit LBA:                             Suportado, Ativo
+  Gerenciamento de energia de link iniciado por host (HIPM): Não suportado
+  Gerenciamento de energia de link iniciado por dispositivo (DIPM): Não suportado
+  Entrega de dados sob encomenda:         Não suportado
+  Controle de recursos de hardware:       Não suportado
+  Preservação das configurações do software: Suportado, Habilitado
+  NCQ Autosense:                          Não suportado
+  Link Power State Device Sleep:          Não suportado
+  Recurso de informações híbridas:        Não suportado
+  Assistente de reconstrução:             Não suportado
+  Desativar energia:                      Não suportado
+  All Write Cache Non-Volatile:           Não suportado
+  Número estendido de setores endereçáveis pelo usuário: Não suportado
+  CFast Specification:                    Não suportado
+  Informações Prioritárias NCQ:           Não suportado
+  Host Automatic Partial to Slumber Transitions: Suportado
+  Device Automatic Partial to Slumber Transitions: Suportado
+  NCQ Streaming:                          Não suportado
+  Comando de gerenciamento de fila NCQ:   Não suportado
+  DevSleep para estado de energia reduzido: Não suportado
+  Out Of Band Management Interface:       Não suportado
+  Recurso de condições de energia estendidas: Não suportado
+  Recurso de relatório de dados de detecção: Não suportado
+  Recurso de controle de queda livre:     Não suportado
+  Recurso Gravar-Ler-Verificar:           Não suportado
+ [Segurança]
+  Recurso de segurança:                   Suportado
+  Status de segurança:                    Desativado
+  Segurança bloqueada:                    Desativado
+  Segurança congelada:                    Habilitado
+  Apagamento de segurança aprimorado:     Suportado
+  Sanitize Feature:                       Suportado
+  Sanitize Device - Crypto Scramble:      Não suportado
+  Sanitize Device - Overwrite:            Não suportado
+  Sanitize Device - Block Erase:          Suportado
+  Sanitize Device - Antifreeze Lock:      Não suportado
+  Device Encrypts All User Data:          Não suportado
+  Trusted Computing:                      Não suportado
+ [Tecnologia de análise e relatórios de autocontrole (S.M.A.R.T.)]
+  [01] Taxa de erro de leitura bruta:     100/50, Pior: 100
+  [05] Contagem de setores realocados:    100/50, Pior: 100
+  [09] Horas de inicialização/contagem de ciclos: 100/50, Pior: 100 (1595 horas / 66.5 dias)
+  [0C] Contagem do ciclo de energia:      100/50, Pior: 100 (Data = 336, 0)
+  [A0] Contagem de setor incorrigível ao ler/gravar: 100/50, Pior: 100
+  [A1] Número de blocos sobressalentes válidos: 100/50, Pior: 100 (Data = 100, 0)
+  [A3] Número de blocos inválidos iniciais: 100/50, Pior: 100 (Data = 132, 0)
+  [A4] Contagem total de apagamento:      100/50, Pior: 100 (Data = 112, 0)
+  [A5] Contagem máxima de apagamento:     100/50, Pior: 100 (Data = 145, 0)
+  [A6] Contagem mínima de apagamento:     100/50, Pior: 100 (Data = 5, 0)
+  [A7] Contagem média de apagamento:      100/50, Pior: 100 (Data = 92, 0)
+  [A8] Contagem máxima de apagamento de especificações: 100/50, Pior: 100
+  [A9] Vida restante:                     100/50, Pior: 100 (Data = 100, 0)
+  [AF] Contagem de falhas do programa no pior chip: 100/50, Pior: 100
+  [B0] Contagem de falhas de apagamento no pior chip: 100/50, Pior: 100 (Data = 424265, 0)
+  [B1] Contagem total do nível de desgaste: 100/50, Pior: 100 (Data = 85896521, 0)
+  [B2] Contagem de blocos inválida em tempo de execução: 100/50, Pior: 100 (Data = 18, 0)
+  [B5] Contagem de falhas do programa (total): 100/50, Pior: 100
+  [B6] Contagem de falhas de apagamento (total): 100/50, Pior: 100
+  [C0] Contagem de retração de desligamento: 100/50, Pior: 100 (Data = 60, 0)
+  [C2] Temperatura:                       100/50, Pior: 100 (40.0 °C)
+  [C3] Hardware ECC recuperado:           100/50, Pior: 100 (Data = 120168, 0)
+  [C4] Contagem de eventos de realocação: 100/50, Pior: 100
+  [C5] Contagem atual sector pendente:    100/50, Pior: 100
+  [C6] Contagem de setores não corrigíveis off-line: 100/50, Pior: 100
+  [C7] Contagem de erros SATA CRC:        100/50, Pior: 100 (Data = 2, 0)
+  [E8] Espaço reservado disponível:       100/50, Pior: 100 (Data = 100, 0)
+  [F1] Total de gravações de host:        100/50, Pior: 100 (Data = 74256, 0)
+  [F2] Total de leituras de host:         100/50, Pior: 100 (Data = 105279, 0)
+  Vida restante do disco                  100%
+ [Estatísticas do dispositivo]
+  Reinicializações de inicialização vitalícias: 336
+  Horas de ligação:                       1595
+  Número de setores lógicos escritos:     4866441216
+  Número de setores lógicos lidos:        6899564544
+  Número de comandos de gravação:         96703576
+  Número de comandos de leitura:          107242859
+
+Áudio ---------------------------------------------------------------------
+
+
+Intel Panther Point PCH - High Definition Audio Controller [C1] -----------
+
+  Adaptador de áudio:                     Intel Panther Point PCH - High Definition Audio Controller [C1]
+  ID de hardware do controlador de áudio: PCI\VEN_8086&DEV_1E20&SUBSYS_1E208086&REV_04
+  Codec de áudio de alta definição:       Intel
+  ID de hardware do codec de áudio:       HDAUDIO\FUNC_01&VEN_8086&DEV_2806&SUBSYS_80860101&REV_1000
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Microsoft
+  Descrição do driver:                    Dispositivo de High Definition Audio
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         18-Oct-2023
+  DeviceInstanceId                        HDAUDIO\FUNC_01&VEN_8086&DEV_2806&SUBSYS_80860101&REV_1000\4&137DABA5&0&0301
+  Codec de áudio de alta definição:       RealTek ALC662
+  ID de hardware do codec de áudio:       HDAUDIO\FUNC_01&VEN_10EC&DEV_0662&SUBSYS_00000000&REV_1003
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Microsoft
+  Descrição do driver:                    Dispositivo de High Definition Audio
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         18-Oct-2023
+  DeviceInstanceId                        HDAUDIO\FUNC_01&VEN_10EC&DEV_0662&SUBSYS_00000000&REV_1003\4&137DABA5&0&0201
+
+Rede ----------------------------------------------------------------------
+
+
+RealTek Semiconductor RTL8168/8111 PCI-E Gigabit Ethernet NIC -------------
+
+ [Informações gerais]
+  Cartão de rede:                         RealTek Semiconductor RTL8168/8111 PCI-E Gigabit Ethernet NIC
+  Descrição do fornecedor:                Realtek Ethernet Controller
+  Endereço MAC:                           0A-E0-AF-A1-03-12
+ [Capacidades]
+  Velocidade máxima do link:              1 Gbps
+  Velocidade do link atual:               100 Mbps
+  Tamanho do buffer de transmissão:       193792 Bytes
+  Tamanho do buffer de recebimento:       775168 Bytes
+  ID de hardware:                         PCI\VEN_10EC&DEV_8168&SUBSYS_012310EC&REV_0C
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   Realtek
+  Descrição do driver:                    Realtek PCIe GbE Family Controller
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       9.1.410.2015
+  Data do driver:                         09-Apr-2015
+  DeviceInstanceId                        PCI\VEN_10EC&DEV_8168&SUBSYS_012310EC&REV_0C\4&24EEA448&0&00E5
+  Caminhos de localização                 PCIROOT(0)#PCI(1C05)#PCI(0000)
+
+Portas --------------------------------------------------------------------
+
+
+Portas seriais ------------------------------------------------------------
+
+
+USB -----------------------------------------------------------------------
+
+
+Intel(R) 7 Series/C216 Chipset Family USB Enhanced Host Controller - 1E2D -
+
+
+Root Hub ------------------------------------------------------------------
+
+
+[Port1] : Intel Integrated Rate Matching Hub ------------------------------
+
+ [Informação de dispositivo]
+  Fabricante do dispositivo:              Intel
+  Nome do produto:                        Intel Integrated Rate Matching Hub
+  Número de série:                        
+  Versão USB suportada:                   2.00
+  Velocidade do dispositivo USB:          USB 2.0 High-speed
+  Descrição do driver:                    Generic USB Hub
+  ID de hardware:                         USB\VID_8087&PID_0024
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Generic USB Hub)
+  Descrição do driver:                    Generic USB Hub
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.4046
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        USB\VID_8087&PID_0024\5&DCEB327&0&1
+  Caminhos de localização                 PCIROOT(0)#PCI(1A00)#USBROOT(0)#USB(1)
+
+[Port1] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+[Port3] : China Resource Semico, PID=6004 ---------------------------------
+
+ [Informação de dispositivo]
+  Fabricante do dispositivo:              SEMICO
+  Nome do produto:                        USB Keyboard
+  Número de série:                        N/A
+  Versão USB suportada:                   1.10
+  Velocidade do dispositivo USB:          USB 1.1 Low-speed
+  Descrição do driver:                    USB Composite Device
+  ID de hardware:                         USB\VID_1A2C&PID_6004
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Standard USB Host Controller)
+  Descrição do driver:                    USB Composite Device
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.4046
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        USB\VID_1A2C&PID_6004\6&C16AD95&0&3
+  Caminhos de localização                 PCIROOT(0)#PCI(1A00)#USBROOT(0)#USB(1)#USB(3)
+
+[Port4] : Cygnal, PID=8108 ------------------------------------------------
+
+ [Informação de dispositivo]
+  Fabricante do dispositivo:              YSPRINGTECH
+  Nome do produto:                        USB OPTICAL MOUSE
+  Número de série:                        N/A
+  Versão USB suportada:                   2.00
+  Velocidade do dispositivo USB:          USB 1.1 Low-speed
+  Descrição do driver:                    Dispositivo de Entrada USB
+  ID de hardware:                         USB\VID_10C4&PID_8108
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Dispositivos padrão do sistema)
+  Descrição do driver:                    Dispositivo de Entrada USB
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.3636
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        USB\VID_10C4&PID_8108\6&C16AD95&0&4
+  Caminhos de localização                 PCIROOT(0)#PCI(1A00)#USBROOT(0)#USB(1)#USB(4)
+
+[Port5] : No Device Connected ---------------------------------------------
+
+
+[Port6] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+Intel(R) USB 3.0 eXtensible Host Controller - 1.0 (Microsoft) -------------
+
+
+Root Hub ------------------------------------------------------------------
+
+
+[Port1] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+[Port3] : No Device Connected ---------------------------------------------
+
+
+[Port4] : No Device Connected ---------------------------------------------
+
+
+[Port5] : No Device Connected ---------------------------------------------
+
+
+[Port6] : No Device Connected ---------------------------------------------
+
+
+[Port7] : No Device Connected ---------------------------------------------
+
+
+[Port8] : No Device Connected ---------------------------------------------
+
+
+Intel(R) 7 Series/C216 Chipset Family USB Enhanced Host Controller - 1E26 -
+
+
+Root Hub ------------------------------------------------------------------
+
+
+[Port1] : Intel Integrated Rate Matching Hub ------------------------------
+
+ [Informação de dispositivo]
+  Fabricante do dispositivo:              Intel
+  Nome do produto:                        Intel Integrated Rate Matching Hub
+  Número de série:                        
+  Versão USB suportada:                   2.00
+  Velocidade do dispositivo USB:          USB 2.0 High-speed
+  Descrição do driver:                    Generic USB Hub
+  ID de hardware:                         USB\VID_8087&PID_0024
+ [Informações do driver do dispositivo]
+  Fabricante do driver:                   (Generic USB Hub)
+  Descrição do driver:                    Generic USB Hub
+  Fornecedor de driver:                   Microsoft
+  Versão do driver:                       10.0.19041.4046
+  Data do driver:                         20-Jun-2006
+  DeviceInstanceId                        USB\VID_8087&PID_0024\5&1A7E2FBD&0&1
+  Caminhos de localização                 PCIROOT(0)#PCI(1D00)#USBROOT(0)#USB(1)
+
+[Port1] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+
+
+[Port3] : No Device Connected ---------------------------------------------
+
+
+[Port4] : No Device Connected ---------------------------------------------
+
+
+[Port5] : No Device Connected ---------------------------------------------
+
+
+[Port6] : No Device Connected ---------------------------------------------
+
+
+[Port7] : No Device Connected ---------------------------------------------
+
+
+[Port8] : No Device Connected ---------------------------------------------
+
+
+[Port2] : No Device Connected ---------------------------------------------
+

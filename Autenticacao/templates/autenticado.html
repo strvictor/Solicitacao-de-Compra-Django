@@ -37,7 +37,7 @@
         <table class="sortable">
             <thead>
               <tr>
-                <th>Id</th>
+                <th style="width: 35px;">Id</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Telefone</th>
@@ -72,7 +72,7 @@
                             </td>
                         {% elif permissao_usuario == 'Diretor Financeiro' %}
                             <td>
-                                <a href="{{dado.arquivo.url}}" download="">Baixar Cotação</a>
+                                <a style="color: #0bb105;" href="{{dado.arquivo.url}}" download="">Baixar Cotação</a>
                             </td>
                         {% endif %}
                         <td>{{dado.data_pedido}}</td>
