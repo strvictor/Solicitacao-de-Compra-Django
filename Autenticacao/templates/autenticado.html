@@ -18,10 +18,10 @@
         <nav>
             <img class="logo" src="{% static 'Autenticacao/img/logo.png' %}" alt="">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="{% url 'pedidos_pendentes' %}">Pedidos Pendentes</a></li>
-                <li><a href="{% url 'pedidos_aprovados' %}">Pedidos Aprovados</a></li>
-                <li><a href="{% url 'pedidos_reprovados' %}">Pedidos Reprovados</a></li>
+                <li><a href="#" class="nav-item">Home</a></li>
+                <li><a href="{% url 'pedidos_pendentes' %}" class="nav-item" data-item="pendentes">Pedidos Pendentes</a></li>
+                <li><a href="{% url 'pedidos_aprovados' %}" class="nav-item" data-item="aprovados">Pedidos Aprovados</a></li>
+                <li><a href="{% url 'pedidos_reprovados' %}" class="nav-item" data-item="reprovados">Pedidos Reprovados</a></li>
                 <form method="post" action="{% url 'logout' %}">
                     {% csrf_token %}
                     <button class="sair" type="submit">Sair</button>
@@ -127,6 +127,38 @@
 
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navItems = document.querySelectorAll('.nav-item');
+
+            // Função para definir o item selecionado
+            const setSelected = (item) => {
+                navItems.forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
+                localStorage.setItem('selectedNavItem', item.getAttribute('data-item'));
+            };
+
+            // Adiciona o evento de clique a cada item
+            navItems.forEach(item => {
+                item.addEventListener('click', () => setSelected(item));
+            });
+
+            // Recupera o item selecionado do Local Storage
+            const selectedItem = localStorage.getItem('selectedNavItem');
+            if (selectedItem) {
+                const itemToSelect = document.querySelector(`.nav-item[data-item="${selectedItem}"]`);
+                if (itemToSelect) {
+                    itemToSelect.classList.add('selected');
+                }
+            }
+
+            const logoutButton = document.querySelector('.sair');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', () => {
+                    localStorage.removeItem('selectedNavItem');
+                });
+            }
+        });
+
         document.querySelector('.aprovar').addEventListener('click', function() {
             // Obtém o arquivo selecionado
             var arquivoInput = document.getElementById('arquivo');

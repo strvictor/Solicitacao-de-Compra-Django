@@ -67,6 +67,11 @@ nav ul li a:hover {
 
 }
 
+.nav-item.selected {
+    color: #0dc207;
+
+}
+
 h1 {
     margin-top: 40px;
     margin-bottom: 40px;
