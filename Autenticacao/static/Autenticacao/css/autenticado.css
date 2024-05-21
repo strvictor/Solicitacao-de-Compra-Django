@@ -58,17 +58,20 @@ nav ul li a {
 .sair:hover {
     color: red;
     transition: all 0.3s;
-    
 }
 
 nav ul li a:hover {
     color: #0dc207;
     transition: all 0.3s;
-
+    
 }
 
 .nav-item.selected {
-    color: #0dc207;
+    color: #0f3104;
+    padding: 0px 0px 5px ;
+    border-bottom: #0dc207 2px solid;
+    border-radius: 4px;
+    transition: all 0.3s;
 
 }
 
