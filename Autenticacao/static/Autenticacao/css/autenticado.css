@@ -167,11 +167,11 @@ tr:nth-child(even) {
 }
 
 .anterior {
-    background-color: #05692b;
+    background-color: #e7a31a;
 }
 
 .anterior:hover {
-    background-color: #b5dac4;
+    background-color: #e7a31ab9;
     color: #011301;
 }
 
@@ -180,7 +180,7 @@ tr:nth-child(even) {
 }
 
 .proximo:hover {
-    background-color: #b5dac4;
+    background-color: #05692ba1;
     color: #011301;
 }
 

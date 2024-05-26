@@ -12,6 +12,7 @@ class Dados(models.Model):
     arquivo = models.FileField(null=True, upload_to='uploads/')
     data_pedido = models.DateTimeField()
     status = models.CharField(max_length=50, default='Pendente')
+    comentario = models.CharField(max_length=200, null=True, blank=True)
     estagio = models.CharField(max_length=50, default='1/5')
     ultima_atualizacao = models.CharField(max_length=50, default='-')
     acao = models.CharField(max_length=50, null=True)
