@@ -181,7 +181,7 @@ def aprovar_dado(request):
             email_solicitante = objeto.email
             nome_solicitante = objeto.nome
             
-            enviar_email_usuario(nome_solicitante, email_solicitante, setor_do_pedido_atual, "Aprovado")
+            enviar_email_usuario(nome_solicitante, email_solicitante, setor_do_pedido_atual, estagio_update, nome_completo, "Aprovado")
             
             print(f'quem solicitou o pedido tem o email {email_solicitante}')
             
@@ -247,7 +247,7 @@ def reprovar_dado(request):
                     email_solicitante = objeto.email
                     nome_solicitante = objeto.nome
                     
-                    enviar_email_usuario(nome_solicitante, email_solicitante, setor_do_pedido_atual, "Reprovado")
+                    enviar_email_usuario(nome_solicitante, email_solicitante, setor_do_pedido_atual, estagio_update, nome_completo, "Reprovado")
                     
                     
                     
@@ -399,13 +399,15 @@ def enviar_email(request, nome_usuario, email_usuario, setor_usuario, tipo_mensa
     
     
     
-def enviar_email_usuario(nome_usuario, email_usuario, setor_usuario, tipo_mensagem):
+def enviar_email_usuario(nome_usuario, email_usuario, setor_usuario, estagio, nome_quem_aprovou, tipo_mensagem):
     
     # Renderiza o modelo HTML como uma string
-    html_content = render_to_string('email_templates/email_template.html',
+    html_content = render_to_string('email_templates/email_template_usuario.html',
                                     {'nome': nome_usuario,
                                      'setor': setor_usuario,
                                      'tipo_mensagem': tipo_mensagem,
+                                     'estagio': estagio,
+                                     'quem_aprovou': nome_quem_aprovou
                                      })
     
     # Converte o HTML para texto sem formatação

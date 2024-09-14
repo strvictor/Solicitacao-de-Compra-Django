@@ -8,7 +8,7 @@
 }
 
 body{
-    background: #f1f2ed;;
+    background: #f1f2ed;
     /* background: linear-gradient(60deg, rgba(19,21,24,1) 0%, rgb(16, 45, 92) 50%, rgba(42,46,52,1) 100%); */
 }
 
@@ -237,6 +237,72 @@ textarea:focus{
     box-shadow: 3px 3px 6px #00ad4eab;
 }
 
+
+.mensagem-confirmacao {
+    transition: opacity 0.3s ease;
+    position: absolute;
+    z-index: 1000;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem-confirmacao h2 {
+    margin: 0;
+    font-size: 20pt;
+}
+
+.mensagem-confirmacao p {
+    font-size: 12pt;
+    margin: 10px 0;
+}
+
+.mensagem-confirmacao button {
+    background-color: #00C85B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.mensagem-confirmacao button:hover {
+    background-color: #45a049;
+}
+
+
+.fazer-login {
+    padding: 12px; /* Adiciona espaço ao redor */
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+.login {
+    font-size: 10pt;
+    padding: 10px;
+    background-color: #00C85B;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.login:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #0d944a;
+}
+/* Responsividade */
 @media screen and (max-width: 700px) {
     .card-envio {
         width: 100%;
@@ -270,3 +336,5 @@ textarea:focus{
         padding: 20px;
     }
 }
+
+

@@ -47,17 +47,37 @@
 </head>
 <body>
     <div class="container">
-        <img class="logo" src="https://i.ibb.co/ySg9YKY/logo.png" alt="logo">
-        
-        <h1 style="color: #00C85B;">Seu Pedido Foi Aprovado!</h1>
-        <p>Olá, {{ nome }}</p>
-        <p>Temos o prazer de informar que sua solicitação no setor {{ setor }} foi aprovada.</p>
-        
-        <p>O pedido já está seguindo para as próximas etapas do processo. Para acompanhar o andamento, acesse o sistema utilizando o link abaixo.</p>
-        
-        <a style="background-color: #00C85B;" href="http://192.168.0.25/autenticacao/pedidos-aprovados/" target="_blank" class="btn">Acompanhar Pedido Aprovado</a>
-        
-        <p>Caso tenha dúvidas, sinta-se à vontade para entrar em contato com o seu supervisor.</p>
+        {% if tipo_mensagem == 'Aprovado' %}
+            <img class="logo" src="https://i.ibb.co/ySg9YKY/logo.png" alt="logo">
+            
+            <h1 style="color: #00C85B;">Seu Pedido Foi Aprovado!</h1>
+            <p>Olá, {{ nome }}</p>
+            <p>Temos o prazer de informar que sua solicitação no setor {{ setor }} foi aprovada pelo(a) {{ quem_aprovou }}.</p>
+
+            <p>Estágio da solicitação: {{ estagio }}</p>
+            
+            <p>O pedido já está seguindo para as próximas etapas do processo. Para acompanhar o andamento, acesse o sistema utilizando o link abaixo.</p>
+            
+            <a style="background-color: #00C85B;" href="http://192.168.0.25/autenticacao/pedidos-aprovados/" target="_blank" class="btn">Acompanhar Pedido Aprovado</a>
+            
+            <p>Caso tenha dúvidas, sinta-se à vontade para entrar em contato com o seu supervisor.</p>
+
+        {% else %}
+            <img class="logo" src="https://i.ibb.co/ySg9YKY/logo.png" alt="logo">
+            
+            <h1 style="color: #e1002f;">Seu Pedido Foi Reprovado!</h1>
+            <p>Olá, {{ nome }}</p>
+            <p>Informamos que sua solicitação no setor {{ setor }} foi reprovada.</p>
+            
+            <p>Estágio da solicitação: {{ estagio }}</p>
+
+            <p>Seu pedido foi reprovado pelo seu supervisor. Para acompanhar a tratativa, acesse o sistema utilizando o link abaixo.</p>
+            
+            <a style="background-color: #e1002f;" href="http://192.168.0.25/autenticacao/pedidos-reprovados/" target="_blank" class="btn">Acompanhar Pedido Reprovado</a>
+            
+            <p>Caso tenha dúvidas, sinta-se à vontade para entrar em contato com o seu supervisor.</p>
+
+        {% endif %}
     </div>
 </body>
 </html>

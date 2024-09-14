@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'rolepermissions',
     'Pedido',
-    'Autenticacao'
+    'Autenticacao',
 ]
 
 MIDDLEWARE = [

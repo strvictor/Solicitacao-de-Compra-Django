@@ -9,6 +9,11 @@
     <link rel="shortcut icon" href="{% static 'Pedido/img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
+
+    <div class="fazer-login">
+        <a class="login" href="{% url 'autenticacao' %}" target="_blank">Fazer Login</a>
+    </div>
+    
     <section>
         <div class="card-envio">
             <img src="{% static 'Pedido/img/logo.png' %}" alt="logo-cabana">
@@ -33,7 +38,6 @@
                 </div>
                 <div class="inputs">
                     <p>Setor da Empresa<span>*</span></p>
-                    <!-- <input type="text" name="setor" placeholder="Insira o seu departamento" required> -->
                     <select name="setor" required>
                         <option value="" disabled selected>Selecione o seu setor</option>
                         <option value="Alimentos e Bebidas">Alimentos e Bebidas</option>
@@ -53,7 +57,6 @@
                         <option value="Média">Média (Entre 15 e 30 dias)</option>
                         <option value="Alta">Alta (Até 7 dias)</option>
                     </select>
-                    <!-- <input type="text" name="prioridade" placeholder="Insira a prioridade da solicitação" required> -->
                 </div>
                 <div class="inputs">
                     <p>Data Limite<span>*</span></p>
@@ -63,44 +66,29 @@
                     <p>Qual sua Justificativa para essa solicitação?<span>*</span></p>
                     <textarea required id="descricao" name="descricao" placeholder="Insira a sua justificativa"></textarea>
                 </div>
-                <!-- <div class="descricao">
-                    <p>Anexe a cotação do item a ser enviado</p>
-                    <div class="espaco">
-                        <label for="arquivo">Envie a Cotação!</label>
-                        <input type="file" id="arquivo" name="arquivo" onchange="mostrarNomeArquivo()">
-                        <div id="nomeArquivo"></div>
-                    </div>
-                </div> -->
-                
+
                 <input class="btn-enviar" type="submit" value="Enviar">
             </form>
         </div>
-
     </section>
-    {% if mensagem %}
-        <script>
-            // Mostra um alerta com o nome enviado
-            alert("{{ mensagem }}");
-        </script>
-    {% endif %}
+
+    {% if messages %}
+    <div class="mensagem-confirmacao" id="mensagemConfirmacao">
+        <h2>Pedido Enviado!</h2>
+        <p>{% for message in messages %}{{ message }}{% endfor %}</p>
+        <button onclick="fecharMensagem()">Fechar</button>
+    </div>
 
     <script>
-        // Aguarda o carregamento completo do documento HTML antes de executar o código JavaScript
-        document.addEventListener("DOMContentLoaded", function() {
-            // Função para exibir o nome do arquivo selecionado
-            function mostrarNomeArquivo() {
-                var input = document.getElementById('arquivo');
-                var nomeArquivo = input.files[0].name;
-                document.getElementById('nomeArquivo').innerText = 'Arquivo selecionado: ' + nomeArquivo;
-            }
-    
-            // Adiciona um ouvinte de evento ao input de arquivo para chamar a função mostrarNomeArquivo() quando o arquivo é selecionado
-            var inputArquivo = document.getElementById('arquivo');
-            if (inputArquivo) {
-                inputArquivo.addEventListener('change', mostrarNomeArquivo);
-            }
-        });
+        // Exibe a mensagem de confirmação
+        document.getElementById('mensagemConfirmacao').style.display = 'block';
+
+        // Função para fechar a mensagem de confirmação
+        function fecharMensagem() {
+            document.getElementById('mensagemConfirmacao').style.display = 'none';
+        }
     </script>
+    {% endif %}
     
 </body>
 </html>
