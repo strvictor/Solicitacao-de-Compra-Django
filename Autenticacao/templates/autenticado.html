@@ -43,16 +43,16 @@
                 <th>Email</th>
                 <th>Telefone</th>
                 <th>Setor</th>
-                <th>Prioridade</th>
+                <th style="width: 70px;">Prioridade</th>
                 <th>Data Limite<span class="popup">data maxima que a solicitante espera que a solicitação seja atendida</span></th>
                 <th>Descrição</th>
                 {% if permissao_usuario == 'Analista de Compras' or permissao_usuario == 'Diretor Financeiro' %}
-                    <th>Cotação</th>
+                    <th style="width: 120px;">Cotação</th>
                 {% endif %}
                 <th>Data da Solicitação</th>
                 <th>Status</th>
                 <!-- <th>Comentario</th> -->
-                <th>Estágio</th>
+                <th style="width: 50px;">Estágio</th>
                 <th>Última Atualização</th>
                 <th>Ação</th>
               </tr>
@@ -67,7 +67,7 @@
                         <td>{{dado.setor}}</td>
                         <td>{{dado.prioridade}}</td>
                         <td>{{dado.data_limite}}</td>
-                        <td>{{dado.descricao}}</td>
+                        <td style="white-space: pre-wrap; text-align: left;">{{dado.descricao|linebreaksbr}}</td>
                         <!-- {% if permissao_usuario == 'Analista de Compras' %}
                             <td>
                                 <input required type="file" id="arquivo" name="arquivo">

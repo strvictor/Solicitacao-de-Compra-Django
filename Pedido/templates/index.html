@@ -53,9 +53,9 @@
                     <p>Prioridade<span>*</span></p>
                     <select name="prioridade" required>
                         <option value="" disabled selected>Selecione a prioridade</option>
-                        <option value="Baixa">Baixa (Mais de 30 dias)</option>
-                        <option value="Média">Média (Entre 15 e 30 dias)</option>
-                        <option value="Alta">Alta (Até 7 dias)</option>
+                        <option value="Baixa">Baixa (Mais de 25 dias)</option>
+                        <option value="Média">Média (Entre 10 e 25 dias)</option>
+                        <option value="Alta">Alta (Até 10 dias)</option>
                     </select>
                 </div>
                 <div class="inputs">
@@ -64,7 +64,12 @@
                 </div>
                 <div class="descricao">
                     <p>Qual sua Justificativa para essa solicitação?<span>*</span></p>
-                    <textarea required id="descricao" name="descricao" placeholder="Insira a sua justificativa"></textarea>
+                    <textarea required id="descricao" name="descricao" placeholder="Ex:
+
+02 UNI - Material x, modelo y, tamanho z.
+01 UNI - Equipamento x, cor y, variação z.
+
+Solicito os itens listados acima por motivo de abc..."></textarea>
                 </div>
 
                 <input class="btn-enviar" type="submit" value="Enviar">
@@ -74,7 +79,7 @@
 
     {% if messages %}
     <div class="mensagem-confirmacao" id="mensagemConfirmacao">
-        <h2>Pedido Enviado!</h2>
+        <h3>Pedido Enviado!</h3>
         <p>{% for message in messages %}{{ message }}{% endfor %}</p>
         <button onclick="fecharMensagem()">Fechar</button>
     </div>

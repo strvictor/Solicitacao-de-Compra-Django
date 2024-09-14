@@ -154,6 +154,7 @@ select:disabled {
 }
 
 textarea {
+    white-space: pre-wrap;
     width: 100%;
     height: 100px; /* Ajuste conforme necessário */
     padding: 5px;
