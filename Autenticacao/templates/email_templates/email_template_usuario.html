@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Aprovado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            color: #2c2c2c;
+            margin-top: 6px;
+        }
+        .btn {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .logo {
+            width: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="https://i.ibb.co/ySg9YKY/logo.png" alt="logo">
+        
+        <h1 style="color: #00C85B;">Seu Pedido Foi Aprovado!</h1>
+        <p>Olá, {{ nome }}</p>
+        <p>Temos o prazer de informar que sua solicitação no setor {{ setor }} foi aprovada.</p>
+        
+        <p>O pedido já está seguindo para as próximas etapas do processo. Para acompanhar o andamento, acesse o sistema utilizando o link abaixo.</p>
+        
+        <a style="background-color: #00C85B;" href="http://192.168.0.25/autenticacao/pedidos-aprovados/" target="_blank" class="btn">Acompanhar Pedido Aprovado</a>
+        
+        <p>Caso tenha dúvidas, sinta-se à vontade para entrar em contato com o seu supervisor.</p>
+    </div>
+</body>
+</html>

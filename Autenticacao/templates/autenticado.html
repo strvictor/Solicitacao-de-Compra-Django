@@ -9,6 +9,7 @@
     {% endblock %}
     <link rel="stylesheet" href="{% static 'Autenticacao/css/autenticado.css' %}">
     <link rel="shortcut icon" href="{% static 'Autenticacao/img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
 </head>
@@ -30,7 +31,7 @@
         </nav>
     </header>
 
-    <h1>Olá, {{ saudacao }}<br>Seja bem-vindo(a) {{ nome_usuario }}!</h1>
+    <h1>Olá, {{ saudacao }}<br>Seja bem-vindo(a) <span style="color: #0bb105;">{{ nome_usuario }}!</span></h1>
     
     {% block tabela %}
     <div class="tabela">
@@ -50,7 +51,7 @@
                 {% endif %}
                 <th>Data da Solicitação</th>
                 <th>Status</th>
-                <th>Comentario</th>
+                <!-- <th>Comentario</th> -->
                 <th>Estágio</th>
                 <th>Última Atualização</th>
                 <th>Ação</th>
@@ -67,7 +68,7 @@
                         <td>{{dado.prioridade}}</td>
                         <td>{{dado.data_limite}}</td>
                         <td>{{dado.descricao}}</td>
-                        {% if permissao_usuario == 'Analista de Compras' %}
+                        <!-- {% if permissao_usuario == 'Analista de Compras' %}
                             <td>
                                 <input required type="file" id="arquivo" name="arquivo">
                             </td>
@@ -75,10 +76,28 @@
                             <td>
                                 <a style="color: #0bb105;" href="{{dado.arquivo.url}}" download="">Baixar Cotação</a>
                             </td>
+                        {% endif %} -->
+                    
+                        {% if permissao_usuario == 'Analista de Compras' %}
+                            <td>
+                                <label for="arquivo" class="custom-file-upload">
+                                    <i class="fa fa-cloud-upload"></i>
+                                    <span id="file-name">Clique para selecionar o arquivo</span>
+                                </label>
+                                <input required type="file" id="arquivo" name="arquivo" style="display:none;" onchange="updateFileName()">
+                            </td>
+                        {% elif permissao_usuario == 'Diretor Financeiro' %}
+                            <td>
+                                <a style="color: #0bb105;" href="{{dado.arquivo.url}}" download="">Baixar Cotação</a>
+                            </td>
                         {% endif %}
+                    
+                        
                         <td>{{dado.data_pedido}}</td>
                         <td>{{dado.status}}</td>
-                        <td>comentario</td>
+                        <!-- <td>
+                            <textarea name="comentario" id="comentario" placeholder="Digite seu comentário aqui..." required></textarea>
+                        </td> -->
                         <td>{{dado.estagio}}</td>
                         <td>{{dado.ultima_atualizacao}}</td>
                         <td>
@@ -178,6 +197,18 @@
             // Envie o formulário
             formulario.submit();
         });
+
+
+        function updateFileName() {
+        var input = document.getElementById('arquivo');
+        var fileName = document.getElementById('file-name');
+        if (input.files.length > 0) {
+            fileName.textContent = input.files[0].name;
+        } else {
+            fileName.textContent = "Clique para selecionar o arquivo";
+        }
+    }
+
     </script>
 
 </body>

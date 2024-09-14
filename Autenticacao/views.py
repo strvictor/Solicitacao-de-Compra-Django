@@ -173,6 +173,22 @@ def aprovar_dado(request):
             email = captura_estagio.email
 
             enviar_email(request, nome, email, setor_do_pedido_atual, "Aprovado")
+            
+            
+            
+            
+            
+            email_solicitante = objeto.email
+            nome_solicitante = objeto.nome
+            
+            enviar_email_usuario(nome_solicitante, email_solicitante, setor_do_pedido_atual, "Aprovado")
+            
+            print(f'quem solicitou o pedido tem o email {email_solicitante}')
+            
+            
+            
+            
+            
 
         return redirect('pedidos_pendentes')
     else:
@@ -225,6 +241,17 @@ def reprovar_dado(request):
                 if str(setor_do_pedido_atual) == str(setor_usuario) or setor_usuario == 'None':
                     print(nome, email)
                     enviar_email(request, nome, email, setor_do_pedido_atual, "Reprovado")
+                    
+                    
+                    
+                    email_solicitante = objeto.email
+                    nome_solicitante = objeto.nome
+                    
+                    enviar_email_usuario(nome_solicitante, email_solicitante, setor_do_pedido_atual, "Reprovado")
+                    
+                    
+                    
+                    
                 else:
                     print('setor errado:', nome, email, setor_usuario)
 
@@ -338,6 +365,7 @@ def pedidos_reprovados(request):
 
 
 def enviar_email(request, nome_usuario, email_usuario, setor_usuario, tipo_mensagem):
+    
     # Renderiza o modelo HTML como uma string
     html_content = render_to_string('email_templates/email_template.html',
                                     {'nome': nome_usuario,
@@ -351,7 +379,42 @@ def enviar_email(request, nome_usuario, email_usuario, setor_usuario, tipo_mensa
     if tipo_mensagem == 'Aprovado':
         mensagem = 'Nova Solicitação de Compra | Cabana Clube'
     else:
-        mensagem = 'Solicitação Reprovada | Cabana Clube'
+        mensagem = 'Solicitação de Compra Reprovada | Cabana Clube'
+
+    # Cria o e-mail
+    email = EmailMultiAlternatives(
+        mensagem,  # Assunto
+        text_content,  # Corpo do e-mail em texto sem formatação
+        settings.EMAIL_HOST_USER,  # Remetente
+        [email_usuario]  # Lista de destinatários
+    )
+    
+    # Adiciona o conteúdo HTML ao e-mail
+    email.attach_alternative(html_content, "text/html")
+    
+    # Envia o e-mail
+    email.send()
+    
+    
+    
+    
+    
+def enviar_email_usuario(nome_usuario, email_usuario, setor_usuario, tipo_mensagem):
+    
+    # Renderiza o modelo HTML como uma string
+    html_content = render_to_string('email_templates/email_template.html',
+                                    {'nome': nome_usuario,
+                                     'setor': setor_usuario,
+                                     'tipo_mensagem': tipo_mensagem,
+                                     })
+    
+    # Converte o HTML para texto sem formatação
+    text_content = strip_tags(html_content)
+
+    if tipo_mensagem == 'Aprovado':
+        mensagem = 'Solicitação de Compra Aprovada | Cabana Clube'
+    else:
+        mensagem = 'Solicitação de Compra Reprovada | Cabana Clube'
 
     # Cria o e-mail
     email = EmailMultiAlternatives(

@@ -34,6 +34,9 @@
 
         .logo {
             width: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         a{
@@ -46,7 +49,7 @@
     <div class="container">
         {% if tipo_mensagem == 'Aprovado' %}
 
-            <img class="logo" src="{% static 'Autenticacao/img/logo.png' %}" alt="">
+            <img class="logo" src="https://i.ibb.co/ySg9YKY/logo.png" alt="logo">
             
             <h1 style="color: #00C85B;" >Novo Pedido Pendente de Aprovação</h1>
             <p>Olá, {{ nome }}</p>
@@ -57,7 +60,7 @@
 
         {% else %}
 
-            <img class="logo" src="{% static 'Autenticacao/img/logo.png' %}" alt="">
+            <img class="logo" src="https://i.ibb.co/ySg9YKY/logo.png" alt="logo">
             
             <h1 style="color: #e1002f;" >Sua Solicitação foi Reprovada</h1>
             <p>Olá, {{ nome }}</p>

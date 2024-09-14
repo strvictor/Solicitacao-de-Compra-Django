@@ -223,3 +223,37 @@ table > thead > tr > th:hover {
     position: relative;
     bottom: 5px;
 }
+
+
+
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    min-height: 40px;
+    width: 100%; /* Ajusta a largura conforme necessário */
+}
+
+.custom-file-upload:hover {
+    background-color: #45a049;
+}
+
+.custom-file-upload i {
+    margin-right: 8px;
+}
+
+#file-name {
+    font-size: 14px;
+    color: white; /* Muda a cor do texto para branco */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px; /* Define um limite para o comprimento do nome do arquivo */
+}
